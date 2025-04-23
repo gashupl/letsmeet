@@ -1,0 +1,67 @@
+parameters:
+  - name: "connection"
+    type: "string"
+    default: ""
+  - name: "environmentUrl"
+    type: "string"
+    default: ""
+  - name: "appId"
+    type: "string"
+    default: ""
+  - name: "clientSecret"
+    type: "string"
+    default: ""
+  - name: "showWelcomeScreen"
+    type: "string"
+    default: "false"
+
+steps:
+  - task: DownloadBuildArtifacts@1
+    inputs:
+      buildType: "current"
+      downloadType: "single"
+      artifactName: "LetsMeet"
+      downloadPath: "$(System.ArtifactsDirectory)"
+      cleanDestinationFolder: true
+
+  - task: CmdLine@2
+    inputs:
+      script: |
+        echo "parameters:"
+        echo ${{parameters.appId}} 
+        echo ${{parameters.clientSecret}}
+
+  - task: PowerPlatformToolInstaller@2
+    inputs:
+      DefaultVersion: true
+
+  - task: PowerPlatformImportSolution@2
+    inputs:
+      authenticationType: "PowerPlatformSPN"
+      PowerPlatformSPN: "${{parameters.connection}}"
+      SolutionInputFile: "$(System.ArtifactsDirectory)/LetsMeet/solutions/LetsMeet_managed.zip"
+      AsyncOperation: true
+      MaxAsyncWaitTime: "60"
+      ConvertToManaged: true
+      HoldingSolution: true
+
+  - task: PowerPlatformApplySolutionUpgrade@2
+    inputs:
+      authenticationType: "PowerPlatformSPN"
+      PowerPlatformSPN: "${{parameters.connection}}"
+      SolutionName: "LetsMeet"
+      AsyncOperation: true
+      MaxAsyncWaitTime: "60"
+
+  - task: CmdLine@2
+    inputs:
+      script: |
+        PostDeploymentStepsRunner.exe -url:${{parameters.environmentUrl}} -appid:${{parameters.appId}} -clientsecret:${{parameters.clientSecret}} -welcomescreen:${{parameters.showWelcomeScreen}}
+      workingDirectory: "$(System.ArtifactsDirectory)/LetsMeet/PostDeploymentStepsRunner"
+
+  - task: PowerPlatformPublishCustomizations@2
+    inputs:
+      authenticationType: "PowerPlatformSPN"
+      PowerPlatformSPN: "${{parameters.connection}}"
+      AsyncOperation: true
+      MaxAsyncWaitTime: "60"

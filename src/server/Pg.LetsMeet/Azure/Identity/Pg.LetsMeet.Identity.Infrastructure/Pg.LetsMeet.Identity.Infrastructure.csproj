@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Dataverse\Pg.LetsMeet.Dataverse.Context\Pg.LetsMeet.Dataverse.Context.csproj" />
+    <ProjectReference Include="..\..\Pg.LetsMeet.Api.Common\Pg.LetsMeet.Api.Common.csproj" />
+    <ProjectReference Include="..\Pg.LetsMeet.Identity.Domain\Pg.LetsMeet.Identity.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

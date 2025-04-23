@@ -1,0 +1,300 @@
+#This is new pipline for building, testing and releasing Dataverse and Azure infrastructure and components
+#It is responsible for building and releasing Dataverse solutions, Azure functions-based API (connected to Dataverse)
+#and React static app which consumes API data
+
+trigger:
+  branches:
+    include:
+      - "*"
+
+parameters:
+  - name: dataveseTest
+    displayName: Release Dataverse TEST
+    type: boolean
+    default: false
+  - name: azureInfraDev
+    displayName: Release Azure Infra DEV
+    type: boolean
+    default: false
+  - name: azureInfraTest
+    displayName: Release Azure Infra TEST
+    type: boolean
+    default: false
+  - name: azureDev
+    displayName: Release Azure DEV
+    type: boolean
+    default: false
+  - name: AzureTest
+    displayName: Release Azure TEST
+    type: boolean
+    default: false
+
+name: "$(Build.SourceBranchName).$(Build.BuildId)"
+
+pool:
+  vmImage: "windows-latest"
+
+variables:
+  - group: LETS_MEET_SETTINGS
+  - name: devEventsApiManagedIdentityId
+    value: $(dev-events-function-identity-id)
+  - name: testEventsApiManagedIdentityId
+    value: $(test-events-function-identity-id)
+  - name: devIdentityApiManagedIdentityId
+    value: $(dev-identity-function-identity-id)
+  - name: testIdentityApiManagedIdentityId
+    value: $(test-identity-function-identity-id)
+  - name: testDataverseAppUserId
+    value: $(test-dataverse-app-user-id)
+  - name: testDataverseAppUserSecret
+    value: $(test-dataverse-app-user-secret)
+  - name: testDataverseUrl
+    value: $(test-dataverse-url)
+  - name: solution
+    value: "**/Pg.LetsMeet.sln"
+  - name: buildPlatform
+    value: "Any CPU"
+  - name: buildConfiguration
+    value: "Release"
+  - name: version
+    value: "1.0.1.$(Build.BuildId)"
+  - name: pcfVersion
+    value: "1.1.$(Build.BuildId)"
+  - name: devFunctionDefaultApiKey
+    value: $(dev-events-function-default-api-key)
+  - name: testFunctionDefaultApiKey
+    value: $(test-events-function-default-api-key)
+
+stages:
+  - stage: Build
+    displayName: "Build and test"
+    jobs:
+      - job: Build
+        displayName: Build and test portal code
+        steps:
+          - task: Npm@1
+            displayName: Install NPM dependencies for Dataverse web resources
+            inputs:
+              command: "install"
+              workingDir: "src/Client/Pg.LetsMeet.WebResources"
+
+          - task: Npm@1
+            displayName: Build Event Registry Portal
+            inputs:
+              command: "custom"
+              workingDir: "src/Client/Pg.LetsMeet.WebResources"
+              customCommand: "run build"
+
+          - task: NuGetToolInstaller@1
+            displayName: Install Nuget
+
+          - task: NuGetCommand@2
+            displayName: Restore nugets for solution
+            inputs:
+              restoreSolution: "$(solution)"
+
+          - task: PowerPlatformToolInstaller@2
+            inputs:
+              DefaultVersion: true
+
+          - task: PowerShell@2
+            displayName: Update managed solution version
+            inputs:
+              targetType: "inline"
+              script: |
+                $solutionFullPath = "solutions/LetsMeet_managed/Other/Solution.xml"
+                $solutionXml = New-Object System.Xml.XmlDocument
+                $solutionXml.PreserveWhitespace = $true
+                $solutionXml.Load($solutionFullPath)
+                $solutionXml.SelectSingleNode("/ImportExportXml/SolutionManifest/Version").'#text' = '$(version)'
+                $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline
+
+          - task: PowerShell@2
+            displayName: Update unmanaged solution version
+            inputs:
+              targetType: "inline"
+              script: |
+                $solutionFullPath = "solutions/LetsMeet/Other/Solution.xml"
+                $solutionXml = New-Object System.Xml.XmlDocument
+                $solutionXml.PreserveWhitespace = $true
+                $solutionXml.Load($solutionFullPath)
+                $solutionXml.SelectSingleNode("/ImportExportXml/SolutionManifest/Version").'#text' = '$(version)'
+                $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline
+
+          - task: VSBuild@1
+            displayName: Build VS solution
+            inputs:
+              solution: "$(solution)"
+              platform: "$(buildPlatform)"
+              configuration: "$(buildConfiguration)"
+
+          - task: DotNetCoreCLI@2
+            displayName: Run unit tests (dotnet core)
+            inputs:
+              command: "test"
+              projects: "**/*tests.csproj"
+              arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
+
+          - task: DotNetCoreCLI@2
+            displayName: Publish Pg.LetsMeet.Events.Api
+            inputs:
+              command: "publish"
+              publishWebProjects: false
+              projects: "src/Server/Pg.LetsMeet/Azure/Events/Pg.LetsMeet.Events.Api/Pg.LetsMeet.Events.Api.csproj"
+              arguments: "--configuration $(buildConfiguration) --output $(build.binariesdirectory)/functions"
+
+          - task: DotNetCoreCLI@2
+            displayName: Publish Pg.LetsMeet.Identity.Api
+            inputs:
+              command: "publish"
+              publishWebProjects: false
+              projects: "src/Server/Pg.LetsMeet/Azure/Identity/Pg.LetsMeet.Identity.Api/Pg.LetsMeet.Identity.Api.csproj"
+              arguments: "--configuration $(buildConfiguration) --output $(build.binariesdirectory)/functions"
+
+          - task: CopyFiles@2
+            displayName: Copy deployment task binaries to artifact folder
+            inputs:
+              SourceFolder: "src/Server/Pg.LetsMeet/Deployment/Dataverse/PostDeploymentStepsRunner/bin/Release/net6.0"
+              Contents: "**"
+              TargetFolder: "$(Build.ArtifactStagingDirectory)/PostDeploymentStepsRunner"
+
+          - task: PowerShell@2
+            displayName: "Copy Nuget package into solutions folders"
+            inputs:
+              targetType: inline
+              script: |
+                New-Item -ItemType File -Path "solutions/LetsMeet_managed/pluginpackages/pg_Pg.LetsMeet.Dataverse.Plugins/package/pg_Pg.LetsMeet.Dataverse.Plugins.nupkg" -Force 
+                Copy-Item "src/Server/Pg.LetsMeet/Dataverse/Pg.LetsMeet.Dataverse.Plugins/bin/Release/Pg.LetsMeet.Dataverse.Plugins.1.0.0.nupkg" -Destination "solutions/LetsMeet_managed/pluginpackages/pg_Pg.LetsMeet.Dataverse.Plugins/package/pg_Pg.LetsMeet.Dataverse.Plugins.nupkg" -Force
+                New-Item -ItemType File -Path "solutions/LetsMeet/pluginpackages/pg_Pg.LetsMeet.Dataverse.Plugins/package/pg_Pg.LetsMeet.Dataverse.Plugins.nupkg" -Force 
+                Copy-Item "src/Server/Pg.LetsMeet/Dataverse/Pg.LetsMeet.Dataverse.Plugins/bin/Release/Pg.LetsMeet.Dataverse.Plugins.1.0.0.nupkg" -Destination "solutions/LetsMeet/pluginpackages/pg_Pg.LetsMeet.Dataverse.Plugins/package/pg_Pg.LetsMeet.Dataverse.Plugins.nupkg" -Force
+
+          - task: PowerPlatformPackSolution@2
+            inputs:
+              SolutionSourceFolder: "solutions/LetsMeet_managed"
+              SolutionOutputFile: "$(build.binariesdirectory)/solutions/LetsMeet_managed.zip"
+              SolutionType: "Managed"
+              MapFile: "configs/solution-mappings.xml"
+
+          - task: PowerPlatformPackSolution@2
+            inputs:
+              SolutionSourceFolder: "solutions/LetsMeet"
+              SolutionOutputFile: "$(build.binariesdirectory)/solutions/LetsMeet.zip"
+              SolutionType: "Unmanaged"
+              MapFile: "configs/solution-mappings.xml"
+
+          - task: CopyFiles@2
+            displayName: Copy binaries to artifact folder
+            inputs:
+              SourceFolder: "infrastructure/bicep/"
+              Contents: "**"
+              TargetFolder: "$(Build.ArtifactStagingDirectory)/LetsMeetBicepTemplates/"
+
+          - task: CopyFiles@2
+            displayName: Copy Bicep templates to artifact folder
+            inputs:
+              SourceFolder: "$(build.binariesdirectory)"
+              Contents: "**"
+              TargetFolder: "$(Build.ArtifactStagingDirectory)"
+
+          - task: CopyFiles@2
+            displayName: Copy SPA files into artifact folder
+            inputs:
+              SourceFolder: "src/client/Pg.LetsMeet.EventsRegistry/"
+              Contents: "**"
+              TargetFolder: "$(Build.ArtifactStagingDirectory)/spa/Pg.LetsMeet.EventsRegistry/"
+
+          - task: PublishBuildArtifacts@1
+            displayName: Publish build artifacts
+            inputs:
+              PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+              ArtifactName: "LetsMeet"
+
+  - stage: AzureInfraDevRelease
+    condition: and(succeeded(), eq( ${{ parameters.azureInfraDev }}, true))
+    displayName: "Azure Infra DEV Release"
+    dependsOn: Build
+    jobs:
+      - deployment: DevInfraAzure
+        displayName: Deploy to Azure DEV environment
+        environment: "DEV"
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: azure-infra-release.yml
+                  parameters:
+                    environment: "dev"
+                    eventsApiClientId: $(devEventsApiManagedIdentityId)
+                    identityApiClientId: $(devIdentityApiManagedIdentityId)
+                    functionDefaultKey: $(devFunctionDefaultApiKey)
+
+  - stage: AzureInfraTestRelease
+    condition: and(succeeded(), eq( ${{ parameters.azureInfraTest }}, true))
+    displayName: "Azure Infra TEST Release"
+    dependsOn: AzureInfraDevRelease
+    jobs:
+      - deployment: TestInfraAzure
+        displayName: Deploy to Azure TEST environment
+        environment: "TEST"
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: azure-infra-release.yml
+                  parameters:
+                    environment: "test"
+                    eventsApiClientId: $(testEventsApiManagedIdentityId)
+                    identityApiClientId: $(testIdentityApiManagedIdentityId)
+                    functionDefaultKey: $(testFunctionDefaultApiKey)
+
+  - stage: AzureDevRelease
+    condition: and(succeeded(), eq( ${{ parameters.azureDev }}, true))
+    displayName: "Azure DEV Release"
+    dependsOn: Build
+    jobs:
+      - deployment: DevAzure
+        displayName: Deploy to Azure DEV environment
+        environment: "DEV"
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: azure-release.yml
+                  parameters:
+                    environment: "dev"
+
+  - stage: AzureTestRelease
+    condition: and(succeeded(), eq( ${{ parameters.azureTest }}, true))
+    displayName: "Azure TEST Release"
+    dependsOn: AzureDevRelease
+    jobs:
+      - deployment: TestAzure
+        displayName: Deploy to Azure TEST environment
+        environment: "TEST"
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: azure-release.yml
+                  parameters:
+                    environment: "test"
+
+  - stage: DataverseTestRelease
+    condition: and(succeeded(), eq( ${{ parameters.dataveseTest }}, true))
+    displayName: "Dataverse TEST Release"
+    dependsOn: Build
+    jobs:
+      - deployment: TestDataverse
+        displayName: Deploy to Dataverse Test environment
+        environment: "TEST"
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: dataverse-release.yml
+                  parameters:
+                    connection: "Dataverse TEST"
+                    environmentUrl: $(testDataverseUrl)
+                    appId: $(testDataverseAppUserId)
+                    clientSecret: $(testDataverseAppUserSecret)
+                    showWelcomeScreen: "true"

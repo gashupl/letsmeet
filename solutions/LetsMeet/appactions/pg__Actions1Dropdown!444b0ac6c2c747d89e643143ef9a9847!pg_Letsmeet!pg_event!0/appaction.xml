@@ -1,0 +1,29 @@
+<appaction uniquename="pg__Actions1Dropdown!444b0ac6c2c747d89e643143ef9a9847!pg_Letsmeet!pg_event!0">
+  <appmoduleid>
+    <uniquename>pg_Letsmeet</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Actions 1 (Dropdown)">
+    <label description="Actions 1 (Dropdown)" languagecode="1033" />
+  </buttonlabeltext>
+  <buttonsequencepriority>10000.0000000000</buttonsequencepriority>
+  <context>1</context>
+  <contextentity>
+    <logicalname>pg_event</logicalname>
+  </contextentity>
+  <contextvalue>pg_event</contextvalue>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Actions1Dropdown!444b0ac6c2c747d89e643143ef9a9847</name>
+  <onclickeventtype>0</onclickeventtype>
+  <origin>0</origin>
+  <parentappactionid>
+    <uniquename>pg__NewGroup!2963a098077a4226a0d0dc9a43235c1e!pg_Letsmeet!pg_event!0</uniquename>
+  </parentappactionid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>1</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

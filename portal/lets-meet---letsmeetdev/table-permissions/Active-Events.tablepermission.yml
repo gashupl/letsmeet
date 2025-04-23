@@ -1,0 +1,21 @@
+adx_accountrelationship: pg_event_partnerId_Account
+adx_append: false
+adx_appendto: false
+adx_childTablePermissions: []
+adx_contactrelationship: 
+adx_copy: undefined
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: pg_event
+adx_entityname: Active Events
+adx_entitypermission_webrole:
+- b28b7525-5291-4e79-8730-bc04947ccfb4
+adx_entitypermissionid: 457e2290-3309-4274-93ec-d21c0132ce75
+adx_filecontent: 
+adx_parententitypermission: 
+adx_parentrelationship: 
+adx_read: true
+adx_scope: 756150002
+adx_write: false
+statecode: 1
+statuscode: 2

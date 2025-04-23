@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{dfce9e67-9b92-ef11-8a69-6045bd9f9c28}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pg_name" select="1" icon="1" preview="1">
+        <row name="result" id="pg_eventid">
+          <cell name="pg_name" width="300" />
+          <cell name="pg_date" width="158" />
+          <cell name="pg_partnerid" width="132" />
+          <cell name="a_c7973d2ebd4d48f0bccb564464a4ccc6.pg_city" width="123" />
+          <cell name="pg_logo" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" distinct="true">
+        <entity name="pg_event">
+          <attribute name="pg_eventid" />
+          <attribute name="pg_name" />
+          <attribute name="pg_date" />
+          <order attribute="pg_date" descending="true" />
+          <attribute name="pg_partnerid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <link-entity alias="a_c7973d2ebd4d48f0bccb564464a4ccc6" name="pg_address" to="pg_addressid" from="pg_addressid" link-type="outer" visible="false">
+            <attribute name="pg_city" />
+          </link-entity>
+          <link-entity name="pg_eventlifecycleflow" alias="aa" link-type="inner" from="bpf_pg_eventid" to="pg_eventid">
+            <filter type="and">
+              <condition attribute="activestageid" operator="eq" value="{291e9330-2c4f-40b5-a53f-408d8d422aac}" uiname="Registration Opened" uitype="processstage" />
+            </filter>
+          </link-entity>
+          <attribute name="pg_logo" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.1.764</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Events with open registration" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

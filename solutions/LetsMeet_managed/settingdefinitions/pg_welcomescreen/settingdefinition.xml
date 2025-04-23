@@ -1,0 +1,15 @@
+<settingdefinition uniquename="pg_welcomescreen">
+  <datatype>2</datatype>
+  <defaultvalue>false</defaultvalue>
+  <displayname default="Welcome Screen">
+    <label description="Welcome Screen" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <ishidden>1</ishidden>
+  <isoverridable>1</isoverridable>
+  <isplatform>0</isplatform>
+  <overridablelevel>2</overridablelevel>
+  <releaselevel>0</releaselevel>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</settingdefinition>

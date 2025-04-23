@@ -1,0 +1,12 @@
+adx_append: false
+adx_appendto: false
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: pg_event
+adx_entityname: Events read access for anonymous
+adx_entitypermission_webrole:
+- 0f461b15-3d92-4e58-958b-f87b7895508c
+adx_entitypermissionid: bc19296c-1e11-f011-998a-0022488b25cc
+adx_read: true
+adx_scope: 756150000
+adx_write: false

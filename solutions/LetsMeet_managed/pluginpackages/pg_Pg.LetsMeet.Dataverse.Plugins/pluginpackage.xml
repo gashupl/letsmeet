@@ -1,0 +1,8 @@
+<pluginpackage uniquename="pg_Pg.LetsMeet.Dataverse.Plugins">
+  <iscustomizable>1</iscustomizable>
+  <name>pg_Pg.LetsMeet.Dataverse.Plugins</name>
+  <package mimetype="application/octet-stream">pg_Pg.LetsMeet.Dataverse.Plugins.nupkg</package>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <version>1.0.0</version>
+</pluginpackage>

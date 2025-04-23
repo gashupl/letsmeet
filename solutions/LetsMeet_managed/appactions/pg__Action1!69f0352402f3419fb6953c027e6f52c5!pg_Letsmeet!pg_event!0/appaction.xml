@@ -1,0 +1,34 @@
+<appaction uniquename="pg__Action1!69f0352402f3419fb6953c027e6f52c5!pg_Letsmeet!pg_event!0">
+  <appmoduleid>
+    <uniquename>pg_Letsmeet</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Action 21">
+    <label description="Action 21" languagecode="1033" />
+  </buttonlabeltext>
+  <buttonsequencepriority>10000.0000000000</buttonsequencepriority>
+  <context>1</context>
+  <contextentity>
+    <logicalname>pg_event</logicalname>
+  </contextentity>
+  <contextvalue>pg_event</contextvalue>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Action1!69f0352402f3419fb6953c027e6f52c5</name>
+  <onclickeventjavascriptfunctionname>function</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>63bfbf17-aab8-e911-a98a-000d3af475aa</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <parentappactionid>
+    <uniquename>pg__NewGroup!80d493fd03a9400fb97971e594097f99!pg_Letsmeet!pg_event!0</uniquename>
+  </parentappactionid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

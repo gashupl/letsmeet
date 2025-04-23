@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{00ac2871-7017-48e4-a613-15f9021c0f05}</savedqueryid>
+    <layoutxml>
+      <grid name="pg_events" jump="pg_name" select="1" icon="1" preview="0">
+        <row name="pg_event" id="pg_eventid">
+          <cell name="pg_name" width="300" />
+          <cell name="pg_date" width="158" />
+          <cell name="pg_allowedparticipantsquantity" width="157" />
+          <cell name="pg_registeredparticipantsquantity" width="175" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pg_event">
+          <attribute name="pg_eventid" />
+          <attribute name="pg_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pg_date" />
+          <attribute name="pg_allowedparticipantsquantity" />
+          <attribute name="pg_registeredparticipantsquantity" />
+          <order attribute="pg_name" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Event Lookup View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Pg.LetsMeet.Identity.Api": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7173",
+      "launchBrowser": false,
+      "devTunnelEnabled": true,
+      "devTunnelAccess": "public"
+    }
+  }
+}

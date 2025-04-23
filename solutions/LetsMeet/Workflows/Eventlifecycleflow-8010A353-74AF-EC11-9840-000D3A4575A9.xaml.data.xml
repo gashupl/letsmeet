@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{8010a353-74af-ec11-9840-000d3a4575a9}" Name="Event lifecycle flow" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/Eventlifecycleflow-8010A353-74AF-EC11-9840-000D3A4575A9.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>pg_eventlifecycleflow</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>pg_event</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Event lifecycle flow" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{4b1afac9-fe91-4de2-b948-30c183ed97d1}">
+      <label languagecode="1033" description="Planning" />
+    </steplabels>
+    <steplabels id="{3e612dba-8b35-442a-8c20-0d410c06551f}">
+      <label languagecode="1033" description="Name" />
+    </steplabels>
+    <steplabels id="{291e9330-2c4f-40b5-a53f-408d8d422aac}">
+      <label languagecode="1033" description="Registration Opened" />
+    </steplabels>
+    <steplabels id="{6de56507-b5c0-48d2-bf98-d62dd6ea8dd7}">
+      <label languagecode="1033" description="Allowed participants" />
+    </steplabels>
+    <steplabels id="{7c00d07e-b4ef-4939-91c3-28a543e3aa13}">
+      <label languagecode="1033" description="Registration Closed" />
+    </steplabels>
+    <steplabels id="{92dca2cf-2f2c-410f-96c6-a404ce357d46}">
+      <label languagecode="1033" description="Date" />
+    </steplabels>
+    <steplabels id="{84d0c905-96ce-4eed-8356-2beeefabb676}">
+      <label languagecode="1033" description="Closed" />
+    </steplabels>
+    <steplabels id="{d9f607b0-7d35-4bd6-8c12-0194fbcc66fc}">
+      <label languagecode="1033" description="Actual Start Date" />
+    </steplabels>
+    <steplabels id="{b970aa93-3c6e-4926-b08c-b2b78fac47e3}">
+      <label languagecode="1033" description="Actual End Date" />
+    </steplabels>
+  </labels>
+</Workflow>

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.PowerPlatform.Dataverse.Client" Version="1.0.26" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Dataverse\Pg.LetsMeet.Dataverse.Context\Pg.LetsMeet.Dataverse.Context.csproj" />
+    <ProjectReference Include="..\..\Pg.LetsMeet.Api.Common\Pg.LetsMeet.Api.Common.csproj" />
+  </ItemGroup>
+
+</Project>

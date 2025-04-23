@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="bpf_pg_event_pg_eventlifecycleflow" />
+  <EntityRelationship Name="business_unit_pg_event" />
+  <EntityRelationship Name="lk_pg_address_createdby" />
+  <EntityRelationship Name="lk_pg_address_modifiedby" />
+  <EntityRelationship Name="lk_pg_event_createdby" />
+  <EntityRelationship Name="lk_pg_event_modifiedby" />
+  <EntityRelationship Name="lk_pg_eventlifecycleflow_activestageid" />
+  <EntityRelationship Name="lk_pg_eventlifecycleflow_createdby" />
+  <EntityRelationship Name="lk_pg_eventlifecycleflow_modifiedby" />
+  <EntityRelationship Name="lk_pg_eventlifecycleflow_processid" />
+  <EntityRelationship Name="lk_pg_eventparticipation_createdby" />
+  <EntityRelationship Name="lk_pg_eventparticipation_modifiedby" />
+  <EntityRelationship Name="organization_pg_address" />
+  <EntityRelationship Name="organization_pg_eventlifecycleflow" />
+  <EntityRelationship Name="organization_pg_eventparticipation" />
+  <EntityRelationship Name="owner_pg_event" />
+  <EntityRelationship Name="pg_event_partnerId_Account" />
+  <EntityRelationship Name="pg_event_pg_addressId_pg_address" />
+  <EntityRelationship Name="pg_eventparticipation_contactId_Contact" />
+  <EntityRelationship Name="pg_eventparticipation_pg_eventId_pg_event" />
+  <EntityRelationship Name="team_pg_event" />
+  <EntityRelationship Name="user_pg_event" />
+</EntityRelationships>

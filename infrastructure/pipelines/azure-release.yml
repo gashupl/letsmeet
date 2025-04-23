@@ -1,0 +1,30 @@
+parameters:
+  - name: 'environment'
+    type: 'string'
+    default: ''
+
+steps:  
+
+  - task: DownloadBuildArtifacts@1
+    inputs:
+      buildType: 'current'
+      downloadType: 'single'
+      artifactName: 'LetsMeet'
+      downloadPath: '$(System.ArtifactsDirectory)'
+      cleanDestinationFolder: true
+
+  - task: AzureFunctionApp@2
+    displayName: 'Azure Events Function App Deploy'
+    inputs:
+      connectedServiceNameARM: 'My Subscription (Pay-As-You-Go) (78621ba0-b066-42cc-b7a6-584cadd66e34)'
+      appType: functionApp
+      appName: 'func-events-api-${{parameters.environment}}'
+      package: '$(System.ArtifactsDirectory)/LetsMeet/functions/Pg.LetsMeet.Events.Api.zip'
+
+  - task: AzureFunctionApp@2
+    displayName: 'Azure Identity Function App Deploy'
+    inputs:
+      connectedServiceNameARM: 'My Subscription (Pay-As-You-Go) (78621ba0-b066-42cc-b7a6-584cadd66e34)'
+      appType: functionApp
+      appName: 'func-identity-api-${{parameters.environment}}'
+      package: '$(System.ArtifactsDirectory)/LetsMeet/functions/Pg.LetsMeet.Identity.Api.zip'

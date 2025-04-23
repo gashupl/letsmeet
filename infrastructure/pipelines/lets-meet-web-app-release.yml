@@ -1,0 +1,106 @@
+#Pipeline for exporting solution from DEV environment 
+
+trigger: none
+
+parameters:
+  - name: azureDev
+    displayName: Release Azure DEV
+    type: boolean
+    default: false
+  - name: azureTest
+    displayName: Release Azure TEST
+    type: boolean
+    default: false
+
+pool: 
+  vmImage: 'ubuntu-latest'
+
+variables:
+  - group: LETS_MEET_SETTINGS
+  - name: devSpaDeploymentToken
+    value: $(dev-events-spa-deployment-token)
+  - name: testSpaDeploymentToken
+    value: $(test-events-spa-deployment-token)
+
+
+stages:
+  - stage: DevRelease
+    condition: and(succeeded(), eq( ${{ parameters.azureDev}}, true))
+    displayName: "Deploy to Dev"
+    jobs:
+      - job: DevRelease
+        displayName: Deploy to Dev
+        steps:
+          - task: DownloadSecureFile@1
+            displayName: 'Download secure file'
+            name: 'config'  
+            inputs:
+              secureFile: 'config.dev.json'
+
+          - task: PowerShell@2
+            displayName: "Copy secure file"
+            inputs:
+              targetType: inline
+              script: |
+                New-Item -ItemType File -Path "$(System.DefaultWorkingDirectory)/src/client/Pg.LetsMeet.EventsRegistry/src/config.json" -Force 
+                Copy-Item "$(config.secureFilePath)" -Destination "$(System.DefaultWorkingDirectory)/src/client/Pg.LetsMeet.EventsRegistry/src/config.json" -Force
+
+
+          - task: Npm@1
+            displayName: Install NPM dependencies for Event Registry Portal
+            inputs:
+              command: "install"
+              workingDir: "$(System.DefaultWorkingDirectory)/src/client/Pg.LetsMeet.EventsRegistry/"
+
+          - task: AzureStaticWebApp@0
+            inputs:
+              workingDirectory: '$(System.DefaultWorkingDirectory)'
+              app_location: '/src/client/Pg.LetsMeet.EventsRegistry'
+              app_build_command: 'npm run build'
+              output_location: 'build'
+              skip_app_build: false
+              skip_api_build: true
+              verbose: false
+              azure_static_web_apps_api_token: '$(devSpaDeploymentToken)'
+
+
+
+  - stage: TestRelease
+    condition: and(succeeded(), eq( ${{ parameters.azureTest}}, true))
+    displayName: "Deploy to Test"
+    jobs:
+      - job: TestRelease
+        displayName: Deploy to Test
+        steps:
+
+          - task: DownloadSecureFile@1
+            displayName: 'Download secure file'
+            name: 'config'  
+            inputs:
+              secureFile: 'config.test.json'
+
+          - task: PowerShell@2
+            displayName: "Copy secure file"
+            inputs:
+              targetType: inline
+              script: |
+                New-Item -ItemType File -Path "$(System.DefaultWorkingDirectory)/src/client/Pg.LetsMeet.EventsRegistry/src/config.json" -Force 
+                Copy-Item "$(config.secureFilePath)" -Destination "$(System.DefaultWorkingDirectory)/src/client/Pg.LetsMeet.EventsRegistry/src/config.json" -Force
+
+
+          - task: Npm@1
+            displayName: Install NPM dependencies for Event Registry Portal
+            inputs:
+              command: "install"
+              workingDir: "$(System.DefaultWorkingDirectory)/src/client/Pg.LetsMeet.EventsRegistry/"
+              
+          - task: AzureStaticWebApp@0
+            inputs:
+              workingDirectory: '$(System.DefaultWorkingDirectory)'
+              app_location: '/src/client/Pg.LetsMeet.EventsRegistry'
+              app_build_command: 'npm run build'
+              output_location: 'build'
+              skip_app_build: false
+              skip_api_build: true
+              verbose: false
+              azure_static_web_apps_api_token: '$(testSpaDeploymentToken)'

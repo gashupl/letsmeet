@@ -1,0 +1,52 @@
+parameters:
+  - name: 'environment'
+    type: 'string'
+    default: ''
+  - name: 'eventsApiClientId'
+    type: 'string'
+    default: ''
+  - name: 'identityApiClientId'
+    type: 'string'
+    default: ''
+  - name: 'functionDefaultKey'
+    type: 'string'
+    default: ''
+
+steps:  
+
+  - task: DownloadBuildArtifacts@1
+    inputs:
+      buildType: 'current'
+      downloadType: 'single'
+      artifactName: 'LetsMeet'
+      downloadPath: '$(System.ArtifactsDirectory)'
+      cleanDestinationFolder: true
+
+  - task: AzureCLI@2
+    displayName: 'Bicep Template deployment'  
+    inputs:
+      azureSubscription: 'My Subscription (Pay-As-You-Go) (78621ba0-b066-42cc-b7a6-584cadd66e34)'
+      scriptType: 'ps'
+      workingDirectory: '$(System.ArtifactsDirectory)/LetsMeet/LetsMeetBicepTemplates/'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az deployment group create `
+          --resource-group rg-letsmeet-${{parameters.environment}} `
+          --template-file events-api.deploy.bicep `
+          --parameters '@events-api.deploy.parameters.${{parameters.environment}}.json' `
+          --parameters eventsApiManagedIdentityId=${{parameters.eventsApiClientId}} `
+          --parameters identityApiManagedIdentityId=${{parameters.identityApiClientId}}
+
+  # - task: AzureCLI@2
+  #   displayName: 'Update default function key'
+  #   inputs:
+  #     azureSubscription: 'My Subscription (Pay-As-You-Go) (78621ba0-b066-42cc-b7a6-584cadd66e34)'
+  #     scriptType: 'ps'
+  #     scriptLocation: 'inlineScript'
+  #     addSpnToEnvironment: true
+  #     inlineScript: |
+  #       # Get the function app's master key
+  #       $masterKey = az rest --method post --uri https://func-events-api-${{parameters.environment}}.azurewebsites.net/admin/host/systemkeys/_master --query functionKeys.default --output tsv --resource https://management.azure.com/
+
+  #       # Set the default API key
+  #       az rest --method post --uri https://func-events-api-${{parameters.environment}}.azurewebsites.net/admin/host/keys --body "{ `"name`": `"default`", `"value`": `"${{parameters.functionDefaultKey}}`" }" --headers "x-functions-key=$masterKey" --resource https://management.azure.com/

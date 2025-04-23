@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{74bf3ed5-c4b9-411f-8918-d95e5158b562}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{2d54b433-81ec-43be-800d-7b593edd179e}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{9f6de51a-0c3c-405f-b866-fcc3d94d1880}" columns="111">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ed80501d-13c5-44c1-b3fc-a37443a216a3}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="pg_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pg_name" />
+                      </cell>
+                      <cell id="{b865622b-13cf-47f6-bd5b-897c048b2a62}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Address" languagecode="1033" />
+                        </labels>
+                        <control id="pg_addressid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pg_addressid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{018f6a2a-86ad-4e69-8659-fd74053666e9}" locklevel="0" colspan="1" rowspan="4">
+                        <labels>
+                          <label description="Details" languagecode="1033" />
+                        </labels>
+                        <control id="pg_details" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="pg_details" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{2c077727-739d-41c0-8ae9-dd69fe6ce41d}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="New QV control 1660304882410" languagecode="1033" />
+                        </labels>
+                        <control id="QuickviewControl1660304882410" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="pg_addressid">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="pg_address"&gt;3f5026a2-5a42-418b-bf6c-a035431f9825&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell locklevel="0" id="{735e3843-0545-47f9-af79-9d2a777f2232}" rowspan="1" colspan="1" showlabel="true">
+                        <labels>
+                          <label description="Participants" languagecode="1033" />
+                        </labels>
+                        <control id="Subgrid_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                          <parameters>
+                            <TargetEntityType>pg_eventparticipation</TargetEntityType>
+                            <ViewId>{1017E053-3C8F-EC11-B400-6045BD93D2EF}</ViewId>
+                            <ViewIds>{E6142CAF-7790-4740-BCE5-4063178BE72B},{1017E053-3C8F-EC11-B400-6045BD93D2EF}</ViewIds>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <RelationshipName>pg_eventparticipation_pg_eventId_pg_event</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell showlabel="false" locklevel="0" id="{e9d2d617-4f4b-4469-bc2b-d79cb2eacc6f}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{544e9ff8-cc88-4a42-86a7-0738ecab1362}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell showlabel="false" locklevel="0" id="{cf44cdc5-a3b7-44e6-864d-b30da290c52b}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{5cc940eb-4617-47b6-8a26-c18e6d64a5fa}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell showlabel="false" locklevel="0" id="{c458962a-0eec-45c9-b09b-fd2bfb25d7ba}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{aba5d462-6184-4b98-a11e-1c41fe314b36}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cd416a25-363f-410d-8bc8-14c029d4d1a6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+                      </cell>
+                      <cell showlabel="false" locklevel="0" id="{bcaeeee1-8de3-4e59-9544-82de667d568b}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{9c35cbff-18c5-4861-8477-dd3238c48435}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5e5a786d-5b71-41c1-9097-2fe4f157abca}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Partner" languagecode="1033" />
+                        </labels>
+                        <control id="pg_partnerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pg_partnerid" disabled="false" />
+                      </cell>
+                      <cell showlabel="false" locklevel="0" id="{3470adce-b11e-4e22-acb6-bd4d60def26b}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{07c34d1b-5c45-4aa9-a867-823d823a9b2d}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c98eaac3-7103-4dd7-864d-30cb56ff75d2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Planned Date" languagecode="1033" />
+                        </labels>
+                        <control id="pg_date" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pg_date" disabled="false" />
+                      </cell>
+                      <cell showlabel="false" locklevel="0" id="{64e2ae63-2e26-41e6-b478-b0fc4df6e7c9}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{2a3d16dc-2dbf-4890-8b60-7bcf248af08f}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{775b0ca2-92e4-44e7-8ac0-59c7509499d0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Actual Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="pg_startdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pg_startdate" disabled="false" />
+                      </cell>
+                      <cell showlabel="false" locklevel="0" id="{05c2a2ef-05ac-4c0c-bc2b-47f9d21c6be7}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{a9432240-ab8e-4373-acf6-d20c8e26ba0f}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{28197cbe-76e5-42bd-81f3-26bd8c294578}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Actual End Date" languagecode="1033" />
+                        </labels>
+                        <control id="pg_enddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pg_enddate" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{2b7d1c7c-6baa-4088-801e-fbcf37bbbeac}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{3aea56bb-2c1f-499d-8e26-a909e4b4b270}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8d0e038f-12d3-4c50-9c41-93476acc9bee}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Allowed participants quantity" languagecode="1033" />
+                        </labels>
+                        <control id="pg_allowedparticipantsquantity" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="pg_allowedparticipantsquantity" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{db8d6873-9777-4ba9-85d7-96c1859c1df7}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{7e03d0cd-938d-4e34-ac05-b19647704356}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e5cc1e42-1b62-40b5-aa56-4ec0de1f2ee8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Registered participants quantity" languagecode="1033" />
+                        </labels>
+                        <control id="pg_registeredparticipantsquantity" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="pg_registeredparticipantsquantity" disabled="true" />
+                      </cell>
+                      <cell locklevel="0" id="{a189e8a8-86b5-4949-a662-286dfbfa45af}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{0fdb18e8-644d-42a1-9f68-d12df89edb4c}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5784b9b9-b107-41af-af4c-5db7c1b273e5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Logo" languagecode="1033" />
+                        </labels>
+                        <control id="pg_logo" classid="{7E548B0D-209C-477B-9DCD-F0F44472381D}" datafieldname="pg_logo" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{dc534547-ca2e-4571-9333-9c58e36cc1b1}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{83f20ac9-8c4f-4c44-9a60-165bae7675ec}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f46b945f-a997-4cb4-aaef-c19c7321ef01}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell locklevel="0" id="{088b0f49-76bf-4dee-b67d-e2fdd8941a15}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{b129900b-2551-426c-853c-3dfd6894edeb}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{66d64d43-ffe4-498c-9fa3-e934754192ec}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{b6a2f7e1-aeb7-4f45-9b07-786b6102c6c9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{19d45719-21c6-488b-a6e4-533266f5e3b1}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9a8d5dba-01c6-4e7b-935e-caa3b4142a26}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{65b35228-4742-44b9-9d06-31019c47bf9c}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{6196a062-497d-485e-8516-14c965156452}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b9cd1006-2dd0-4507-8aa4-ea6b2be6bc53}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{3ca71331-eaf7-4f52-8ca5-941e6690e25d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

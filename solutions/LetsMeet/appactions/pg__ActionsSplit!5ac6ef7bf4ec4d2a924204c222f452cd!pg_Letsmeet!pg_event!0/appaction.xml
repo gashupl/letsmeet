@@ -1,0 +1,32 @@
+<appaction uniquename="pg__ActionsSplit!5ac6ef7bf4ec4d2a924204c222f452cd!pg_Letsmeet!pg_event!0">
+  <appmoduleid>
+    <uniquename>pg_Letsmeet</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Actions (Split)">
+    <label description="Actions (Split)" languagecode="1033" />
+  </buttonlabeltext>
+  <buttonsequencepriority>15.0000000000</buttonsequencepriority>
+  <context>1</context>
+  <contextentity>
+    <logicalname>pg_event</logicalname>
+  </contextentity>
+  <contextvalue>pg_event</contextvalue>
+  <fonticon>$clientsvg:Flow</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>ActionsSplit!5ac6ef7bf4ec4d2a924204c222f452cd</name>
+  <onclickeventjavascriptfunctionname>function</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>63bfbf17-aab8-e911-a98a-000d3af475aa</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>2</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

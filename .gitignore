@@ -1,0 +1,22 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+**/.vs/**
+**/obj/**
+**/bin/**
+**/bin/Debug/**
+**/bin/Release/**
+**/obj/Debug/**
+**/obj/Release/**
+**/node_modules/**
+/src/Pg.LetsMeet/packages
+**/.vscode/**
+/src/Pg.LetsMeet/Azure/Pg.LetsMeet.EventsRegistry/Pg.LetsMeet.EventsRegistry.njsproj.user
+/src/Server/Pg.LetsMeet/packages
+/src/Client/Pg.LetsMeet.EventsRegistry/node_modules
+/src/Client/Pg.LetsMeet.EventsRegistry/build
+/src/Client/Pg.LetsMeet.EventsRegistry/Odx.Customer.Project.WebResources/WebResources/scripts
+/src/Client/Pg.LetsMeet.WebResources/WebResources/scripts
+/src/client/Pg.LetsMeet.EventsRegistry/build
+src/client/Pg.LetsMeet.EventsRegistry/src/config.json

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<Mapping>
+  <FileToFile map="pluginpackages\pg_Pg.LetsMeet.Dataverse.Plugins\package\pg_Pg.LetsMeet.Dataverse.Plugins.nupkg" to="..\..\src\Server\Pg.LetsMeet\Dataverse\Pg.LetsMeet.Dataverse.Plugins\bin\Release\Pg.LetsMeet.Dataverse.Plugins.1.0.0.nupkg" />
+  <FileToFile map="PluginAssemblies\PgLetsMeetDataversePlugins-4ACE8D14-E337-ED11-9DB1-000D3AABDFEE\PgLetsMeetDataversePlugins.dll" to="..\..\src\Server\Pg.LetsMeet\Dataverse\Pg.LetsMeet.Dataverse.Plugins\bin\Release\net462\Pg.LetsMeet.Dataverse.Plugins.dll" />
+  <FileToFile map="WebResources\pg_\script\main.js" to="..\..\src\Client\Pg.LetsMeet.WebResources\WebResources\scripts\Main.js" />
+</Mapping>

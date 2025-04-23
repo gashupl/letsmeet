@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{b71aed6d-605d-4537-9361-103e785a6005}</savedqueryid>
+    <layoutxml>
+      <grid name="pg_addresses" jump="pg_name" select="1" icon="1" preview="0">
+        <row name="pg_address" id="pg_addressid">
+          <cell name="pg_name" width="300" />
+          <cell name="pg_addressline1" width="300" />
+          <cell name="pg_postalcode" width="100" />
+          <cell name="pg_city" width="250" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pg_address">
+          <attribute name="pg_addressid" />
+          <attribute name="pg_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pg_addressline1" />
+          <attribute name="pg_postalcode" />
+          <attribute name="pg_city" />
+          <order attribute="pg_name" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Address Lookup View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

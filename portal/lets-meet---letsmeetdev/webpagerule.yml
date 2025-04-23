@@ -1,0 +1,22 @@
+- adx_name: Grant Change to Content
+  adx_right: 1
+  adx_scope: 1
+  adx_webpageaccesscontrolruleid: 0af7c8dd-2506-4014-93e8-1a57ff6daa51
+- adx_copy: undefined
+  adx_filecontent: 
+  adx_name: Restrict Read on User Panel
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 2028d3ef-39a7-ef11-b8e8-6045bd9f9c28
+  - 233101e7-39a7-ef11-b8e8-6045bd9f9c28
+  - b28b7525-5291-4e79-8730-bc04947ccfb4
+  adx_webpageaccesscontrolruleid: 8d1e3b30-3b9c-fde8-7a85-cfd597eb41ac
+  adx_webpageid: e4c28e30-0f49-4fd0-918c-6f0dde906496
+- adx_name: Grant Change to Administrators
+  adx_right: 1
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - b28b7525-5291-4e79-8730-bc04947ccfb4
+  adx_webpageaccesscontrolruleid: ad103822-8ad8-424a-80b1-6fc44d77bc6e
+  adx_webpageid: ed08e01a-218b-449e-9132-56e4ab2e56c7

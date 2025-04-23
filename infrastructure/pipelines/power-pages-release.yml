@@ -1,0 +1,20 @@
+#Deployment definition file for single power-pages portal enviorment
+
+trigger: none
+
+pool: 
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- task: PowerPlatformToolInstaller@2
+  displayName: 'Power Platform Tool Installer'
+
+- task: PowerPlatformUploadPaportal@2
+  displayName: 'Power Platform Upload PAPortal '
+  inputs:
+    authenticationType: PowerPlatformSPN
+    PowerPlatformSPN: 'Dataverse TEST'
+    UploadPath: 'portal/lets-meet---letsmeetdev'
+    Environment: 'https://pg-dataverse-test.crm4.dynamics.com'
+    ModelVersion: '2'
