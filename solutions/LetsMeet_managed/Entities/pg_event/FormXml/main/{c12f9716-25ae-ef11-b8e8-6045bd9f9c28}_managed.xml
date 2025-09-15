@@ -14,7 +14,7 @@
           <columns>
             <column width="100%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{9f6de51a-0c3c-405f-b866-fcc3d94d1880}" columns="1" labelid="{6d3f80d5-a1ed-4541-aa3b-6f0c25950ab2}">
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{9f6de51a-0c3c-405f-b866-fcc3d94d1880}" columns="1" labelid="{6d3f80d5-a1ed-4541-aa3b-6f0c25950ab2}" name="General">
                   <labels>
                     <label description="General" languagecode="1033" />
                   </labels>
@@ -100,6 +100,14 @@
                           <label description="Logo" languagecode="1033" />
                         </labels>
                         <control id="pg_logo" classid="{7E548B0D-209C-477B-9DCD-F0F44472381D}" datafieldname="pg_logo" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6658623e-2211-4975-85f6-cd89ff508426}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Created By (Portal User)" languagecode="1033" />
+                        </labels>
+                        <control id="pg_createdbyportaluserid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pg_createdbyportaluserid" disabled="false" />
                       </cell>
                     </row>
                     <row>
