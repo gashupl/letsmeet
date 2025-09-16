@@ -3,7 +3,7 @@ adx_defaultlanguage: 0a267cca-8bc6-43e0-a670-6afa645bba27
 adx_footerwebtemplateid: 26c8852b-d3aa-424e-9a08-591e65ccf9d4
 adx_headerwebtemplateid: 1ea54b1d-375d-4e7d-8d54-f6952d310f15
 adx_name: Lets meet - letsmeetdev
-adx_statecode: 0
-adx_statuscode: 1
 adx_website_language: 1033
 adx_websiteid: ebe68541-b84b-41ad-9776-a8a9a559a636
+statecode: 0
+statuscode: 1

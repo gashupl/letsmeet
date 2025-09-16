@@ -1,9 +1,7 @@
-- adx_copy: undefined
-  adx_disablepagevalidation: false
+- adx_disablepagevalidation: false
   adx_displayimageonly: false
   adx_displayorder: 3
   adx_displaypagechildlinks: false
-  adx_filecontent: 
   adx_name: User Panel
   adx_openinnewwindow: false
   adx_pageid: e4c28e30-0f49-4fd0-918c-6f0dde906496
@@ -12,12 +10,9 @@
   adx_robotsfollowlink: true
   adx_weblinkid: 005a1faa-53c9-4699-9925-c7068677868e
   adx_weblinksetid: defb802d-ac34-4802-b682-a32ad9f341ae
-- adx_copy: undefined
-  adx_displayimageonly: false
+- adx_displayimageonly: false
   adx_displayorder: 2
   adx_displaypagechildlinks: false
-  adx_displaypagevalidation: false
-  adx_filecontent: 
   adx_name: My Events
   adx_openinnewwindow: false
   adx_pageid: c7b01045-e16b-ea3b-f1a3-3bf0c39068e8
@@ -29,7 +24,6 @@
 - adx_displayimageonly: false
   adx_displayorder: 9
   adx_displaypagechildlinks: false
-  adx_displaypagevalidation: false
   adx_name: Event Details
   adx_openinnewwindow: false
   adx_pageid: 54723412-cc5b-75c3-e9e6-4eb1f7e3d498
@@ -39,12 +33,10 @@
   adx_weblinksetid: defb802d-ac34-4802-b682-a32ad9f341ae
   statecode: 1
   statuscode: 2
-- adx_copy: undefined
-  adx_disablepagevalidation: false
+- adx_disablepagevalidation: false
   adx_displayimageonly: false
   adx_displayorder: 8
   adx_displaypagechildlinks: false
-  adx_filecontent: 
   adx_name: Subpage 2-deleted
   adx_openinnewwindow: false
   adx_pageid: c5db0ca1-7e39-4065-b730-eb5068c27296
@@ -55,12 +47,10 @@
   adx_weblinksetid: defb802d-ac34-4802-b682-a32ad9f341ae
   statecode: 1
   statuscode: 2
-- adx_copy: undefined
-  adx_disablepagevalidation: false
+- adx_disablepagevalidation: false
   adx_displayimageonly: false
   adx_displayorder: 6
   adx_displaypagechildlinks: false
-  adx_filecontent: 
   adx_name: Pages-deleted
   adx_openinnewwindow: false
   adx_pageid: a61b51c8-57c5-4442-bbe2-2512c815ba09
@@ -82,12 +72,10 @@
   adx_robotsfollowlink: true
   adx_weblinkid: b85f1bae-fb11-48c6-8848-c4463470b92c
   adx_weblinksetid: defb802d-ac34-4802-b682-a32ad9f341ae
-- adx_copy: undefined
-  adx_disablepagevalidation: false
+- adx_disablepagevalidation: false
   adx_displayimageonly: false
   adx_displayorder: 7
   adx_displaypagechildlinks: false
-  adx_filecontent: 
   adx_name: Contact us
   adx_openinnewwindow: false
   adx_pageid: ab9d1609-8775-4f0f-8647-39c30094cf3b

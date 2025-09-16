@@ -2,9 +2,7 @@
   adx_right: 1
   adx_scope: 1
   adx_webpageaccesscontrolruleid: 0af7c8dd-2506-4014-93e8-1a57ff6daa51
-- adx_copy: undefined
-  adx_filecontent: 
-  adx_name: Restrict Read on User Panel
+- adx_name: Restrict Read on User Panel
   adx_right: 2
   adx_scope: 1
   adx_webpageaccesscontrolrule_webrole:

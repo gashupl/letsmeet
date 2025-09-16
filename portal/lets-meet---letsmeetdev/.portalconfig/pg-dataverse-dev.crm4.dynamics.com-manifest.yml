@@ -135,7 +135,7 @@ adx_contentsnippet:
 adx_entityform:
 - RecordId: 31d50ce0-59d3-ef11-8ee9-7c1e52267093
   DisplayName: Event - Information Form (Insert)
-  CheckSum: e8879c6e260bc583b550c7acbc39c3a79283310b1fdcf34a2ad631f61183d9c6
+  CheckSum: f0d987affe9f51facef248d320ed5f8ec95aa47a28b1e46410d4a46e200ba7d4
   IsDeleted: false
 - RecordId: 8c9f1cab-fb53-4e54-b75c-124b66224d3d
   DisplayName: simple contact us form
@@ -176,6 +176,10 @@ adx_entitypermission:
   DisplayName: Active Events
   CheckSum: 97bc717aefae598ceb6441cc1f743a6050d5356ca4029078905555e747061376
   IsDeleted: false
+- RecordId: 7a54fea5-dc92-f011-b4cc-000d3abfa45a
+  DisplayName: Employee Contact Access
+  CheckSum: 876e5118c2b6d9d5506786f50c1a35f31b14dce6a070bb84e043898a45142a10
+  IsDeleted: false
 - RecordId: b06b474b-3648-4156-928e-84fddca8feb5
   DisplayName: Events full access for account's employees
   CheckSum: 3429d6b5eb395f45c63466decaf64b991bcb60462f69dd620c524b062b5174a9
@@ -184,13 +188,17 @@ adx_entitypermission:
   DisplayName: Events read access for anonymous
   CheckSum: bd6af088c61a6488b95b9655ccc3dead4ce95d77c03597a2a847222cc663825f
   IsDeleted: false
+- RecordId: bddff057-335b-f011-bec1-0022488b25cc
+  DisplayName: Employee Self Contact Access
+  CheckSum: 9c7940ba1207eff0cf611e56cbae6e506cee8f5be818bc0b9b9a0f7acc15621b
+  IsDeleted: false
 - RecordId: ef4ed576-cd23-4c9e-bda3-66b617709c23
   DisplayName: Feedback
   CheckSum: 143adf1480556020ad52dd5758a78c9ec97c81c4998a5d9c3f5cf0cd1d48513c
   IsDeleted: false
 - RecordId: f3e4b2d5-bc14-40ed-b14a-80c29d560528
   DisplayName: Employee Account Access
-  CheckSum: c8826c86e92f232237b7dd6f430b4768ef2a99fafe4e2f948d157cd1fcef65d0
+  CheckSum: 3659da609926b415016152a0d67e4a59db004332451b7c756448aa28c2c396d3
   IsDeleted: false
 adx_entitypermission_webrole:
 - RecordId: 0f461b15-3d92-4e58-958b-f87b7895508c
@@ -204,6 +212,14 @@ adx_entitypermission_webrole:
 - RecordId: 0f461b15-3d92-4e58-958b-f87b7895508c
   DisplayName: $RELATIONSHIP$adx_entitypermission:ef4ed576-cd23-4c9e-bda3-66b617709c23:adx_webrole
   CheckSum: e52bf9c63bd7311ecf8b2cbfe841cead47d310ac4fa0eaaffe113db16c667bd1
+  IsDeleted: false
+- RecordId: 2028d3ef-39a7-ef11-b8e8-6045bd9f9c28
+  DisplayName: $RELATIONSHIP$adx_entitypermission:7a54fea5-dc92-f011-b4cc-000d3abfa45a:adx_webrole
+  CheckSum: 9e790d27491d521fb4fd0c03e66a61abc2a4c78dd881aeb70d2556d3dda64ea4
+  IsDeleted: false
+- RecordId: 2028d3ef-39a7-ef11-b8e8-6045bd9f9c28
+  DisplayName: $RELATIONSHIP$adx_entitypermission:bddff057-335b-f011-bec1-0022488b25cc:adx_webrole
+  CheckSum: f122217bfcbadd1460dd19f858f81c3e428938cff9e5f15e7723bdca9f11563f
   IsDeleted: false
 - RecordId: 2028d3ef-39a7-ef11-b8e8-6045bd9f9c28
   DisplayName: $RELATIONSHIP$adx_entitypermission:f3e4b2d5-bc14-40ed-b14a-80c29d560528:adx_webrole
@@ -229,6 +245,10 @@ adx_pagetemplate:
 - RecordId: 9c467746-ede3-47dc-a01f-0a31c7987514
   DisplayName: Full Page
   CheckSum: a88a8e282bd73b08f11b324631211753533b4a6a49bf1df02f4235d0630f4fc5
+  IsDeleted: false
+- RecordId: b21617cf-589c-4a95-a06a-e0732b17f37c
+  DisplayName: AI Search PageTemplate
+  CheckSum: d7d4fb4c971b8705aa1c78e566463515a6c37491837b3ac3b2844058df6700af
   IsDeleted: false
 - RecordId: e568f8a1-3b99-48ac-b64a-21520af9cb56
   DisplayName: Profile
@@ -700,7 +720,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: c7b01045-e16b-ea3b-f1a3-3bf0c39068e8
   DisplayName: My Events
-  CheckSum: bbfe1359c377a288df52b3fc297971584000e7040abaad7c717a2b6b869ea323
+  CheckSum: f57a79d5bb6e79f17585f6d98518ab7bb902da7d1f7cdbe2cf17498d25162b88
   IsDeleted: false
 - RecordId: dab496ea-05a1-4192-86ab-bb9c96a8e27e
   DisplayName: Page Not Found
@@ -720,7 +740,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: eebd0b0c-0961-dd7e-e602-b246d2a28836
   DisplayName: My Events
-  CheckSum: 14b16e3de5229046b7e9ecafa90b92212c3ee697c69befd487e2f38ddf7fee30
+  CheckSum: 3cb167ed0d4f5394824b11f8a498abd065d78494aa831bf181e31345ade480df
   IsDeleted: false
 - RecordId: f4eeb201-2d58-4f1c-9afb-5664fa0d8181
   DisplayName: Contact us
@@ -772,7 +792,7 @@ adx_webrole:
 adx_website:
 - RecordId: ebe68541-b84b-41ad-9776-a8a9a559a636
   DisplayName: Lets meet - letsmeetdev
-  CheckSum: 7855809f29a1b239a8aa5c8998724407c1f0f31d142f78d3d1ab4e59af598f03
+  CheckSum: c6f9f5798529f4a087762bf1e3ef5df1656d9024896255e1ace3568a20033baa
   IsDeleted: false
 adx_websiteaccess:
 - RecordId: 5c77cec3-4bce-4a77-bb3d-7067778f9488
