@@ -47,14 +47,6 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{5e5a786d-5b71-41c1-9097-2fe4f157abca}" locklevel="0" colspan="1" rowspan="1" labelid="{8c67a47b-c3de-4d03-8ef1-664739f6963e}">
-                        <labels>
-                          <label description="Partner" languagecode="1033" />
-                        </labels>
-                        <control id="pg_partnerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pg_partnerid" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
                       <cell id="{c98eaac3-7103-4dd7-864d-30cb56ff75d2}" locklevel="0" colspan="1" rowspan="1" labelid="{1ef04f6b-8d99-4388-996a-3c4c335d55c2}">
                         <labels>
                           <label description="Planned Date" languagecode="1033" />
@@ -107,7 +99,15 @@
                         <labels>
                           <label description="Created By (Portal User)" languagecode="1033" />
                         </labels>
-                        <control id="pg_createdbyportaluserid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pg_createdbyportaluserid" disabled="false" />
+                        <control id="pg_createdbyportaluserid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pg_createdbyportaluserid" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5e5a786d-5b71-41c1-9097-2fe4f157abca}" locklevel="0" colspan="1" rowspan="1" labelid="{8c67a47b-c3de-4d03-8ef1-664739f6963e}">
+                        <labels>
+                          <label description="Partner" languagecode="1033" />
+                        </labels>
+                        <control id="pg_partnerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pg_partnerid" disabled="true" />
                       </cell>
                     </row>
                     <row>

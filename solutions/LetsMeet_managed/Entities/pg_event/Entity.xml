@@ -571,7 +571,7 @@
           <Type>lookup</Type>
           <Name>pg_createdbyportaluserid</Name>
           <LogicalName>pg_createdbyportaluserid</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
+          <RequiredLevel>required</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ValidForUpdateApi>1</ValidForUpdateApi>
           <ValidForReadApi>1</ValidForReadApi>
