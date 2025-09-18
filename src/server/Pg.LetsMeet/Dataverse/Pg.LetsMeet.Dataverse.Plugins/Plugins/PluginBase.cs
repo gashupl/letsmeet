@@ -97,8 +97,6 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Plugins
             }
         }
 
-
-
         protected static EntityReference GetTargetEntityReference(IPluginExecutionContext context)
         {
             return context != null && context.InputParameters != null &&
