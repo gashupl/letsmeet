@@ -116,6 +116,7 @@
     <Compile Include="BusinessLogic\EventParticipationServiceTests.cs" />
     <Compile Include="DataAccess\EventParticipations\EventParticipationRepositoryTests.cs" />
     <Compile Include="Plugins\CalculateEventParticipantsPluginTests.cs" />
+    <Compile Include="Plugins\SetPartnerOnNewEventPluginTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataverseTestBase.cs" />
   </ItemGroup>
