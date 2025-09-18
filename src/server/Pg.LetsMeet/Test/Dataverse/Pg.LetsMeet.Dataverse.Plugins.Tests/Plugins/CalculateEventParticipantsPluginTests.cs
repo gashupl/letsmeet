@@ -54,11 +54,13 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
             {
                 PrimaryEntityName = pg_eventparticipation.EntityLogicalName,
                 MessageName = MessageName.Create,
-                Mode = (int)ProcessingMode.Asynchronous
+                Mode = (int)ProcessingMode.Synchronous
             };
 
             var plugin = new CalculateEventParticipantsPlugin();
-            plugin.IsContextValid(pluginContext); 
+            var isValid = plugin.IsContextValid(pluginContext); 
+
+            Assert.True(isValid);
         }
 
         [Fact]
@@ -68,11 +70,13 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
             {
                 PrimaryEntityName = pg_eventparticipation.EntityLogicalName,
                 MessageName = MessageName.Create,
-                Mode = (int)ProcessingMode.Synchronous
+                Mode = (int)ProcessingMode.Asynchronous
             };
 
             var plugin = new CalculateEventParticipantsPlugin();
-            plugin.IsContextValid(pluginContext);
+            var isValid = plugin.IsContextValid(pluginContext);
+
+            Assert.False(isValid);
         }
 
         [Fact]
