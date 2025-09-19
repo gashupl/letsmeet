@@ -25,13 +25,13 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Tests.DataAccess.EventParticipations
             context.Initialize(new List<Entity>() {
                 new pg_eventparticipation(){ Id = Guid.NewGuid(),
                     pg_eventId = eventRef,
-                    StateCode = pg_eventparticipationState.Active},
+                    StateCode = pg_eventparticipation_statecode.Active},
                 new pg_eventparticipation(){ Id = Guid.NewGuid(),
                     pg_eventId = eventRef,
-                    StateCode = pg_eventparticipationState.Inactive},
+                    StateCode = pg_eventparticipation_statecode.Inactive},
                 new pg_eventparticipation(){ Id = Guid.NewGuid(),
                     pg_eventId = new EntityReference(pg_event.EntityLogicalName, Guid.NewGuid()),
-                    StateCode = pg_eventparticipationState.Active},
+                    StateCode = pg_eventparticipation_statecode.Active},
             });
 
             var service = context.GetOrganizationService();

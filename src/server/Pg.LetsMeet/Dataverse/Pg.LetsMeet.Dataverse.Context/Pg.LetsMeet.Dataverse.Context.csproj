@@ -39,14 +39,14 @@
     <AssemblyOriginatorKeyFile>LetsMeet.key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.45\lib\net462\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.59\lib\net462\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.45\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.59\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -56,8 +56,8 @@
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.DirectoryServices.AccountManagement" />
     <Reference Include="System.IdentityModel" />
-    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -69,12 +69,18 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceModel.Web" />
-    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    <Reference Include="System.ServiceModel.Http, Version=4.10.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ServiceModel.Http.4.10.3\lib\net461\System.ServiceModel.Http.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=6.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.Text.Json.6.0.2\lib\net461\System.Text.Json.dll</HintPath>
+    <Reference Include="System.ServiceModel.Primitives, Version=4.10.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ServiceModel.Primitives.4.10.3\lib\net461\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -91,20 +97,291 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="Actions.cs" />
-    <Compile Include="AppModule.cs" />
-    <Compile Include="AppSetting.cs" />
-    <Compile Include="AppUserSetting.cs" />
-    <Compile Include="Contact.cs" />
-    <Compile Include="DataverseServiceContext.cs" />
-    <Compile Include="EnvironmentVariableDefinition.cs" />
-    <Compile Include="OptionSets.cs" />
-    <Compile Include="OrganizationSetting.cs" />
-    <Compile Include="pg_event.cs" />
-    <Compile Include="pg_eventparticipation.cs" />
+    <Compile Include="DataverseContext.cs" />
+    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\AppModule.cs" />
+    <Compile Include="Entities\AppSetting.cs" />
+    <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\EnvironmentVariableDefinition.cs" />
+    <Compile Include="Entities\EnvironmentVariableValue.cs" />
+    <Compile Include="Entities\pg_event.cs" />
+    <Compile Include="Entities\pg_eventparticipation.cs" />
+    <Compile Include="Entities\SettingDefinition.cs" />
+    <Compile Include="EntityOptionSetEnum.cs" />
+    <Compile Include="Messages\AddCertificateCredential.cs" />
+    <Compile Include="Messages\AddComponentsToSolutionAsync.cs" />
+    <Compile Include="Messages\AddComponentToSolutionAsync.cs" />
+    <Compile Include="Messages\AddRequiredDesktopFlowComponentsToSolutions.cs" />
+    <Compile Include="Messages\AddRequiredUIElementCollectionComponentsToSolutions.cs" />
+    <Compile Include="Messages\AddToFeedbackLoop.cs" />
+    <Compile Include="Messages\AddWorkQueueItemProcessingHistoryEntry.cs" />
+    <Compile Include="Messages\adx_AzureBlobStorageEnabled.cs" />
+    <Compile Include="Messages\adx_AzureBlobStorageUrl.cs" />
+    <Compile Include="Messages\adx_GenerateSharedAccessSignature.cs" />
+    <Compile Include="Messages\adx_SendEmailConfirmationToContact.cs" />
+    <Compile Include="Messages\adx_SendEmailTwoFactorCodeToContact.cs" />
+    <Compile Include="Messages\adx_SendPasswordResetToContact.cs" />
+    <Compile Include="Messages\AIClassify.cs" />
+    <Compile Include="Messages\AIExtract.cs" />
+    <Compile Include="Messages\AIModelPublish.cs" />
+    <Compile Include="Messages\AIReply.cs" />
+    <Compile Include="Messages\AISentiment.cs" />
+    <Compile Include="Messages\AISummarize.cs" />
+    <Compile Include="Messages\AISummarizeRecord.cs" />
+    <Compile Include="Messages\AITranslate.cs" />
+    <Compile Include="Messages\AlmHandler.cs" />
+    <Compile Include="Messages\Analyze.cs" />
+    <Compile Include="Messages\AnalyzeSentiment.cs" />
+    <Compile Include="Messages\AppendRelatedParty.cs" />
+    <Compile Include="Messages\BatchGetFlowMachineStatus.cs" />
+    <Compile Include="Messages\BatchPrediction.cs" />
+    <Compile Include="Messages\BeginMachineImageProvisioning.cs" />
+    <Compile Include="Messages\BulkRemoveActiveCustomizationsAsync.cs" />
+    <Compile Include="Messages\BulkRetain.cs" />
+    <Compile Include="Messages\CancelAllCloudFlowRuns.cs" />
+    <Compile Include="Messages\CancelDesktopFlowRun.cs" />
+    <Compile Include="Messages\CancelTraining.cs" />
+    <Compile Include="Messages\CardCreateClone.cs" />
+    <Compile Include="Messages\CardGetFullJson.cs" />
+    <Compile Include="Messages\cascadeAsync_FailureAPI.cs" />
+    <Compile Include="Messages\cascadeAsync_SuccessAPI.cs" />
+    <Compile Include="Messages\CategorizeText.cs" />
+    <Compile Include="Messages\cat_Sendfollowupemail.cs" />
+    <Compile Include="Messages\cat_Sendin-appnotification.cs" />
+    <Compile Include="Messages\ClearWorkQueue.cs" />
+    <Compile Include="Messages\CommitToGit.cs" />
+    <Compile Include="Messages\ComputeSlaWorkQueueItem.cs" />
+    <Compile Include="Messages\ConfirmConsentCode.cs" />
+    <Compile Include="Messages\copilotquerytextcontext.cs" />
+    <Compile Include="Messages\copilottextdatastatus.cs" />
+    <Compile Include="Messages\CreateAndSendNewEmail.cs" />
+    <Compile Include="Messages\CreateFlowCredentialApplication.cs" />
+    <Compile Include="Messages\CreateFlowMachineNetwork.cs" />
+    <Compile Include="Messages\CreateHostedFlowMachineGroup.cs" />
+    <Compile Include="Messages\CreateNPSUserRating.cs" />
+    <Compile Include="Messages\CreateRoleWithPrivilegeCheckerRun.cs" />
+    <Compile Include="Messages\CreateRpaBox.cs" />
+    <Compile Include="Messages\DeactivateEntityKey.cs" />
+    <Compile Include="Messages\DeleteAutomatedPlugin.cs" />
+    <Compile Include="Messages\DeleteFlowMachineGroup.cs" />
+    <Compile Include="Messages\DeleteInstantPlugin.cs" />
+    <Compile Include="Messages\Dequeue.cs" />
+    <Compile Include="Messages\DetectLanguage.cs" />
+    <Compile Include="Messages\DiscoverFabricAISkills.cs" />
+    <Compile Include="Messages\DiscoverFabricWorkspaces.cs" />
+    <Compile Include="Messages\ExecuteBackgroundOperation.cs" />
+    <Compile Include="Messages\ExecuteFxExpression.cs" />
+    <Compile Include="Messages\ExportRetainedData.cs" />
+    <Compile Include="Messages\ExtractKeyPhrases.cs" />
+    <Compile Include="Messages\ExtractTextEntities.cs" />
+    <Compile Include="Messages\FormPredict.cs" />
+    <Compile Include="Messages\GenerateAutomatedPlugin.cs" />
+    <Compile Include="Messages\GenerateInstantPlugin.cs" />
+    <Compile Include="Messages\GeneratePowerFxFormula.cs" />
+    <Compile Include="Messages\GetCertificateCredential.cs" />
+    <Compile Include="Messages\GetComponentManagedIdentityFIC.cs" />
+    <Compile Include="Messages\GetConsentLink.cs" />
+    <Compile Include="Messages\GetEntityLinkChatConfig.cs" />
+    <Compile Include="Messages\GetHostedRpaCapacity.cs" />
+    <Compile Include="Messages\GetJobStatus.cs" />
+    <Compile Include="Messages\GetLinkedChats.cs" />
+    <Compile Include="Messages\GetOrCreateSharedWorkspace.cs" />
+    <Compile Include="Messages\GetPBIReportRefreshStatus.cs" />
+    <Compile Include="Messages\GetPublicKey.cs" />
+    <Compile Include="Messages\GetRunMap.cs" />
+    <Compile Include="Messages\GetSearchInformation.cs" />
+    <Compile Include="Messages\GrantDelegatedAccess.cs" />
+    <Compile Include="Messages\InferEntityDefinition.cs" />
+    <Compile Include="Messages\Ingest.cs" />
+    <Compile Include="Messages\InitializeTemporaryFileBlocksUpload.cs" />
+    <Compile Include="Messages\IsPaiEnabled.cs" />
+    <Compile Include="Messages\IsPmEnabled.cs" />
+    <Compile Include="Messages\JoinLinkedChat.cs" />
+    <Compile Include="Messages\LeaveGroup.cs" />
+    <Compile Include="Messages\ListChildDesktopFlows.cs" />
+    <Compile Include="Messages\ListConnectionReferences.cs" />
+    <Compile Include="Messages\ListCredentialDependencies.cs" />
+    <Compile Include="Messages\McpCreateTable.cs" />
+    <Compile Include="Messages\McpUpdateTable.cs" />
+    <Compile Include="Messages\msdyn_ActivateProcesses.cs" />
+    <Compile Include="Messages\msdyn_ActivateSdkMessageProcessingSteps.cs" />
+    <Compile Include="Messages\msdyn_AITestRun.cs" />
+    <Compile Include="Messages\msdyn_BulkAITestCaseUpload.cs" />
+    <Compile Include="Messages\msdyn_BulkAITestRun.cs" />
+    <Compile Include="Messages\msdyn_CancelMobileAppBuild.cs" />
+    <Compile Include="Messages\msdyn_CheckForCustomizedOptionSet.cs" />
+    <Compile Include="Messages\msdyn_CheckForCustomizedSitemap.cs" />
+    <Compile Include="Messages\msdyn_CheckForCustomizedWebResources.cs" />
+    <Compile Include="Messages\msdyn_CheckForDeletedProcess.cs" />
+    <Compile Include="Messages\msdyn_CheckForDeletedSDKMessageProcessingSteps.cs" />
+    <Compile Include="Messages\msdyn_CheckForDeletedWebResources.cs" />
+    <Compile Include="Messages\msdyn_CheckForPendingProcesses.cs" />
+    <Compile Include="Messages\msdyn_CheckIfFormsHaveTooManyCustomControls.cs" />
+    <Compile Include="Messages\msdyn_CheckIfProcessesAreActive.cs" />
+    <Compile Include="Messages\msdyn_CheckIfProcessesOwnedByDisabledUsers.cs" />
+    <Compile Include="Messages\msdyn_CheckIfSDKMessageProcessingStepsAreActive.cs" />
+    <Compile Include="Messages\msdyn_CloneAttachmentsPluginAction.cs" />
+    <Compile Include="Messages\msdyn_ConditionXmlConversion.cs" />
+    <Compile Include="Messages\msdyn_CreateActionFlow.cs" />
+    <Compile Include="Messages\msdyn_CreateAITestCase.cs" />
+    <Compile Include="Messages\msdyn_CreateEntity.cs" />
+    <Compile Include="Messages\msdyn_CreateNewAnalysisJob.cs" />
+    <Compile Include="Messages\msdyn_CreateNewAnalysisJobForRuleSet.cs" />
+    <Compile Include="Messages\msdyn_create_virtual_table_v2.cs" />
+    <Compile Include="Messages\msdyn_dataprovideroperations.cs" />
+    <Compile Include="Messages\msdyn_DeleteCalendar.cs" />
+    <Compile Include="Messages\msdyn_DownloadMobileAppBuild.cs" />
+    <Compile Include="Messages\msdyn_FixSLARelationshipsOnTargetEntities.cs" />
+    <Compile Include="Messages\msdyn_getCTandEACdisabledEntities.cs" />
+    <Compile Include="Messages\msdyn_GetFavoriteArticles.cs" />
+    <Compile Include="Messages\msdyn_GetKAObjectFromTemplate.cs" />
+    <Compile Include="Messages\msdyn_GetSubjectHierarchyData.cs" />
+    <Compile Include="Messages\msdyn_get_required_fields.cs" />
+    <Compile Include="Messages\msdyn_knowledgeHarvestAgentTrigger.cs" />
+    <Compile Include="Messages\msdyn_knowledgeHarvestCreateArticle.cs" />
+    <Compile Include="Messages\msdyn_KnowledgeHarvestFetchData.cs" />
+    <Compile Include="Messages\msdyn_LoadCalendars.cs" />
+    <Compile Include="Messages\msdyn_ManageSLAInstances.cs" />
+    <Compile Include="Messages\msdyn_markunmarkfavoritearticle.cs" />
+    <Compile Include="Messages\msdyn_MigrateSlaProactiveRun.cs" />
+    <Compile Include="Messages\msdyn_MobileAppBuild.cs" />
+    <Compile Include="Messages\msdyn_MobileAppBuildStatus.cs" />
+    <Compile Include="Messages\msdyn_ModelAppDiagnosis.cs" />
+    <Compile Include="Messages\msdyn_ModelAppRepair.cs" />
+    <Compile Include="Messages\msdyn_RegisterSolutionHealthRule.cs" />
+    <Compile Include="Messages\msdyn_ResolveSolutionHealthRuleFailure.cs" />
+    <Compile Include="Messages\msdyn_RetrieveEnvironmentVariableValueForCS.cs" />
+    <Compile Include="Messages\msdyn_RetrieveKnowledgeManagementSettings.cs" />
+    <Compile Include="Messages\msdyn_RetrieveKnowledgeSearchFilters.cs" />
+    <Compile Include="Messages\msdyn_RetrieveKnowledgeSearchModifiers.cs" />
+    <Compile Include="Messages\msdyn_RetrieveKnowledgeSuggestions.cs" />
+    <Compile Include="Messages\msdyn_RetrievePersonalizationFilters.cs" />
+    <Compile Include="Messages\msdyn_RetrieveSearchProviders.cs" />
+    <Compile Include="Messages\msdyn_RunSolutionCheckerRules.cs" />
+    <Compile Include="Messages\msdyn_SaveCalendar.cs" />
+    <Compile Include="Messages\msdyn_SendEmailFromTemplate.cs" />
+    <Compile Include="Messages\msdyn_SiteMapDiagnosis.cs" />
+    <Compile Include="Messages\msdyn_SiteMapRepair.cs" />
+    <Compile Include="Messages\msdyn_SLACustomTimeCalculationTemplate.cs" />
+    <Compile Include="Messages\msdyn_SLATimeCalculation.cs" />
+    <Compile Include="Messages\msdyn_SyncKnowledgeManagementSettingsV2.cs" />
+    <Compile Include="Messages\msdyn_TriggerIntegratedSearchAnalytics.cs" />
+    <Compile Include="Messages\msdyn_TriggerIntegratedSearchIngestion.cs" />
+    <Compile Include="Messages\msdyn_TriggerIntegratedSearchProvisioningApi.cs" />
+    <Compile Include="Messages\msdyn_TriggerIntegratedSearchSync.cs" />
+    <Compile Include="Messages\msdyn_UpdateKbAttachmentPrivilege.cs" />
+    <Compile Include="Messages\msdyn_ValidateKeyVault.cs" />
+    <Compile Include="Messages\msft_DataEngineIndexMgmt_CreateIndex.cs" />
+    <Compile Include="Messages\msft_DataEngineIndexMgmt_GetIndexInfo.cs" />
+    <Compile Include="Messages\msft_GetSecHubFeatureData.cs" />
+    <Compile Include="Messages\msft_LabelAttributeMapping.cs" />
+    <Compile Include="Messages\NotifyEnvironmentVariableSecretChange.cs" />
+    <Compile Include="Messages\OnBackgroundOperationComplete.cs" />
+    <Compile Include="Messages\PBIAutoRefreshDataset.cs" />
+    <Compile Include="Messages\pbi_CloneAndAddPowerBIDataset.cs" />
+    <Compile Include="Messages\pbi_CloneAndAddPowerBIReport.cs" />
+    <Compile Include="Messages\pbi_GetEnvironmentWorkspaceAccessForUser.cs" />
+    <Compile Include="Messages\pg_monthlyresults.cs" />
+    <Compile Include="Messages\pm_CreateProcess.cs" />
+    <Compile Include="Messages\pm_RefreshProcessMiningLicensingCapacity.cs" />
+    <Compile Include="Messages\PowerAutomateProxy.cs" />
+    <Compile Include="Messages\Predict.cs" />
+    <Compile Include="Messages\PredictByReference.cs" />
+    <Compile Include="Messages\PredictionSchema.cs" />
+    <Compile Include="Messages\PreValidateGitComponents.cs" />
+    <Compile Include="Messages\ProvisionDelegation.cs" />
+    <Compile Include="Messages\PublishAIConfiguration.cs" />
+    <Compile Include="Messages\PublishAllAsync.cs" />
+    <Compile Include="Messages\PurgeRetainedContent.cs" />
+    <Compile Include="Messages\PvaAuthorize.cs" />
+    <Compile Include="Messages\PvaComponentCollectionAuthorize.cs" />
+    <Compile Include="Messages\PvaCreateBotComponents.cs" />
+    <Compile Include="Messages\PvaCreateContentSnapshot.cs" />
+    <Compile Include="Messages\PvaDeleteBot.cs" />
+    <Compile Include="Messages\PvaDeleteBotComponentCollection.cs" />
+    <Compile Include="Messages\PvaGetDirectLineEndpoint.cs" />
+    <Compile Include="Messages\PvaGetFeatureControlSet.cs" />
+    <Compile Include="Messages\PvaGetMaxDatabaseVersion.cs" />
+    <Compile Include="Messages\PvaGetUserBots.cs" />
+    <Compile Include="Messages\PvaProvision.cs" />
+    <Compile Include="Messages\PvaPublish.cs" />
+    <Compile Include="Messages\PvaPublishStatus.cs" />
+    <Compile Include="Messages\PvaShareConnection.cs" />
+    <Compile Include="Messages\PvaStartConversation.cs" />
+    <Compile Include="Messages\QueryDvUnstructuredData.cs" />
+    <Compile Include="Messages\QuerySalesforceUnstructuredData.cs" />
+    <Compile Include="Messages\QueryZendeskUnstructuredArticles.cs" />
+    <Compile Include="Messages\QuestionAnalytics.cs" />
+    <Compile Include="Messages\QuickTest.cs" />
+    <Compile Include="Messages\RecognizeText.cs" />
+    <Compile Include="Messages\RefreshChangesFromGit.cs" />
+    <Compile Include="Messages\RefreshRpaLicensingCapacity.cs" />
+    <Compile Include="Messages\RegisterFlowMachine.cs" />
+    <Compile Include="Messages\RemoveActiveCustomization.cs" />
+    <Compile Include="Messages\RemoveCertificateCredential.cs" />
+    <Compile Include="Messages\ResetInheritedAccess.cs" />
+    <Compile Include="Messages\RestartHostedMachine.cs" />
+    <Compile Include="Messages\Restore.cs" />
+    <Compile Include="Messages\Retain.cs" />
+    <Compile Include="Messages\RetrieveAllCompositeDataSources.cs" />
+    <Compile Include="Messages\RetrieveAppsWithDelegatedAccessPermissions.cs" />
+    <Compile Include="Messages\RetrieveBoolFeatureControlSetting.cs" />
+    <Compile Include="Messages\RetrieveCascadeAssignAsyncJobId.cs" />
+    <Compile Include="Messages\RetrieveCascadeDeleteAsyncJobId.cs" />
+    <Compile Include="Messages\RetrieveCompositeDataSource.cs" />
+    <Compile Include="Messages\RetrieveConnectorActions.cs" />
+    <Compile Include="Messages\RetrieveConnectorSettings.cs" />
+    <Compile Include="Messages\RetrieveEnvironmentVariables.cs" />
+    <Compile Include="Messages\RetrieveEnvironmentVariableSecretValue.cs" />
+    <Compile Include="Messages\RetrieveEnvironmentVariableValue.cs" />
+    <Compile Include="Messages\RetrieveFinanceAndOperationsIntegrationDetails.cs" />
+    <Compile Include="Messages\RetrieveFlowUpdates.cs" />
+    <Compile Include="Messages\RetrieveMissingDependenciesWithMetadata.cs" />
+    <Compile Include="Messages\RetrievePowerAppsConnections.cs" />
+    <Compile Include="Messages\RetrievePowerAppsConnectorApis.cs" />
+    <Compile Include="Messages\RetrieveSetting.cs" />
+    <Compile Include="Messages\RetrieveUserApplicationLicenseAccess.cs" />
+    <Compile Include="Messages\RollbackRetain.cs" />
+    <Compile Include="Messages\RotateGroupKey.cs" />
+    <Compile Include="Messages\RunDataProcessingModule.cs" />
+    <Compile Include="Messages\RunDesktopFlow.cs" />
+    <Compile Include="Messages\SaveAsDesktopFlow.cs" />
+    <Compile Include="Messages\SaveAsDesktopFlowModule.cs" />
+    <Compile Include="Messages\SaveSettingValue.cs" />
+    <Compile Include="Messages\SchedulePrediction.cs" />
+    <Compile Include="Messages\ScheduleRetrain.cs" />
+    <Compile Include="Messages\ScheduleTraining.cs" />
+    <Compile Include="Messages\searchautocomplete.cs" />
+    <Compile Include="Messages\searchquery.cs" />
+    <Compile Include="Messages\searchstatistics.cs" />
+    <Compile Include="Messages\searchstatus.cs" />
+    <Compile Include="Messages\searchsuggest.cs" />
+    <Compile Include="Messages\SendAppNotification.cs" />
+    <Compile Include="Messages\SetupAiConnection.cs" />
+    <Compile Include="Messages\SnapshotDatasource.cs" />
+    <Compile Include="Messages\SubstituteForAttribute.cs" />
+    <Compile Include="Messages\SubstituteForComponent.cs" />
+    <Compile Include="Messages\SummarizeRecord.cs" />
+    <Compile Include="Messages\SyncCopresenceState.cs" />
+    <Compile Include="Messages\Train.cs" />
+    <Compile Include="Messages\TriggerDesktopFlowRunCallback.cs" />
+    <Compile Include="Messages\UnpublishAIConfiguration.cs" />
+    <Compile Include="Messages\UnschedulePrediction.cs" />
+    <Compile Include="Messages\UnscheduleTraining.cs" />
+    <Compile Include="Messages\UpdateAccountCredentials.cs" />
+    <Compile Include="Messages\UpdateAutomatedPlugin.cs" />
+    <Compile Include="Messages\UpdateFlowMachineNetwork.cs" />
+    <Compile Include="Messages\UpdateInstantPlugin.cs" />
+    <Compile Include="Messages\UpsertCompositeDataSource.cs" />
+    <Compile Include="Messages\UpsertEnvironmentVariable.cs" />
+    <Compile Include="Messages\ValidateAIConfiguration.cs" />
+    <Compile Include="Messages\ValidateRetentionConfig.cs" />
+    <Compile Include="Messages\_Downloademailasattachment.cs" />
+    <Compile Include="Messages\_InvokeHideReserveEntities.cs" />
+    <Compile Include="Messages\_SyncKnowledgeManagementSettings.cs" />
+    <Compile Include="OptionSets\ComponentState.cs" />
+    <Compile Include="OptionSets\powerpagelanguages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -112,11 +389,4 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\..\packages\System.Text.Json.6.0.2\build\System.Text.Json.targets" Condition="Exists('..\..\packages\System.Text.Json.6.0.2\build\System.Text.Json.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\System.Text.Json.6.0.2\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\System.Text.Json.6.0.2\build\System.Text.Json.targets'))" />
-  </Target>
 </Project>

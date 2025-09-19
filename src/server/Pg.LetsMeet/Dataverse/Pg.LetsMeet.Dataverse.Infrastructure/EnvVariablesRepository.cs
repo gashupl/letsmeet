@@ -12,7 +12,7 @@ namespace Pg.LetsMeet.Dataverse.Infrastructure
         public string GetDefaultValue(string name)
         {
 
-            using (var context = CreateContext<DataverseServiceContext>())
+            using (var context = CreateContext<DataverseContext>())
             {
                 var query = context.EnvironmentVariableDefinitionSet
                     .Where(a => a.SchemaName == name)

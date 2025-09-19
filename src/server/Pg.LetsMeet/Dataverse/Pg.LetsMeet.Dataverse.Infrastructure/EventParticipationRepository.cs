@@ -13,10 +13,10 @@ namespace Pg.LetsMeet.Dataverse.Infrastructure
 
         public IList<pg_eventparticipation> GetActiveByEventId(Guid eventId)
         {
-            using (var context = CreateContext<DataverseServiceContext>())
+            using (var context = CreateContext<DataverseContext>())
             {
                 var query = context.pg_eventparticipationSet
-                    .Where(ep => ep.pg_eventId.Id == eventId && ep.StateCode == pg_eventparticipationState.Active)
+                    .Where(ep => ep.pg_eventId.Id == eventId && ep.StateCode == pg_eventparticipation_statecode.Active)
                     .Select(ep => ep);
 
                 return query.ToList<pg_eventparticipation>(); 

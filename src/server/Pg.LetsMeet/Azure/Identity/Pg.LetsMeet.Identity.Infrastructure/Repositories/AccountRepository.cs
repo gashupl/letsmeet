@@ -13,10 +13,10 @@ namespace Pg.LetsMeet.Identity.Infrastructure.Repositories
 
         public Account? FindByEmail(string email)
         {
-            using (var context = new DataverseServiceContext(service))
+            using (var context = new DataverseContext(service))
             {
                 var query = context.AccountSet
-                    .Where(a => a.EMailAddress1 == email && a.StateCode == AccountState.Active)
+                    .Where(a => a.EMailAddress1 == email && a.StateCode == account_statecode.Active)
                     .Select(a => a);
 
                 return query.FirstOrDefault<Account>();
