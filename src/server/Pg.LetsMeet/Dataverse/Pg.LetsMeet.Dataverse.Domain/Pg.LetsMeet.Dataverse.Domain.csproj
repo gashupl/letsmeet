@@ -93,6 +93,8 @@
   <ItemGroup>
     <Compile Include="BusinessLogic\Demo\DemoService.cs" />
     <Compile Include="BusinessLogic\Demo\IDemoService.cs" />
+    <Compile Include="BusinessLogic\Event\IEventService.cs" />
+    <Compile Include="BusinessLogic\Event\EventService.cs" />
     <Compile Include="BusinessLogic\ServicesFactory.cs" />
     <Compile Include="BusinessLogic\Environment\IVariablesService.cs" />
     <Compile Include="BusinessLogic\Environment\VariablesService.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="BusinessLogic\IService.cs" />
     <Compile Include="BusinessLogic\ServiceBase.cs" />
     <Compile Include="DataAccess\IAccountRepository.cs" />
+    <Compile Include="DataAccess\IContactRepository.cs" />
     <Compile Include="DataAccess\IEnvVariablesRepository.cs" />
     <Compile Include="DataAccess\IEventParticipationRepository.cs" />
     <Compile Include="DataAccess\IRepositoriesFactory.cs" />

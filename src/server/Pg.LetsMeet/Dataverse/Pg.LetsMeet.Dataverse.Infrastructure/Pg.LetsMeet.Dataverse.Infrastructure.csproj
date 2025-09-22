@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountRepository.cs" />
+    <Compile Include="ContactRepository.cs" />
     <Compile Include="EnvVariablesRepository.cs" />
     <Compile Include="EventParticipationRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
