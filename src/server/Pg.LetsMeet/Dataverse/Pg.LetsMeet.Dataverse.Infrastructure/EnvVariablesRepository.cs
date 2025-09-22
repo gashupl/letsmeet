@@ -1,7 +1,5 @@
-﻿using Microsoft.Xrm.Sdk;
-using Pg.LetsMeet.Dataverse.Context;
+﻿using Pg.LetsMeet.Dataverse.Context;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
-using System;
 using System.Linq;
 
 namespace Pg.LetsMeet.Dataverse.Infrastructure
@@ -11,7 +9,6 @@ namespace Pg.LetsMeet.Dataverse.Infrastructure
 
         public string GetDefaultValue(string name)
         {
-
             using (var context = CreateContext<DataverseContext>())
             {
                 var query = context.EnvironmentVariableDefinitionSet
