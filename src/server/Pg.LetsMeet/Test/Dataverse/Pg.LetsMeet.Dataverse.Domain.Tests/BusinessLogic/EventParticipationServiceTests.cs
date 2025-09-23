@@ -3,11 +3,12 @@ using Moq;
 using Pg.LetsMeet.Dataverse.Context;
 using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
+using Pg.LetsMeet.Dataverse.Tests.Shared;
 using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Tests.BusinessLogic
+namespace Pg.LetsMeet.Dataverse.Domain.Tests.BusinessLogic
 {
     public class EventParticipationServiceTests : DataverseTestBase
     {

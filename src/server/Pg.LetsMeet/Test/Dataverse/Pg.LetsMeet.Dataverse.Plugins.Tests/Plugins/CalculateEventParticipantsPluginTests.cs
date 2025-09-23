@@ -11,6 +11,7 @@ using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations;
 using Pg.LetsMeet.Dataverse.Shared.Values;
 using Pg.LetsMeet.Dataverse.Common.Values;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
+using Pg.LetsMeet.Dataverse.Tests.Shared;
 
 namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
 {

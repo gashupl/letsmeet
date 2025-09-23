@@ -1,13 +1,12 @@
-﻿using System; 
+﻿using System;
 using FakeXrmEasy;
 using Microsoft.Xrm.Sdk;
 using Pg.LetsMeet.Dataverse.Context;
 using System.Collections.Generic;
 using System.Reflection;
 using Xunit;
-using Pg.LetsMeet.Dataverse.Infrastructure;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Tests.DataAccess.EventParticipations
+namespace Pg.LetsMeet.Dataverse.Infrastructure.Tests.DataAccess.EventParticipations
 {
     
     public class EventParticipationRepositoryTests

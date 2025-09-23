@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xrm.Sdk;
 using Moq;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Tests
+namespace Pg.LetsMeet.Dataverse.Tests.Shared
 {
     public class DataverseTestBase
     {
