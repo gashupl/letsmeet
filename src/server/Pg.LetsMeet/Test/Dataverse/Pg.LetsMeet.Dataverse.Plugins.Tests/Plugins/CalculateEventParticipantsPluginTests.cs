@@ -18,9 +18,8 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
 
     public class CalculateEventParticipantsPluginTests : DataverseTestBase
     {
-        private class CalculateEventParticipantsDependencyLoaderFake : IDependencyLoader
-        {
-            public IServicesFactory DomainServicesFactory;
+        private class CalculateEventParticipantsDependencyLoaderFake : DependencyLoaderFakeBase, IDependencyLoader
+        {         
             public Mock<IEventParticipationService> EventServiceMock;
 
             public CalculateEventParticipantsDependencyLoaderFake()
@@ -31,11 +30,6 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
                 servicesFactoryMock.Setup(m => m.Get<IEventParticipationService>()).Returns(EventServiceMock.Object);
                 
                 DomainServicesFactory = servicesFactoryMock.Object; 
-            }
-
-            public void SetRegistrations(IContainer container)
-            {
-                throw new NotImplementedException(); 
             }
         }
 

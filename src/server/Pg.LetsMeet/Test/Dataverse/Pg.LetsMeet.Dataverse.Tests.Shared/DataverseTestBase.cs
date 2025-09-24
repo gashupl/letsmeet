@@ -5,12 +5,14 @@ namespace Pg.LetsMeet.Dataverse.Tests.Shared
 {
     public class DataverseTestBase
     {
-        public static ITracingService CreateTracingService()
-        {
-            var tracingService = new Mock<ITracingService>();
-            tracingService.Setup(s => s.Trace(It.IsAny<string>())); 
+        public Mock<ITracingService> TracingServiceMock { get; set; }
 
-            return tracingService.Object;   
+        public ITracingService CreateTracingService()
+        {
+            TracingServiceMock = new Mock<ITracingService>();
+            TracingServiceMock.Setup(s => s.Trace(It.IsAny<string>())); 
+
+            return TracingServiceMock.Object;   
         }
     }
 }
