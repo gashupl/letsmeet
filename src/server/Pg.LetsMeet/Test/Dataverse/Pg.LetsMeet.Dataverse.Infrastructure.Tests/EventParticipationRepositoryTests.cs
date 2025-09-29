@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Xunit;
 
-namespace Pg.LetsMeet.Dataverse.Infrastructure.Tests.DataAccess.EventParticipations
+namespace Pg.LetsMeet.Dataverse.Infrastructure.Tests
 {
     
     public class EventParticipationRepositoryTests
@@ -14,7 +14,6 @@ namespace Pg.LetsMeet.Dataverse.Infrastructure.Tests.DataAccess.EventParticipati
         [Fact]
         public void GetActiveByEventId_ReturnValidCount()
         {
-            //TODO: To be fixed
             var eventRef = new EntityReference(pg_event.EntityLogicalName, Guid.NewGuid());
             var expectedCount = 1;
 
