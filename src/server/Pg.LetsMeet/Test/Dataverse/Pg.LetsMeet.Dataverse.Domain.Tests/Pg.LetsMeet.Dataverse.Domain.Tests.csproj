@@ -3,7 +3,7 @@
   <Import Project="..\..\..\packages\xunit.core.2.5.3\build\xunit.core.props" Condition="Exists('..\..\..\packages\xunit.core.2.5.3\build\xunit.core.props')" />
   <Import Project="..\..\..\packages\xunit.runner.visualstudio.2.4.3\build\net452\xunit.runner.visualstudio.props" Condition="Exists('..\..\..\packages\xunit.runner.visualstudio.2.4.3\build\net452\xunit.runner.visualstudio.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-   <PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{93F1AFF1-8FE6-4EF2-A9CE-518BB367E46E}</ProjectGuid>
@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\EventParticipationServiceTests.cs" />
+    <Compile Include="BusinessLogic\EventServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
