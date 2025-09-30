@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SdkMessageProcessingStep Name="Pg.LetsMeet.Dataverse.Plugins.Plugins.CalculateEventParticipantsPlugin: Delete of pg_eventparticipation" SdkMessageProcessingStepId="{0007d059-e337-ed11-9db1-000d3aabdfee}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SdkMessageProcessingStep Name="Pg.LetsMeet.Dataverse.Plugins.Events.CalculateEventParticipantsPlugin: Delete of pg_eventparticipation" SdkMessageProcessingStepId="{098ee962-c89d-f011-b41c-000d3abfa45a}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SdkMessageId>a1bdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
-  <PluginTypeExportKey>851C4E0D4219D45D31458990C6128AA347DC5F82E368174285997AF5F13E5952</PluginTypeExportKey>
+  <PluginTypeExportKey>BED19AAD077484B3A5380886E556BF99CD055082DA7F5BCE6AFE21DCD8036FAF</PluginTypeExportKey>
   <PrimaryEntity>pg_eventparticipation</PrimaryEntity>
   <AsyncAutoDelete>0</AsyncAutoDelete>
-  <Description>Pg.LetsMeet.Dataverse.Plugins.Plugins.CalculateEventParticipantsPlugin: Delete of pg_eventparticipation</Description>
+  <Description>Pg.LetsMeet.Dataverse.Plugins.Events.CalculateEventParticipantsPlugin: Delete of pg_eventparticipation</Description>
   <FilteringAttributes></FilteringAttributes>
   <InvocationSource>1</InvocationSource>
   <Mode>0</Mode>
@@ -17,7 +17,7 @@
   <IntroducedVersion>1.0</IntroducedVersion>
   <SdkMessageProcessingStepImages>
     <SdkMessageProcessingStepImage Name="PreImage">
-      <SdkMessageProcessingStepImageId>{b5672160-e337-ed11-9db1-000d3aabdfee}</SdkMessageProcessingStepImageId>
+      <SdkMessageProcessingStepImageId>{af0cc9a3-c89d-f011-b41c-000d3abfa45a}</SdkMessageProcessingStepImageId>
       <Attributes></Attributes>
       <EntityAlias>PreImage</EntityAlias>
       <ImageType>0</ImageType>
