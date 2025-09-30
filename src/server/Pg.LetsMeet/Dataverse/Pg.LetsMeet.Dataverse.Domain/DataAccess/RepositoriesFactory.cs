@@ -21,12 +21,5 @@ namespace Pg.LetsMeet.Dataverse.Domain.DataAccess
             instance.Initialize(serviceFactory.CreateOrganizationService(userId));
             return instance;
         }
-
-        //public IMetadataRepository GetMetadataInstance()
-        //{
-        //    var instance = (IMetadataRepository)Container.GetInstance(typeof(IMetadataRepository));
-        //    instance.Initialize(this.OrganizationService);
-        //    return instance;
-        //}
     }
 }
