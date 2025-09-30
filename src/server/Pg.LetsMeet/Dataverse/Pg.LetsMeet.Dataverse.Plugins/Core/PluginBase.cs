@@ -5,6 +5,7 @@ using Pg.LetsMeet.Dataverse.Domain;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
 using Pg.LetsMeet.Dataverse.Shared.Extensions;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
+using Pg.LetsMeet.Dataverse.Context;
 
 namespace Pg.LetsMeet.Dataverse.Plugins.Core
 {
@@ -49,6 +50,12 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Core
 
                 var orgServiceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
 
+                var proxyProvider = orgServiceFactory as IProxyTypesAssemblyProvider;
+                if (proxyProvider != null)
+                {
+                    proxyProvider.ProxyTypesAssembly = typeof(DataverseContext).Assembly;
+                }
+
                 if (!IsContextValid(pluginExecutionContext))
                 {
                     // Perform silent abort
@@ -60,8 +67,8 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Core
 
                 container.Register<ITracingService>(() => { return tracingService; });
                 container.RegisterSingleton<IOrganizationServiceFactory>(() => { return orgServiceFactory; }); 
-                container.Register(() => new ServicesFactory(container));
-                container.Register(() => new RepositoriesFactory(container));
+                container.Register<IServicesFactory>(() => new ServicesFactory(container));
+                container.Register<IRepositoriesFactory>(() => new RepositoriesFactory(container));
                 DependencyLoader?.SetRegistrations(container);
 
                 scope = container.BeginExecutionScope();
