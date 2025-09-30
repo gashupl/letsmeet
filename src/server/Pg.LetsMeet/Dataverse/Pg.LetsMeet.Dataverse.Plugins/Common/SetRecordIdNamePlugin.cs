@@ -1,11 +1,12 @@
 ﻿using Microsoft.Xrm.Sdk;
 using Pg.LetsMeet.Dataverse.Common.Values;
 using Pg.LetsMeet.Dataverse.Domain;
+using Pg.LetsMeet.Dataverse.Plugins.Core;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
 using Pg.LetsMeet.Dataverse.Shared.Values;
 using System.Collections.Generic;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Plugins.Common
+namespace Pg.LetsMeet.Dataverse.Plugins.Common
 {
     public class SetRecordIdNamePlugin : PluginBase
     {

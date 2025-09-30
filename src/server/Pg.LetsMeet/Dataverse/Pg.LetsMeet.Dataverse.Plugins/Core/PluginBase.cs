@@ -5,9 +5,8 @@ using Pg.LetsMeet.Dataverse.Domain;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
 using Pg.LetsMeet.Dataverse.Shared.Extensions;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
-using System.Runtime.Remoting.Messaging;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Plugins
+namespace Pg.LetsMeet.Dataverse.Plugins.Core
 {
     public abstract class PluginBase : IPlugin 
     {

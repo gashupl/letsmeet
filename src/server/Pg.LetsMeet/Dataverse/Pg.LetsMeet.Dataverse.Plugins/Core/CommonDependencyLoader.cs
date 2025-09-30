@@ -5,7 +5,7 @@ using Pg.LetsMeet.Dataverse.Infrastructure;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
 using System;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Plugins.Common
+namespace Pg.LetsMeet.Dataverse.Plugins.Core
 {
     public class CommonDependencyLoader : IDependencyLoader
     {

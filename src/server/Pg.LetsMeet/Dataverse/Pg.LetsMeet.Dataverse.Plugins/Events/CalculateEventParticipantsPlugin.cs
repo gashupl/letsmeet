@@ -3,10 +3,11 @@ using Pg.LetsMeet.Dataverse.Common.Values;
 using Pg.LetsMeet.Dataverse.Context;
 using Pg.LetsMeet.Dataverse.Domain;
 using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations;
+using Pg.LetsMeet.Dataverse.Plugins.Core;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
 using Pg.LetsMeet.Dataverse.Shared.Values;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Plugins
+namespace Pg.LetsMeet.Dataverse.Plugins.Events
 {
     public class CalculateEventParticipantsPlugin : PluginBase
     {

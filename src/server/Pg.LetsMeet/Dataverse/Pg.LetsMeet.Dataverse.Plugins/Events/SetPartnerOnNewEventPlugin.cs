@@ -3,9 +3,10 @@ using Pg.LetsMeet.Dataverse.Common.Values;
 using Pg.LetsMeet.Dataverse.Context;
 using Pg.LetsMeet.Dataverse.Domain;
 using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Event;
+using Pg.LetsMeet.Dataverse.Plugins.Core;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Plugins
+namespace Pg.LetsMeet.Dataverse.Plugins.Events
 {
     public class SetPartnerOnNewEventPlugin : PluginBase
     {

@@ -1,9 +1,10 @@
 ﻿using Microsoft.Xrm.Sdk;
 using Pg.LetsMeet.Dataverse.Domain;
 using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Environment;
+using Pg.LetsMeet.Dataverse.Plugins.Core;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Plugins.Common
+namespace Pg.LetsMeet.Dataverse.Plugins.Common
 {
     public class ReadEnvironmentVariableSamplePlugin : PluginBase
     {

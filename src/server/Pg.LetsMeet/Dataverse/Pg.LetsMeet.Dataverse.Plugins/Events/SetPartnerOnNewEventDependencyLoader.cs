@@ -4,7 +4,7 @@ using Pg.LetsMeet.Dataverse.Infrastructure;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
 using System;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Plugins
+namespace Pg.LetsMeet.Dataverse.Plugins.Events
 {
     internal class SetPartnerOnNewEventDependencyLoader : IDependencyLoader
     {
