@@ -17,7 +17,7 @@ namespace Pg.LetsMeet.Dataverse.Infrastructure
             this.organizationService = service;  
         }
 
-        protected TContext CreateContext<TContext>() where TContext : DataverseServiceContext =>
+        protected TContext CreateContext<TContext>() where TContext : DataverseContext =>
             (TContext)Activator.CreateInstance(typeof(TContext), organizationService);
 
 

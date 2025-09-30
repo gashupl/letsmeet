@@ -20,12 +20,12 @@ namespace Pg.LetsMeet.Events.Infrastructure.Repositories
         public IList<pg_event> FindByAccountCode(string accountCode)
         {
 
-            using (var context = new DataverseServiceContext(service))
+            using (var context = new DataverseContext(service))
             {
                 var query = from e in context.pg_eventSet
                             join a in context.AccountSet on e.pg_partnerId.Id equals a.Id
-                            where e.StateCode == pg_eventState.Active 
-                                && a.StateCode == AccountState.Active 
+                            where e.StateCode == pg_event_statecode.Active 
+                                && a.StateCode == account_statecode.Active 
                                 && a.AccountNumber == accountCode
                             select e; 
                 return query.ToList(); 

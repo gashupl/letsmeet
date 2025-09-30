@@ -1,7 +1,5 @@
-adx_accountrelationship: 
 adx_append: true
 adx_appendto: true
-adx_childTablePermissions: []
 adx_contactrelationship: contact_customer_accounts
 adx_create: false
 adx_delete: false
@@ -11,8 +9,6 @@ adx_entitypermission_webrole:
 - 2028d3ef-39a7-ef11-b8e8-6045bd9f9c28
 - 233101e7-39a7-ef11-b8e8-6045bd9f9c28
 adx_entitypermissionid: f3e4b2d5-bc14-40ed-b14a-80c29d560528
-adx_parententitypermission: 
-adx_parentrelationship: 
 adx_read: true
 adx_scope: 756150001
 adx_write: false

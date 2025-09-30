@@ -22,7 +22,7 @@ namespace PostDeploymentStepsRunner.Services
         {
             var newAppSetting = new AppSetting();
 
-            using (var context = new DataverseServiceContext(service))
+            using (var context = new DataverseContext(service))
             {
                 try
                 {

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.25032.214" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25032.214" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25033.00218">
+<ImportExportXml version="9.2.25091.165" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25091.165" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25091.00165">
   <SolutionManifest>
     <UniqueName>LetsMeet</UniqueName>
     <LocalizedNames>
@@ -99,20 +99,21 @@
       <RootComponent type="62" schemaName="pg_Letsmeet" behavior="0" />
       <RootComponent type="80" schemaName="pg_Letsmeet" behavior="0" />
       <RootComponent type="91" id="{6d9e39a2-ed47-ee11-be6e-000d3a25b9ca}" schemaName="Pg.LetsMeet.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=965513d0014c923c" behavior="0" />
-      <RootComponent type="92" id="{0007d059-e337-ed11-9db1-000d3aabdfee}" behavior="0" />
-      <RootComponent type="92" id="{25866d44-e337-ed11-9db1-000d3aabdfee}" behavior="0" />
-      <RootComponent type="92" id="{520abe2f-e337-ed11-9db1-000d3aabdfee}" behavior="0" />
+      <RootComponent type="92" id="{074c8258-c89d-f011-b41c-000d3abfa45a}" behavior="0" />
+      <RootComponent type="92" id="{098ee962-c89d-f011-b41c-000d3abfa45a}" behavior="0" />
+      <RootComponent type="92" id="{79bea5c3-c89d-f011-b41c-000d3abfa45a}" behavior="0" />
+      <RootComponent type="92" id="{c445d949-c89d-f011-b41c-000d3abfa45a}" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
         <Required type="60" displayName="account contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
-          <package appName="msdynce_AppCommon" version="9.0.25033.10001">msdynce_AppCommonAnchor (9.0.25033.10001)</package>
+          <package appName="msdynce_AppCommon" version="9.0.25091.10002">msdynce_AppCommonAnchor (9.0.25091.10002)</package>
         </Required>
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="60" displayName="Account" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}">
-          <package appName="msdynce_AppCommon" version="9.0.25033.10001">msdynce_AppCommonAnchor (9.0.25033.10001)</package>
+          <package appName="msdynce_AppCommon" version="9.0.25091.10002">msdynce_AppCommonAnchor (9.0.25091.10002)</package>
         </Required>
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
@@ -163,8 +164,8 @@
         <Dependent type="80" schemaName="pg_Letsmeet" displayName="Let's Meet!" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2503.2010)">
-          <package appName="Base Custom Controls" version="9.0.2503.2010">BaseCustomControlsCore (9.0.2503.2010)</package>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2509.1013)">
+          <package appName="Base Custom Controls" version="9.0.2509.1013">BaseCustomControlsCore (9.0.2509.1013)</package>
         </Required>
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>

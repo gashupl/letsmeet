@@ -1,7 +1,5 @@
 adx_append: true
 adx_appendto: true
-adx_childTablePermissions: []
-adx_copy: undefined
 adx_create: true
 adx_delete: true
 adx_entitylogicalname: pg_event
@@ -10,7 +8,6 @@ adx_entitypermission_webrole:
 - 2028d3ef-39a7-ef11-b8e8-6045bd9f9c28
 - 233101e7-39a7-ef11-b8e8-6045bd9f9c28
 adx_entitypermissionid: b06b474b-3648-4156-928e-84fddca8feb5
-adx_filecontent: 
 adx_read: true
 adx_scope: 756150000
 adx_write: true

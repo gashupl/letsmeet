@@ -11,15 +11,15 @@ using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations;
 using Pg.LetsMeet.Dataverse.Shared.Values;
 using Pg.LetsMeet.Dataverse.Common.Values;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
+using Pg.LetsMeet.Dataverse.Tests.Shared;
 
 namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
 {
 
     public class CalculateEventParticipantsPluginTests : DataverseTestBase
     {
-        private class CalculateEventParticipantsDependencyLoaderFake : IDependencyLoader
-        {
-            public IServicesFactory DomainServicesFactory;
+        private class CalculateEventParticipantsDependencyLoaderFake : DependencyLoaderFakeBase, IDependencyLoader
+        {         
             public Mock<IEventParticipationService> EventServiceMock;
 
             public CalculateEventParticipantsDependencyLoaderFake()
@@ -30,11 +30,6 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
                 servicesFactoryMock.Setup(m => m.Get<IEventParticipationService>()).Returns(EventServiceMock.Object);
                 
                 DomainServicesFactory = servicesFactoryMock.Object; 
-            }
-
-            public void SetRegistrations(IContainer container)
-            {
-                throw new NotImplementedException(); 
             }
         }
 
@@ -54,11 +49,13 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
             {
                 PrimaryEntityName = pg_eventparticipation.EntityLogicalName,
                 MessageName = MessageName.Create,
-                Mode = (int)ProcessingMode.Asynchronous
+                Mode = (int)ProcessingMode.Synchronous
             };
 
             var plugin = new CalculateEventParticipantsPlugin();
-            plugin.IsContextValid(pluginContext); 
+            var isValid = plugin.IsContextValid(pluginContext); 
+
+            Assert.True(isValid);
         }
 
         [Fact]
@@ -68,11 +65,13 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
             {
                 PrimaryEntityName = pg_eventparticipation.EntityLogicalName,
                 MessageName = MessageName.Create,
-                Mode = (int)ProcessingMode.Synchronous
+                Mode = (int)ProcessingMode.Asynchronous
             };
 
             var plugin = new CalculateEventParticipantsPlugin();
-            plugin.IsContextValid(pluginContext);
+            var isValid = plugin.IsContextValid(pluginContext);
+
+            Assert.False(isValid);
         }
 
         [Fact]

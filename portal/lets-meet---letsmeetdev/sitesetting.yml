@@ -24,11 +24,7 @@
   adx_sitesettingid: 1bab566e-009b-4ea9-b7cd-e46cdad04c12
   adx_value: '*WEB*'
 - adx_name: ThemeFeature
-  adx_selectedThemeId: 329a43fa-5471-4678-8330-d3a0b404e9bb
   adx_sitesettingid: 1bcd80e8-4066-415d-baf7-be245cc64c85
-  adx_siteSettingId: 1bcd80e8-4066-415d-baf7-be245cc64c85
-  adx_status: enable
-  adx_version: V2
 - adx_name: Search/IndexNotesAttachments
   adx_sitesettingid: 225a1ca2-a10c-48a8-905a-05c114a3ff32
   adx_value: false

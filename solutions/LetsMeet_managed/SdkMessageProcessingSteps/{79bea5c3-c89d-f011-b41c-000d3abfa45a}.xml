@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="Pg.LetsMeet.Dataverse.Plugins.Events.SetPartnerOnNewEventPlugin: Create of pg_event" SdkMessageProcessingStepId="{79bea5c3-c89d-f011-b41c-000d3abfa45a}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeExportKey>5AB7426BC8667C3B00D0270F1124D2D0C964D744795DFE01E38AE2728D600600</PluginTypeExportKey>
+  <PrimaryEntity>pg_event</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>Pg.LetsMeet.Dataverse.Plugins.Events.SetPartnerOnNewEventPlugin: Create of pg_event</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>20</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

@@ -17,10 +17,10 @@ namespace Pg.LetsMeet.Events.Infrastructure.Repositories
 
         public Account? FindByAccountCode(string accountCode)
         {
-            using (var context = new DataverseServiceContext(service))
+            using (var context = new DataverseContext(service))
             {
                 var query = context.AccountSet
-                    .Where(a => a.AccountNumber == accountCode && a.StateCode == AccountState.Active)
+                    .Where(a => a.AccountNumber == accountCode && a.StateCode == account_statecode.Active)
                     .Select(a => a);
 
                 return query.FirstOrDefault<Account>();
