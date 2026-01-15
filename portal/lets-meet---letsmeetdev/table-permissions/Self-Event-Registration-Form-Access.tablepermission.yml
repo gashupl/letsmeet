@@ -1,0 +1,15 @@
+adx_append: false
+adx_appendto: false
+adx_create: true
+adx_delete: false
+adx_entitylogicalname: pg_eventregistrationform
+adx_entityname: Self Event Registration Form Access
+adx_entitypermission_webrole:
+- 0f461b15-3d92-4e58-958b-f87b7895508c
+- 2028d3ef-39a7-ef11-b8e8-6045bd9f9c28
+- 233101e7-39a7-ef11-b8e8-6045bd9f9c28
+- b28b7525-5291-4e79-8730-bc04947ccfb4
+adx_entitypermissionid: 2bc92035-e4f1-f011-8406-002248882207
+adx_read: true
+adx_scope: 756150004
+adx_write: true

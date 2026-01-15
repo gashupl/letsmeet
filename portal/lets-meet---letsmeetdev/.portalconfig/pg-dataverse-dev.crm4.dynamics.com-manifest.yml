@@ -133,6 +133,10 @@ adx_contentsnippet:
   CheckSum: 501952535c60de4392470d7e0f9cf49433249fe43553e25c0fd46a9ca08fb6dc
   IsDeleted: false
 adx_entityform:
+- RecordId: 0307e671-e4f1-f011-8406-002248882207
+  DisplayName: Event Registration Form - Information Form
+  CheckSum: e21df6ddd8f4678c34a23d3e5cdce5e7e16f21ca6cd8754070bf6bd1f0337f54
+  IsDeleted: false
 - RecordId: 31d50ce0-59d3-ef11-8ee9-7c1e52267093
   DisplayName: Event - Information Form (Insert)
   CheckSum: f708752b233d0cd83e90c5a5b420773007202615c743f481026269386b6a617c
@@ -172,6 +176,10 @@ adx_entitylist:
   CheckSum: ce4c32c9e96c767d82d4048b6e0084a5dd949d3f6ba72347b4fcb80e923c8403
   IsDeleted: false
 adx_entitypermission:
+- RecordId: 2bc92035-e4f1-f011-8406-002248882207
+  DisplayName: Self Event Registration Form Access
+  CheckSum: 1e1ac3cb8cce895c937eac73361c1a9f3ee81b8b4738578403c1b134f096df49
+  IsDeleted: false
 - RecordId: 457e2290-3309-4274-93ec-d21c0132ce75
   DisplayName: Active Events
   CheckSum: 97bc717aefae598ceb6441cc1f743a6050d5356ca4029078905555e747061376
@@ -201,6 +209,10 @@ adx_entitypermission:
   CheckSum: 3659da609926b415016152a0d67e4a59db004332451b7c756448aa28c2c396d3
   IsDeleted: false
 adx_entitypermission_webrole:
+- RecordId: 0f461b15-3d92-4e58-958b-f87b7895508c
+  DisplayName: $RELATIONSHIP$adx_entitypermission:2bc92035-e4f1-f011-8406-002248882207:adx_webrole
+  CheckSum: 2391138326fe1cf093cbe064ce0f60fe50935caf921db5bb4da673f67e766990
+  IsDeleted: false
 - RecordId: 0f461b15-3d92-4e58-958b-f87b7895508c
   DisplayName: $RELATIONSHIP$adx_entitypermission:b06b474b-3648-4156-928e-84fddca8feb5:adx_webrole
   CheckSum: 98fb54b540849a6de4f596058a13affad94b96f72dae740890db0db748541fbf
@@ -644,6 +656,10 @@ adx_weblink:
   DisplayName: Contact us
   CheckSum: b3e477ed0f3843f1f97326ec072bd4ee658628fcd7dd72bf96a01cffb4510845
   IsDeleted: false
+- RecordId: d66fb469-239d-6223-254c-55b382c8158d
+  DisplayName: Event Form Registration
+  CheckSum: 1f7c7c71d9663b580d19a93f84c356b337e50f1ab635751b48317c98812296a8
+  IsDeleted: false
 adx_weblinkset:
 - RecordId: 199d1557-9a42-434e-9560-5b0d819cb12a
   DisplayName: Secondary Navigation
@@ -672,7 +688,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: 10ebe240-1303-928b-8ba7-aa8e00a594ed
   DisplayName: Event Details
-  CheckSum: 04f8324fd8785a1b33cfadba84d2ed70a170a8a970cac94072a5b4cde7c10cfe
+  CheckSum: 8088a9ba7801b54905bd4063a35efea9b8e2d9f969c1c08b598834a1e0b9cb99
   IsDeleted: false
 - RecordId: 2ae695d4-0e17-479e-89e8-cc399a424040
   DisplayName: Home
@@ -682,9 +698,17 @@ adx_webpage:
   DisplayName: User Panel
   CheckSum: 81f73c02751d96ca65eed72413c3e71ebe7675456a9d5ea61d9bbfd1126b1ec6
   IsDeleted: false
+- RecordId: 33ee654a-f1fd-2b4f-3e1e-19e537669128
+  DisplayName: Event Form Registration
+  CheckSum: ba4dea77196bff0798d2aea4fb5f5461a7cd395f747dede8744c4051bfe5ca1c
+  IsDeleted: false
 - RecordId: 36458231-d113-48d0-845f-716348e85a51
   DisplayName: Page Not Found
   CheckSum: e611353b27394e351f9165c2d75ccb5c85c99dc2a53ec93863dcded40a9a4cdb
+  IsDeleted: false
+- RecordId: 4326f56f-df9d-55b8-cdb1-5267e3f4465b
+  DisplayName: Event Form Registration
+  CheckSum: b7aefd5e0f2d13d66d31b4d055ea7872e6f58694b50ad8b6332af091bd0e0f22
   IsDeleted: false
 - RecordId: 4de8b326-dda0-4c2e-a72a-6c57a2b1f863
   DisplayName: Access Denied
