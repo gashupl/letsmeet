@@ -1,5 +1,27 @@
+adx_webfile:
+- RecordId: 85665ae0-01b6-4622-95ab-aa6025ff430f
+  DisplayName: A-flower.png
+  CheckSum: 
+  IsDeleted: true
 adx_webpageaccesscontrolrule_webrole:
 - RecordId: b66ac5ea-943a-4000-a85e-a0c4384dd16e
   DisplayName: $RELATIONSHIP$adx_webpageaccesscontrolrule:8d1e3b30-3b9c-fde8-7a85-cfd597eb41ac:adx_webrole
+  CheckSum: 
+  IsDeleted: true
+annotation:
+- RecordId: 79faee41-48f1-f011-8406-002248882207
+  DisplayName: A-flower.png
+  CheckSum: 
+  IsDeleted: true
+- RecordId: a4ee2c5b-5181-ef11-ac21-6045bd8c7e6d
+  DisplayName: portalbasictheme.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: ac282689-48f1-f011-8406-002248882207
+  DisplayName: ORANGE%20(1)
+  CheckSum: 
+  IsDeleted: true
+- RecordId: ad282689-48f1-f011-8406-002248882207
+  DisplayName: portalbasictheme.css
   CheckSum: 
   IsDeleted: true

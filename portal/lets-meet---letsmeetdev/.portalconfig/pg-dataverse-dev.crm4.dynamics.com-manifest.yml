@@ -10,7 +10,7 @@ adx_contentsnippet:
   IsDeleted: false
 - RecordId: 056f2f91-763f-4229-abd7-6e0db3808c94
   DisplayName: Logo URL
-  CheckSum: 677bf415552522c39e5cd62595918eca54a38af1857cf540f2c1a3626e216300
+  CheckSum: 2e8f50ccef4f17c4abaf6b596ad855c785397019401ddde95555271321dafff2
   IsDeleted: false
 - RecordId: 07da4f30-d157-45b1-b50d-314200def4e3
   DisplayName: Header/Toggle Navigation
@@ -110,7 +110,7 @@ adx_contentsnippet:
   IsDeleted: false
 - RecordId: c1153b8d-28e9-4733-9eb4-0308a35d0dae
   DisplayName: Site name
-  CheckSum: 34a90c0702fba811d2788452de68643e16d74c58896fa52c083cbaecb6d7512f
+  CheckSum: 62e8aec36c07b0aded7f561c10be6ee3a8e514027e2129c147c73db997e904b8
   IsDeleted: false
 - RecordId: cbb78394-c1ba-48a9-a987-1d3a70debdf9
   DisplayName: Search/Facet/ClearConstraints
@@ -135,7 +135,7 @@ adx_contentsnippet:
 adx_entityform:
 - RecordId: 31d50ce0-59d3-ef11-8ee9-7c1e52267093
   DisplayName: Event - Information Form (Insert)
-  CheckSum: f0d987affe9f51facef248d320ed5f8ec95aa47a28b1e46410d4a46e200ba7d4
+  CheckSum: f708752b233d0cd83e90c5a5b420773007202615c743f481026269386b6a617c
   IsDeleted: false
 - RecordId: 8c9f1cab-fb53-4e54-b75c-124b66224d3d
   DisplayName: simple contact us form
@@ -515,6 +515,10 @@ adx_webfile:
   DisplayName: PWALogo.png
   CheckSum: 7ec81b7ea0a15660f795998248ce49cf08be8383b86c3cf1f4bd5db621cbe51b
   IsDeleted: false
+- RecordId: 10a0e620-64cb-3c80-9ad3-546b7879cf62
+  DisplayName: ORANGE (1)
+  CheckSum: 66c8692007ce786695aa5ca2007567827f8692737c7f8d3bf955a0ae67fac607
+  IsDeleted: false
 - RecordId: 1697c359-72cd-4bb8-b804-b125312dc61a
   DisplayName: Geometric-4.png
   CheckSum: a3dd0eadfbec3fe24763e2fff2c9aaa3c04b079519e1b42a53f5195f800b4be5
@@ -523,9 +527,17 @@ adx_webfile:
   DisplayName: Circle-2.png
   CheckSum: 4d5f2b3c2e5fb3d5d87ec1670b94671784c2addd92723b80e8cdc088db4d6e68
   IsDeleted: false
+- RecordId: 211bb96a-7c91-4549-ada7-88788445a112
+  DisplayName: Three-snow-cones-with-sprinkles.png
+  CheckSum: b05cb11ff83bf424fabcac9d90a806a4c8c601f23efe92dec92062403cc9639d
+  IsDeleted: false
+- RecordId: 259f25ba-50e5-4e89-9f36-30a6faefd5d3
+  DisplayName: homeImage.jpg
+  CheckSum: 4f38954c181126b77fee3d369a82f008f9fbb0afafd9bf5e8e6cc55b178c7bf0
+  IsDeleted: false
 - RecordId: 3f89cc99-8a75-4d8a-87e4-4b22b9285011
   DisplayName: portalbasictheme.css
-  CheckSum: eede59e88781a4e66d6e0510742055266f89eb3751234c2bd8d03edd2b9b6a4c
+  CheckSum: d0253f59ab873382b22d519e033ea4afc57aace04ee6cfe8a5acd0f5662f1cbd
   IsDeleted: false
 - RecordId: 41173215-c7d9-4a09-b160-c84c0ccdf385
   DisplayName: Site-mockup-1.png
@@ -543,6 +555,10 @@ adx_webfile:
   DisplayName: Logo-sm-64.png
   CheckSum: 7e6745be83df3bda4ad3b39ba0e47d4dfda658478ad54e0eb68d3c5c66eb6e3c
   IsDeleted: false
+- RecordId: 85665ae0-01b6-4622-95ab-aa6025ff430f
+  DisplayName: A-flower.png
+  CheckSum: 45562a165c8225f303d444df6b47f03f17248685bd34b5f572d312b214cb284b
+  IsDeleted: true
 - RecordId: 8ecd72cf-b64a-4ca0-b0a1-e3fa6615b05d
   DisplayName: Graph-1.png
   CheckSum: 2de5a04d6806b6351641fb5135307a29b04942cdafae33f9d5c401b76c4077d3
@@ -660,7 +676,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: 2ae695d4-0e17-479e-89e8-cc399a424040
   DisplayName: Home
-  CheckSum: 5ca872a418806ebb2d44223ff2a58be5ec56946a92f709703ace04349e74dd65
+  CheckSum: f8bb1cfa0a05eba47aa7955b4a92b75693c678901b07c12f196cd6e03dc79b72
   IsDeleted: false
 - RecordId: 3153dcf5-f144-42a6-a92e-64cb6a5d87f4
   DisplayName: User Panel
@@ -943,10 +959,38 @@ adx_webtemplate:
   CheckSum: 9ed85a4e149be6a7952cf2816892d66bc2dde4941e13ec272c3ee4f0cb9c0180
   IsDeleted: false
 annotation:
+- RecordId: 0cc27e5f-48f1-f011-8406-002248882207
+  DisplayName: Three-snow-cones-with-sprinkles.png
+  CheckSum: 89c7317360f7a584245e1e30df89297370aedd3bb1fe2953a9a0b2d60c718ebd
+  IsDeleted: false
+- RecordId: 1e00f121-4bf1-f011-8406-002248882207
+  DisplayName: homeImage.jpg
+  CheckSum: e82eb055bcefd875c054272a501d16eefd55fb53845d0393bb343c9c7faee422
+  IsDeleted: false
+- RecordId: 79faee41-48f1-f011-8406-002248882207
+  DisplayName: A-flower.png
+  CheckSum: 1abfdf0885853cac2adceaec3183d41bb00eeb3868aeedbe413c27c07c1833be
+  IsDeleted: true
+- RecordId: 905c26ec-49f1-f011-8406-002248882207
+  DisplayName: ORANGE%20(1)
+  CheckSum: e68467c49e7fad7f4a2b3c30c68c934e3dad902ff8a34e2e1b73a0b1ffca8339
+  IsDeleted: false
+- RecordId: 915c26ec-49f1-f011-8406-002248882207
+  DisplayName: portalbasictheme.css
+  CheckSum: ff3d245d61b7adb55356b3fd66c7e06ac616b2661e00d45205972832cf94c0f6
+  IsDeleted: false
 - RecordId: a4ee2c5b-5181-ef11-ac21-6045bd8c7e6d
   DisplayName: portalbasictheme.css
   CheckSum: 155bf893547c47bbdbbf6ff4cf58108319e8808b45efd962f827568a2cf3399b
-  IsDeleted: false
+  IsDeleted: true
+- RecordId: ac282689-48f1-f011-8406-002248882207
+  DisplayName: ORANGE%20(1)
+  CheckSum: abd45727a99618a60b8889e36d4f081bfd9685c6dca6d83763f7d5aeed6e9197
+  IsDeleted: true
+- RecordId: ad282689-48f1-f011-8406-002248882207
+  DisplayName: portalbasictheme.css
+  CheckSum: 713e0f38dfab5c0595212c94dc9e9173e64eb11a24e9f01e23de18c64f3f2227
+  IsDeleted: true
 - RecordId: b2cf55b0-5081-ef11-ac21-6045bd8c7e6d
   DisplayName: PWAManifest.json
   CheckSum: 0fa00f769e699d4be804dd2242368c9031b592d6fd5afc2bde78d1334634d26d
