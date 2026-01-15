@@ -15,6 +15,7 @@
     <AppModuleComponent type="1" schemaName="pg_address" />
     <AppModuleComponent type="1" schemaName="pg_event" />
     <AppModuleComponent type="1" schemaName="pg_eventparticipation" />
+    <AppModuleComponent type="1" schemaName="pg_eventregistrationform" />
     <AppModuleComponent type="62" schemaName="pg_Letsmeet" />
   </AppModuleComponents>
   <AppModuleRoleMaps>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.25091.165" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25091.165" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25091.00165">
+<ImportExportXml version="9.2.25114.188" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25114.188" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25114.00188">
   <SolutionManifest>
     <UniqueName>LetsMeet</UniqueName>
     <LocalizedNames>
@@ -87,6 +87,7 @@
       <RootComponent type="1" schemaName="pg_event" behavior="0" />
       <RootComponent type="1" schemaName="pg_eventlifecycleflow" behavior="0" />
       <RootComponent type="1" schemaName="pg_eventparticipation" behavior="0" />
+      <RootComponent type="1" schemaName="pg_eventregistrationform" behavior="0" />
       <RootComponent type="29" id="{8010a353-74af-ec11-9840-000d3a4575a9}" behavior="0" />
       <RootComponent type="300" schemaName="pg_latesteventspage_ce5f1" behavior="0" />
       <RootComponent type="300" schemaName="pg_letsmeetwelcomepage_f99a3" behavior="0" />
@@ -95,6 +96,7 @@
       <RootComponent type="61" schemaName="pg_/image/address.svg" behavior="0" />
       <RootComponent type="61" schemaName="pg_/image/event.svg" behavior="0" />
       <RootComponent type="61" schemaName="pg_/image/eventparticipant.svg" behavior="0" />
+      <RootComponent type="61" schemaName="pg_/image/event-registration.svg" behavior="0" />
       <RootComponent type="61" schemaName="pg_/script/main.js" behavior="0" />
       <RootComponent type="62" schemaName="pg_Letsmeet" behavior="0" />
       <RootComponent type="80" schemaName="pg_Letsmeet" behavior="0" />
@@ -107,13 +109,13 @@
     <MissingDependencies>
       <MissingDependency>
         <Required type="60" displayName="account contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
-          <package appName="msdynce_AppCommon" version="9.0.25091.10002">msdynce_AppCommonAnchor (9.0.25091.10002)</package>
+          <package appName="msdynce_AppCommon" version="9.0.25113.10001">msdynce_AppCommonAnchor (9.0.25113.10001)</package>
         </Required>
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="60" displayName="Account" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}">
-          <package appName="msdynce_AppCommon" version="9.0.25091.10002">msdynce_AppCommonAnchor (9.0.25091.10002)</package>
+          <package appName="msdynce_AppCommon" version="9.0.25113.10001">msdynce_AppCommonAnchor (9.0.25113.10001)</package>
         </Required>
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
@@ -164,8 +166,8 @@
         <Dependent type="80" schemaName="pg_Letsmeet" displayName="Let's Meet!" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2509.1013)">
-          <package appName="Base Custom Controls" version="9.0.2509.1013">BaseCustomControlsCore (9.0.2509.1013)</package>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2511.4011)">
+          <package appName="Base Custom Controls" version="9.0.2511.4011">BaseCustomControlsCore (9.0.2511.4011)</package>
         </Required>
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>

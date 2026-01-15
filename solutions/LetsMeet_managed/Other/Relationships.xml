@@ -12,15 +12,19 @@
   <EntityRelationship Name="lk_pg_eventlifecycleflow_processid" />
   <EntityRelationship Name="lk_pg_eventparticipation_createdby" />
   <EntityRelationship Name="lk_pg_eventparticipation_modifiedby" />
+  <EntityRelationship Name="lk_pg_eventregistrationform_createdby" />
+  <EntityRelationship Name="lk_pg_eventregistrationform_modifiedby" />
   <EntityRelationship Name="organization_pg_address" />
   <EntityRelationship Name="organization_pg_eventlifecycleflow" />
   <EntityRelationship Name="organization_pg_eventparticipation" />
+  <EntityRelationship Name="organization_pg_eventregistrationform" />
   <EntityRelationship Name="owner_pg_event" />
   <EntityRelationship Name="pg_event_createdbyportaluserid_contact" />
   <EntityRelationship Name="pg_event_partnerId_Account" />
   <EntityRelationship Name="pg_event_pg_addressId_pg_address" />
   <EntityRelationship Name="pg_eventparticipation_contactId_Contact" />
   <EntityRelationship Name="pg_eventparticipation_pg_eventId_pg_event" />
+  <EntityRelationship Name="pg_eventregistrationform_pg_event" />
   <EntityRelationship Name="team_pg_event" />
   <EntityRelationship Name="user_pg_event" />
 </EntityRelationships>
