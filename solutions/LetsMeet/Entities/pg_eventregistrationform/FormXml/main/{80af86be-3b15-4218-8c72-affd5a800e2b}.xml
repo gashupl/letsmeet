@@ -44,6 +44,14 @@
                       </cell>
                     </row>
                     <row>
+                      <cell id="{e05481f9-ecc6-49a1-a60e-d52a2127e86d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="E-Mail" languagecode="1033" />
+                        </labels>
+                        <control id="pg_email" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="pg_email" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{d8bc045a-39b9-4d80-8ec4-ee5b13341549}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
                           <label description="Birthday" languagecode="1033" />

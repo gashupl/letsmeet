@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.25114.188" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25114.188" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25114.00188">
+<ImportExportXml version="9.2.25123.160" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25123.160" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25123.00160">
   <SolutionManifest>
     <UniqueName>LetsMeet</UniqueName>
     <LocalizedNames>
@@ -112,18 +112,18 @@
         <Dependent type="1" schemaName="contact" displayName="Contact" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="1" schemaName="customeraddress" displayName="CustomerAddress" parentSchemaName="" solution="msdynce_AppCommonPatch201904 (9.0.25113.10001)" />
+        <Required type="1" schemaName="customeraddress" displayName="CustomerAddress" parentSchemaName="" solution="msdynce_AppCommonPatch201904 (9.0.25123.10001)" />
         <Dependent type="1" schemaName="customeraddress" displayName="CustomerAddress" />
       </MissingDependency>
       <MissingDependency>
         <Required type="60" displayName="account contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
-          <package appName="msdynce_AppCommon" version="9.0.25113.10001">msdynce_AppCommonAnchor (9.0.25113.10001)</package>
+          <package appName="msdynce_AppCommon" version="9.0.25123.10001">msdynce_AppCommonAnchor (9.0.25123.10001)</package>
         </Required>
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="60" displayName="Account" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}">
-          <package appName="msdynce_AppCommon" version="9.0.25113.10001">msdynce_AppCommonAnchor (9.0.25113.10001)</package>
+          <package appName="msdynce_AppCommon" version="9.0.25123.10001">msdynce_AppCommonAnchor (9.0.25123.10001)</package>
         </Required>
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
@@ -174,8 +174,8 @@
         <Dependent type="80" schemaName="pg_Letsmeet" displayName="Let's Meet!" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2511.4011)">
-          <package appName="Base Custom Controls" version="9.0.2511.4011">BaseCustomControlsCore (9.0.2511.4011)</package>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2512.3008)">
+          <package appName="Base Custom Controls" version="9.0.2512.3008">BaseCustomControlsCore (9.0.2512.3008)</package>
         </Required>
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
