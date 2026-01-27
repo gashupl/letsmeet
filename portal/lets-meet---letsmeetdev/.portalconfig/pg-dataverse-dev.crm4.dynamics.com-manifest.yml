@@ -350,6 +350,10 @@ adx_sitesetting:
   DisplayName: ThemeFeature
   CheckSum: 6711c414ceec3a48a36a19920d537ec9b7d03141773e997418413de89ee5656e
   IsDeleted: false
+- RecordId: 1c5e3359-5ffb-f011-8406-002248882207
+  DisplayName: Webapi/error/innererror
+  CheckSum: 8aa5d854f142cf6d11f72148730dc6eae436da1a9f4b3fa037d5918e087277ae
+  IsDeleted: false
 - RecordId: 225a1ca2-a10c-48a8-905a-05c114a3ff32
   DisplayName: Search/IndexNotesAttachments
   CheckSum: 4e6ea3f9b08361d87a13b3b357ba4bce163bb7b13ce96566a5b3d96673a4ce82
@@ -482,6 +486,10 @@ adx_sitesetting:
   DisplayName: Authentication/Registration/LocalLoginDeprecated
   CheckSum: b2467934c6b554d52cfab84afd4163dd1adeee8b08a85189a92e535c6f2c0f72
   IsDeleted: false
+- RecordId: d4438552-5ffb-f011-8406-002248882207
+  DisplayName: Webapi/pg_event/fields
+  CheckSum: 790588b54f0e909c99b2aec25bf855b8495c0f0718b3a50748b8550cf239f0d0
+  IsDeleted: false
 - RecordId: d54e4d72-e920-43d7-a7b7-7579093b8130
   DisplayName: Search/Enabled
   CheckSum: ebb0320e091b5a986d0c89720f9f9ca00c3b0bc84563500618c7c77e5298c301
@@ -497,6 +505,10 @@ adx_sitesetting:
 - RecordId: dbcd50c4-6d54-48d8-a23e-88990750be97
   DisplayName: Header/OutputCache/Enabled
   CheckSum: 36dfd904312aa44c59fdaa8ed7d8f7a12a778fffec5de6a941c98557b678e26f
+  IsDeleted: false
+- RecordId: e071eb3e-5ffb-f011-8406-002248882207
+  DisplayName: Webapi/pg_event/enabled
+  CheckSum: b2398077fcf238b5447b5d3d0cb9fc8dc2a70fd978f1374a50bf1866fced97b0
   IsDeleted: false
 - RecordId: e3ef0c12-72e6-4182-b5db-decc6e7b3e61
   DisplayName: MultiLanguage/DisplayLanguageCodeInURL
@@ -688,7 +700,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: 10ebe240-1303-928b-8ba7-aa8e00a594ed
   DisplayName: Event Details
-  CheckSum: 8088a9ba7801b54905bd4063a35efea9b8e2d9f969c1c08b598834a1e0b9cb99
+  CheckSum: 5c2dba3578e3e841205c53ef01aae72ef6307face7341e87f48eb47b2a0f689e
   IsDeleted: false
 - RecordId: 2ae695d4-0e17-479e-89e8-cc399a424040
   DisplayName: Home
@@ -700,7 +712,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: 33ee654a-f1fd-2b4f-3e1e-19e537669128
   DisplayName: Event Form Registration
-  CheckSum: ba4dea77196bff0798d2aea4fb5f5461a7cd395f747dede8744c4051bfe5ca1c
+  CheckSum: 7309159566c01169cb0cfb3973580261d6f5a8ccb74fd97c25152e9a7f461a8f
   IsDeleted: false
 - RecordId: 36458231-d113-48d0-845f-716348e85a51
   DisplayName: Page Not Found

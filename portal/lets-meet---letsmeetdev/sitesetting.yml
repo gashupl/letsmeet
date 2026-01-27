@@ -25,6 +25,10 @@
   adx_value: '*WEB*'
 - adx_name: ThemeFeature
   adx_sitesettingid: 1bcd80e8-4066-415d-baf7-be245cc64c85
+- adx_name: Webapi/error/innererror
+  adx_sitesettingid: 1c5e3359-5ffb-f011-8406-002248882207
+  adx_source: 0
+  adx_value: true
 - adx_name: Search/IndexNotesAttachments
   adx_sitesettingid: 225a1ca2-a10c-48a8-905a-05c114a3ff32
   adx_value: false
@@ -133,6 +137,10 @@
   adx_name: Authentication/Registration/LocalLoginDeprecated
   adx_sitesettingid: ce274d6b-9bf2-4d55-9a16-40ee142501b8
   adx_value: False
+- adx_name: Webapi/pg_event/fields
+  adx_sitesettingid: d4438552-5ffb-f011-8406-002248882207
+  adx_source: 0
+  adx_value: pg_eventId,pg_allowedparticipantsquantity,pg_registeredparticipantsquantity
 - adx_name: Search/Enabled
   adx_sitesettingid: d54e4d72-e920-43d7-a7b7-7579093b8130
   adx_value: true
@@ -147,6 +155,10 @@
   adx_name: Header/OutputCache/Enabled
   adx_sitesettingid: dbcd50c4-6d54-48d8-a23e-88990750be97
   adx_value: True
+- adx_name: Webapi/pg_event/enabled
+  adx_sitesettingid: e071eb3e-5ffb-f011-8406-002248882207
+  adx_source: 0
+  adx_value: true
 - adx_description: Site setting that determines if the language code is included in the portal URL.
   adx_name: MultiLanguage/DisplayLanguageCodeInURL
   adx_sitesettingid: e3ef0c12-72e6-4182-b5db-decc6e7b3e61
