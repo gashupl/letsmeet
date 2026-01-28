@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('id');
     }
+
+    function getEventApiUrl(eventId) {
+        const portalUrl = window.location.origin;
+        var apiUrl = `${portalUrl}/_api/pg_events(${encodeURIComponent(eventId)})
+            ?$select=pg_allowedparticipantsquantity,pg_registeredparticipantsquantity`;
+        return apiUrl;
+    }
     
     // Update the Register button href with the event ID
     function updateRegisterButtonHref() {
@@ -19,7 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
             registerButton.setAttribute('href', currentHref + separator + 'eventId=' + encodeURIComponent(eventId));
         }
     }
+
+    function enableRegisterButton() {
+        const eventApiUrl = getEventApiUrl();
+        console.log(eventApiUrl); 
+        const registerButton = document.getElementById('registerButton');
+        registerButton.removeAttribute('disabled');
+    }
     
     // Execute the function
     updateRegisterButtonHref();
+    enableRegisterButton(); 
 });
