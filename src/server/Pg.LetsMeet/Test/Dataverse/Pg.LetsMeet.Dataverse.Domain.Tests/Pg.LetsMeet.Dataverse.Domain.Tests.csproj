@@ -112,6 +112,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\Contact\ContactServiceTests.cs" />
     <Compile Include="BusinessLogic\EventParticipationServiceTests.cs" />
     <Compile Include="BusinessLogic\EventServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -91,6 +91,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\Contact\ContactService.cs" />
+    <Compile Include="BusinessLogic\Contact\IContactService.cs" />
     <Compile Include="BusinessLogic\Demo\DemoService.cs" />
     <Compile Include="BusinessLogic\Demo\IDemoService.cs" />
     <Compile Include="BusinessLogic\Event\IEventService.cs" />
