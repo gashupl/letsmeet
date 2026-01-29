@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getEventApiUrl(eventId) {
         const portalUrl = window.location.origin;
-        var apiUrl = `${portalUrl}/_api/pg_events(${encodeURIComponent(eventId)})
-            ?$select=pg_allowedparticipantsquantity,pg_registeredparticipantsquantity`;
+        var apiUrl = `${portalUrl}/_api/pg_events(${encodeURIComponent(eventId)})`
+            + '?$select=pg_allowedparticipantsquantity,pg_registeredparticipantsquantity';
         return apiUrl;
     }
     
@@ -28,10 +28,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function enableRegisterButton() {
-        const eventApiUrl = getEventApiUrl();
-        console.log(eventApiUrl); 
+        const eventId = getEventIdFromUrl();
+        if (!eventId) return;
+        const eventApiUrl = getEventApiUrl(eventId);
         const registerButton = document.getElementById('registerButton');
-        registerButton.removeAttribute('disabled');
+        // Fetch event data
+        fetch(eventApiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const allowed = data.pg_allowedparticipantsquantity;
+                const registered = data.pg_registeredparticipantsquantity || 0;
+                // Enable only if registration is allowed
+                if (registered < allowed) {
+                    console.log('Enabling Register button');
+                    registerButton.removeAttribute('disabled');
+                    registerButton.style.pointerEvents = 'auto';
+                    registerButton.style.opacity = '1';
+                    registerButton.style.cursor = 'pointer';
+                }
+                else{
+                    console.log('Registration full, keeping Register button disabled');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching event data:', error);
+            });
     }
     
     // Execute the function
