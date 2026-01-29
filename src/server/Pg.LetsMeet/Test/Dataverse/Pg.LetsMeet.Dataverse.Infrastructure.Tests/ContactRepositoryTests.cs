@@ -75,5 +75,47 @@ namespace Pg.LetsMeet.Dataverse.Infrastructure.Tests
 
             Assert.Null(actualCustomerRef);
         }
+
+        [Fact]
+        public void GetContactByEmail_ContactExists_ReturnsContact()
+        {
+            var contactId = Guid.NewGuid();
+            var email = "test@example.com";
+
+            var context = new XrmFakedContext();
+            context.ProxyTypesAssembly = Assembly.GetAssembly(typeof(pg_eventparticipation));
+
+            context.Initialize(new List<Entity>() {
+                new Contact(){ Id = contactId, EMailAddress1 = email
+                },
+            });
+
+            var service = context.GetOrganizationService();
+
+            var repo = new ContactRepository();
+            repo.Initialize(service);
+            var actualContact = repo.GetContactByEmail(email);
+
+            Assert.NotNull(actualContact);
+            Assert.Equal(contactId, actualContact.Id);
+        }
+
+        [Fact]
+        public void GetContactByEmail_ContactNotExists_ReturnsNull()
+        {
+            var contactId = Guid.NewGuid();
+            var email = "test@example.com";
+
+            var context = new XrmFakedContext();
+            context.ProxyTypesAssembly = Assembly.GetAssembly(typeof(pg_eventparticipation));
+
+            var service = context.GetOrganizationService();
+
+            var repo = new ContactRepository();
+            repo.Initialize(service);
+            var actualContact = repo.GetContactByEmail(email);
+
+            Assert.Null(actualContact);
+        }
     }
 }

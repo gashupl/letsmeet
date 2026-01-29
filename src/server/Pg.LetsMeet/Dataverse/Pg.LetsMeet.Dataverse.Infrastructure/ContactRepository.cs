@@ -19,5 +19,15 @@ namespace Pg.LetsMeet.Dataverse.Infrastructure
                 return query.FirstOrDefault();
             }
         }
+
+        public Contact GetContactByEmail(string email)
+        {
+            using (var context = CreateContext<DataverseContext>())
+            {
+                var query = context.ContactSet
+                    .Where(c => c.EMailAddress1 != null && c.EMailAddress1 == email);
+                return query.FirstOrDefault();
+            }
+        }
     }
 }
