@@ -2,6 +2,7 @@
 {
     public interface IContactService : IService
     {
-        bool ContactExists(string email);
+        ContactExistsResponse ContactExists(string email);
+        bool UpdateContactIfChanged(Context.Contact contact, string firstName, string lastName);
     }
 }
