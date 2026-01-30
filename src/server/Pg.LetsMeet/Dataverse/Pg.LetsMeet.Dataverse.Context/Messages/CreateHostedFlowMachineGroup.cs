@@ -27,6 +27,8 @@ namespace Pg.LetsMeet.Dataverse.Context
 			public const string groupDescription = "groupDescription";
 			public const string groupMaximumMachineCount = "groupMaximumMachineCount";
 			public const string groupDomainSetting = "groupDomainSetting";
+			public const string groupManagedVersion = "groupManagedVersion";
+			public const string groupUsageType = "groupUsageType";
 		}
 		
 		public const string ActionLogicalName = "CreateHostedFlowMachineGroup";
@@ -180,6 +182,44 @@ namespace Pg.LetsMeet.Dataverse.Context
 			set
 			{
 				this.Parameters["groupDomainSetting"] = value;
+			}
+		}
+		
+		public string groupManagedVersion
+		{
+			get
+			{
+				if (this.Parameters.Contains("groupManagedVersion"))
+				{
+					return ((string)(this.Parameters["groupManagedVersion"]));
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+			set
+			{
+				this.Parameters["groupManagedVersion"] = value;
+			}
+		}
+		
+		public string groupUsageType
+		{
+			get
+			{
+				if (this.Parameters.Contains("groupUsageType"))
+				{
+					return ((string)(this.Parameters["groupUsageType"]));
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+			set
+			{
+				this.Parameters["groupUsageType"] = value;
 			}
 		}
 		

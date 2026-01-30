@@ -127,6 +127,7 @@
     "environmentvariablevalue",
     "pg_event",
     "pg_eventparticipation",
+    "pg_eventregistrationform",
     "settingdefinition"
   ],
   "entityTypesFolder": "Entities",

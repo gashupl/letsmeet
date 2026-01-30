@@ -22,6 +22,7 @@ namespace Pg.LetsMeet.Dataverse.Context
 			public const string tablename = "tablename";
 			public const string Item_1 = "Item_1";
 			public const string displayname = "displayname";
+			public const string description = "description";
 		}
 		
 		public const string ActionLogicalName = "McpCreateTable";
@@ -80,6 +81,25 @@ namespace Pg.LetsMeet.Dataverse.Context
 			set
 			{
 				this.Parameters["displayname"] = value;
+			}
+		}
+		
+		public string description
+		{
+			get
+			{
+				if (this.Parameters.Contains("description"))
+				{
+					return ((string)(this.Parameters["description"]));
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+			set
+			{
+				this.Parameters["description"] = value;
 			}
 		}
 		

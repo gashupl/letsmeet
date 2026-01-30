@@ -106,6 +106,7 @@
     <Compile Include="Entities\EnvironmentVariableValue.cs" />
     <Compile Include="Entities\pg_event.cs" />
     <Compile Include="Entities\pg_eventparticipation.cs" />
+    <Compile Include="Entities\pg_eventregistrationform.cs" />
     <Compile Include="Entities\SettingDefinition.cs" />
     <Compile Include="EntityOptionSetEnum.cs" />
     <Compile Include="Messages\AddCertificateCredential.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Messages\CommitToGit.cs" />
     <Compile Include="Messages\ComputeSlaWorkQueueItem.cs" />
     <Compile Include="Messages\ConfirmConsentCode.cs" />
+    <Compile Include="Messages\ConnectToGit.cs" />
     <Compile Include="Messages\copilotquerytextcontext.cs" />
     <Compile Include="Messages\copilottextdatastatus.cs" />
     <Compile Include="Messages\CreateAndSendNewEmail.cs" />
@@ -167,11 +169,14 @@
     <Compile Include="Messages\DeleteInstantPlugin.cs" />
     <Compile Include="Messages\Dequeue.cs" />
     <Compile Include="Messages\DetectLanguage.cs" />
+    <Compile Include="Messages\DisconnectFromGit.cs" />
     <Compile Include="Messages\DiscoverFabricAISkills.cs" />
     <Compile Include="Messages\DiscoverFabricWorkspaces.cs" />
     <Compile Include="Messages\ExecuteBackgroundOperation.cs" />
     <Compile Include="Messages\ExecuteFxExpression.cs" />
     <Compile Include="Messages\ExportRetainedData.cs" />
+    <Compile Include="Messages\ExportSolutionFromGit.cs" />
+    <Compile Include="Messages\ExportSolutionFromGitAsync.cs" />
     <Compile Include="Messages\ExtractKeyPhrases.cs" />
     <Compile Include="Messages\ExtractTextEntities.cs" />
     <Compile Include="Messages\FormPredict.cs" />
@@ -205,6 +210,8 @@
     <Compile Include="Messages\McpUpdateTable.cs" />
     <Compile Include="Messages\msdyn_ActivateProcesses.cs" />
     <Compile Include="Messages\msdyn_ActivateSdkMessageProcessingSteps.cs" />
+    <Compile Include="Messages\msdyn_AIEvaluationMetrics.cs" />
+    <Compile Include="Messages\msdyn_AIEvaluationMetricsWrapper.cs" />
     <Compile Include="Messages\msdyn_AITestRun.cs" />
     <Compile Include="Messages\msdyn_BulkAITestCaseUpload.cs" />
     <Compile Include="Messages\msdyn_BulkAITestRun.cs" />
@@ -281,6 +288,7 @@
     <Compile Include="Messages\pbi_CloneAndAddPowerBIDataset.cs" />
     <Compile Include="Messages\pbi_CloneAndAddPowerBIReport.cs" />
     <Compile Include="Messages\pbi_GetEnvironmentWorkspaceAccessForUser.cs" />
+    <Compile Include="Messages\pg_getunsynchronizedtables.cs" />
     <Compile Include="Messages\pg_monthlyresults.cs" />
     <Compile Include="Messages\pm_CreateProcess.cs" />
     <Compile Include="Messages\pm_RefreshProcessMiningLicensingCapacity.cs" />
@@ -310,6 +318,7 @@
     <Compile Include="Messages\PvaStartConversation.cs" />
     <Compile Include="Messages\QueryDvUnstructuredData.cs" />
     <Compile Include="Messages\QuerySalesforceUnstructuredData.cs" />
+    <Compile Include="Messages\querystructureddatastream.cs" />
     <Compile Include="Messages\QueryZendeskUnstructuredArticles.cs" />
     <Compile Include="Messages\QuestionAnalytics.cs" />
     <Compile Include="Messages\QuickTest.cs" />
@@ -319,6 +328,9 @@
     <Compile Include="Messages\RegisterFlowMachine.cs" />
     <Compile Include="Messages\RemoveActiveCustomization.cs" />
     <Compile Include="Messages\RemoveCertificateCredential.cs" />
+    <Compile Include="Messages\ReplicateCreate.cs" />
+    <Compile Include="Messages\ReplicateDelete.cs" />
+    <Compile Include="Messages\ReplicateUpdate.cs" />
     <Compile Include="Messages\ResetInheritedAccess.cs" />
     <Compile Include="Messages\RestartHostedMachine.cs" />
     <Compile Include="Messages\Restore.cs" />
@@ -336,6 +348,7 @@
     <Compile Include="Messages\RetrieveEnvironmentVariableValue.cs" />
     <Compile Include="Messages\RetrieveFinanceAndOperationsIntegrationDetails.cs" />
     <Compile Include="Messages\RetrieveFlowUpdates.cs" />
+    <Compile Include="Messages\RetrieveMaskedAttributesForEntity.cs" />
     <Compile Include="Messages\RetrieveMissingDependenciesWithMetadata.cs" />
     <Compile Include="Messages\RetrievePowerAppsConnections.cs" />
     <Compile Include="Messages\RetrievePowerAppsConnectorApis.cs" />
@@ -356,6 +369,7 @@
     <Compile Include="Messages\searchstatistics.cs" />
     <Compile Include="Messages\searchstatus.cs" />
     <Compile Include="Messages\searchsuggest.cs" />
+    <Compile Include="Messages\SearchWeb.cs" />
     <Compile Include="Messages\SendAppNotification.cs" />
     <Compile Include="Messages\SetupAiConnection.cs" />
     <Compile Include="Messages\SnapshotDatasource.cs" />
