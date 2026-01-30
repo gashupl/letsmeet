@@ -75,6 +75,7 @@ namespace Pg.LetsMeet.Dataverse.Context
 			public const string pg_email = "pg_email";
 			public const string pg_eventId = "pg_eventid";
 			public const string pg_eventIdName = "pg_eventidname";
+			public const string pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform = "pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform";
 			public const string pg_eventregistrationform_pg_event = "pg_eventregistrationform_pg_event";
 			public const string pg_eventregistrationformId = "pg_eventregistrationformid";
 			public const string Id = "pg_eventregistrationformid";
@@ -683,6 +684,24 @@ namespace Pg.LetsMeet.Dataverse.Context
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform")]
+		public System.Collections.Generic.IEnumerable<Pg.LetsMeet.Dataverse.Context.pg_eventparticipation> pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<Pg.LetsMeet.Dataverse.Context.pg_eventparticipation>("pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetRelatedEntities<Pg.LetsMeet.Dataverse.Context.pg_eventparticipation>("pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform", null, value);
 			}
 		}
 		

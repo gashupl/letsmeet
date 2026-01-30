@@ -1,10 +1,12 @@
 ﻿using Microsoft.Xrm.Sdk;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
+using System;
 
 namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contact
 {
     public class ContactService : ServiceBase, IContactService
     {
+        private readonly IContactRepository _contactRepository;
         public ContactService(IRepositoriesFactory repositoryFactory, ITracingService tracing) : base(repositoryFactory, tracing)
         {
         }
@@ -41,6 +43,30 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contact
                 contactRepository.Update(contact);
             }
             return isUpdated;
+        }
+
+        public Guid UpsertContactWithEmail(string email, string firstName, string lastName)
+        {
+            var contactExistsResponse = ContactExists(email);
+            if (contactExistsResponse.Exists)
+            {
+                UpdateContactIfChanged(
+                    contactExistsResponse.Contact,
+                    firstName,
+                    lastName);
+
+                return contactExistsResponse.Contact.Id;
+            }
+            else
+            {
+                var newContact = new Context.Contact
+                {
+                    FirstName = firstName,
+                    LastName = lastName,
+                    EMailAddress1 = email
+                };
+                return _contactRepository.Create(newContact);
+            }
         }
     }
 }

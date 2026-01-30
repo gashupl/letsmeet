@@ -96,6 +96,9 @@
     <Compile Include="BusinessLogic\Contact\IContactService.cs" />
     <Compile Include="BusinessLogic\Demo\DemoService.cs" />
     <Compile Include="BusinessLogic\Demo\IDemoService.cs" />
+    <Compile Include="BusinessLogic\EventParticipations\CreateParticipationsFromRegistrationsResult.cs" />
+    <Compile Include="BusinessLogic\EventParticipations\IRegistrationToParticipationService.cs" />
+    <Compile Include="BusinessLogic\EventParticipations\RegistrationToParticipationService.cs" />
     <Compile Include="BusinessLogic\Event\IEventService.cs" />
     <Compile Include="BusinessLogic\Event\EventService.cs" />
     <Compile Include="BusinessLogic\ServicesFactory.cs" />
