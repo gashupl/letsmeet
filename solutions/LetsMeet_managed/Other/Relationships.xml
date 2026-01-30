@@ -24,6 +24,7 @@
   <EntityRelationship Name="pg_event_pg_addressId_pg_address" />
   <EntityRelationship Name="pg_eventparticipation_contactId_Contact" />
   <EntityRelationship Name="pg_eventparticipation_pg_eventId_pg_event" />
+  <EntityRelationship Name="pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform" />
   <EntityRelationship Name="pg_eventregistrationform_pg_event" />
   <EntityRelationship Name="team_pg_event" />
   <EntityRelationship Name="user_pg_event" />
