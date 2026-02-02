@@ -4,7 +4,7 @@ using Moq;
 using Pg.LetsMeet.Dataverse.Common.Values;
 using Pg.LetsMeet.Dataverse.Context;
 using Pg.LetsMeet.Dataverse.Domain;
-using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Event;
+using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Events;
 using Pg.LetsMeet.Dataverse.Plugins.Events;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
 using Pg.LetsMeet.Dataverse.Shared.Values;

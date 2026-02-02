@@ -1,7 +1,7 @@
 ﻿using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using Pg.LetsMeet.Dataverse.Context;
-using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contact;
+using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
 using System;
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contact
+namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
 {
     public interface IContactService : IService
     {

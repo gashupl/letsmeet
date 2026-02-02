@@ -2,7 +2,7 @@
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
 using System;
 
-namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contact
+namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
 {
     public class ContactService : ServiceBase, IContactService
     {
