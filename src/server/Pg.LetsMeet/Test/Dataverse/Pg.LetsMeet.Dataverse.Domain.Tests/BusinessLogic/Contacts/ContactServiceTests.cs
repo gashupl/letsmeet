@@ -6,7 +6,7 @@ using Pg.LetsMeet.Dataverse.Domain.DataAccess;
 using Pg.LetsMeet.Dataverse.Tests.Shared;
 using Xunit;
 
-namespace Pg.LetsMeet.Dataverse.Domain.Tests.BusinessLogic
+namespace Pg.LetsMeet.Dataverse.Domain.Tests.BusinessLogic.Contacts
 {
     public class ContactServiceTests : DataverseTestBase
     {

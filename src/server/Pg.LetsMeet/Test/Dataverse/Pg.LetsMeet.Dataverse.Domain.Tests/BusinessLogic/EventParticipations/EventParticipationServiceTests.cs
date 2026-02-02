@@ -8,8 +8,8 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace Pg.LetsMeet.Dataverse.Domain.Tests.BusinessLogic
-{
+namespace Pg.LetsMeet.Dataverse.Domain.Tests.BusinessLogic.EventParticipations
+{ 
     public class EventParticipationServiceTests : DataverseTestBase
     {
         [Fact]

@@ -112,8 +112,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogic\Contact\ContactServiceTests.cs" />
-    <Compile Include="BusinessLogic\EventParticipationServiceTests.cs" />
+    <Compile Include="BusinessLogic\Contacts\ContactServiceTests.cs" />
+    <Compile Include="BusinessLogic\EventParticipations\EventParticipationServiceTests.cs" />
+    <Compile Include="BusinessLogic\EventParticipations\RegistrationToParticipationServiceTests.cs" />
     <Compile Include="BusinessLogic\EventServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -135,9 +136,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BusinessLogic\EventParticipations\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
