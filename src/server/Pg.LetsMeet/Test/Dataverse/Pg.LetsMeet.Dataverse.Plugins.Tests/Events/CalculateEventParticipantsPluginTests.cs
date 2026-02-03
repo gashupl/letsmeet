@@ -13,7 +13,7 @@ using Pg.LetsMeet.Dataverse.Shared.Injections;
 using Pg.LetsMeet.Dataverse.Tests.Shared;
 using Pg.LetsMeet.Dataverse.Plugins.Events;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
+namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Events
 {
 
     public class CalculateEventParticipantsPluginTests : DataverseTestBase

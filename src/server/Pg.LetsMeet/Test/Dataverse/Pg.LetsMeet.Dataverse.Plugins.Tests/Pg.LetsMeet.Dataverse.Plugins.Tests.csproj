@@ -114,8 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyLoaderFakeBase.cs" />
-    <Compile Include="Plugins\CalculateEventParticipantsPluginTests.cs" />
-    <Compile Include="Plugins\SetPartnerOnNewEventPluginTests.cs" />
+    <Compile Include="Events\CalculateEventParticipantsPluginTests.cs" />
+    <Compile Include="Events\SetPartnerOnNewEventPluginTests.cs" />
+    <Compile Include="Events\TryConvertRegistrationToParticipationAsyncPluginTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

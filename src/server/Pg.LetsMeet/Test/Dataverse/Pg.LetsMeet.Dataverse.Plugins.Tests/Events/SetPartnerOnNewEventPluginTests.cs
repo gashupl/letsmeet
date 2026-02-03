@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
+namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Events
 {
     public class SetPartnerOnNewEventPluginTests : DataverseTestBase
     {
