@@ -9,6 +9,7 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
         private readonly IContactRepository _contactRepository;
         public ContactService(IRepositoriesFactory repositoryFactory, ITracingService tracing) : base(repositoryFactory, tracing)
         {
+            _contactRepository = repositoryFactory.Get<IContactRepository>();
         }
 
         public ContactExistsResponse ContactExists(string email)
@@ -47,9 +48,11 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
 
         public Guid UpsertContactWithEmail(string email, string firstName, string lastName)
         {
+            tracing.Trace($"UpsertContactWithEmail called with email: {email}, firstName: {firstName}, lastName: {lastName}");
             var contactExistsResponse = ContactExists(email);
             if (contactExistsResponse.Exists)
             {
+                tracing.Trace($"Contact with email {email} already exists. Checking for updates.");
                 UpdateContactIfChanged(
                     contactExistsResponse.Contact,
                     firstName,
@@ -59,6 +62,7 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
             }
             else
             {
+                tracing.Trace($"Contact with email {email} does not exist. Creating new contact.");
                 var newContact = new Context.Contact
                 {
                     FirstName = firstName,
