@@ -10,7 +10,6 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
     public class RegistrationToParticipationService : ServiceBase, IRegistrationToParticipationService
     {
         private readonly IContactService _contactService;
-        private readonly IContactRepository _contactRepository;
         private readonly IEventParticipationRepository _eventParticipationRepository;
         private readonly IRepository _repository; 
 
@@ -19,7 +18,6 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
         {
             _contactService = contactService;
             _repository = repositoryFactory.Get<IRepository>();
-            _contactRepository = repositoryFactory.Get<IContactRepository>();
             _eventParticipationRepository = repositoryFactory.Get<IEventParticipationRepository>();
         }
 
@@ -45,8 +43,13 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
             }
             catch (InvalidPluginExecutionException ex)
             {
-                tracing.Trace("Failed to create event participation: " + ex.Message);
+                tracing.Trace("[InvalidPluginExecutionException] Failed to create event participation: " + ex.Message);
                 return CreateParticipationsFromRegistrationsResult.Failure; 
+            }
+            catch(Exception ex)
+            {
+                tracing.Trace("[Exception] Failed to create event participation: " + ex.Message);
+                return CreateParticipationsFromRegistrationsResult.Failure;
             }
 
         }
