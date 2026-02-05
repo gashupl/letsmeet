@@ -4,8 +4,8 @@ using Moq;
 using Pg.LetsMeet.Dataverse.Common.Values;
 using Pg.LetsMeet.Dataverse.Context;
 using Pg.LetsMeet.Dataverse.Domain;
-using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Event;
-using Pg.LetsMeet.Dataverse.Plugins.Plugins;
+using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Events;
+using Pg.LetsMeet.Dataverse.Plugins.Events;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
 using Pg.LetsMeet.Dataverse.Shared.Values;
 using Pg.LetsMeet.Dataverse.Tests.Shared;
@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Plugins
+namespace Pg.LetsMeet.Dataverse.Plugins.Tests.Events
 {
     public class SetPartnerOnNewEventPluginTests : DataverseTestBase
     {

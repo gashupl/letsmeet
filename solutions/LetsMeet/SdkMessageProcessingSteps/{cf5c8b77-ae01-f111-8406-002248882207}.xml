@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="Pg.LetsMeet.Dataverse.Plugins.Events.TryConvertRegistrationToParticipationAsyncPlugin: Create of pg_eventregistrationform" SdkMessageProcessingStepId="{cf5c8b77-ae01-f111-8406-002248882207}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeExportKey>92E1860449B55363767B8DA8DB7CFD668FD90E838570A8DBAC31EEA5AE3E7420</PluginTypeExportKey>
+  <PrimaryEntity>pg_eventregistrationform</PrimaryEntity>
+  <AsyncAutoDelete>1</AsyncAutoDelete>
+  <Description>Pg.LetsMeet.Dataverse.Plugins.Events.TryConvertRegistrationToParticipationAsyncPlugin: Create of pg_eventregistrationform</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>1</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

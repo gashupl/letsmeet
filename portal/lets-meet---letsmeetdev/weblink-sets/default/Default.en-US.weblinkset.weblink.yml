@@ -84,3 +84,15 @@
   adx_robotsfollowlink: true
   adx_weblinkid: be7b2fc0-58be-4cad-b7f9-b83248ceb338
   adx_weblinksetid: defb802d-ac34-4802-b682-a32ad9f341ae
+- adx_displayimageonly: false
+  adx_displayorder: 10
+  adx_displaypagechildlinks: false
+  adx_name: Event Form Registration
+  adx_openinnewwindow: false
+  adx_pageid: 4326f56f-df9d-55b8-cdb1-5267e3f4465b
+  adx_publishingstateid: 85d6aec0-34ff-4fd5-b572-a66952ecbd7f
+  adx_robotsfollowlink: true
+  adx_weblinkid: d66fb469-239d-6223-254c-55b382c8158d
+  adx_weblinksetid: defb802d-ac34-4802-b682-a32ad9f341ae
+  statecode: 1
+  statuscode: 2

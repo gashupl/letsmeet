@@ -34,6 +34,7 @@ namespace Pg.LetsMeet.Dataverse.Context
 		{
 			public const string Id = "Id";
 			public const string IsUnifiedDatabase = "IsUnifiedDatabase";
+			public const string OrgLifecycleStatus = "OrgLifecycleStatus";
 			public const string TenantId = "TenantId";
 			public const string Url = "Url";
 		}
@@ -79,6 +80,25 @@ namespace Pg.LetsMeet.Dataverse.Context
 			set
 			{
 				this.Results["IsUnifiedDatabase"] = value;
+			}
+		}
+		
+		public string OrgLifecycleStatus
+		{
+			get
+			{
+				if (this.Results.Contains("OrgLifecycleStatus"))
+				{
+					return ((string)(this.Results["OrgLifecycleStatus"]));
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+			set
+			{
+				this.Results["OrgLifecycleStatus"] = value;
 			}
 		}
 		

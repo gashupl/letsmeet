@@ -133,6 +133,10 @@ adx_contentsnippet:
   CheckSum: 501952535c60de4392470d7e0f9cf49433249fe43553e25c0fd46a9ca08fb6dc
   IsDeleted: false
 adx_entityform:
+- RecordId: 0307e671-e4f1-f011-8406-002248882207
+  DisplayName: Event Registration Form - Information Form
+  CheckSum: e21df6ddd8f4678c34a23d3e5cdce5e7e16f21ca6cd8754070bf6bd1f0337f54
+  IsDeleted: false
 - RecordId: 31d50ce0-59d3-ef11-8ee9-7c1e52267093
   DisplayName: Event - Information Form (Insert)
   CheckSum: f708752b233d0cd83e90c5a5b420773007202615c743f481026269386b6a617c
@@ -172,6 +176,10 @@ adx_entitylist:
   CheckSum: ce4c32c9e96c767d82d4048b6e0084a5dd949d3f6ba72347b4fcb80e923c8403
   IsDeleted: false
 adx_entitypermission:
+- RecordId: 2bc92035-e4f1-f011-8406-002248882207
+  DisplayName: Self Event Registration Form Access
+  CheckSum: 1e1ac3cb8cce895c937eac73361c1a9f3ee81b8b4738578403c1b134f096df49
+  IsDeleted: false
 - RecordId: 457e2290-3309-4274-93ec-d21c0132ce75
   DisplayName: Active Events
   CheckSum: 97bc717aefae598ceb6441cc1f743a6050d5356ca4029078905555e747061376
@@ -201,6 +209,10 @@ adx_entitypermission:
   CheckSum: 3659da609926b415016152a0d67e4a59db004332451b7c756448aa28c2c396d3
   IsDeleted: false
 adx_entitypermission_webrole:
+- RecordId: 0f461b15-3d92-4e58-958b-f87b7895508c
+  DisplayName: $RELATIONSHIP$adx_entitypermission:2bc92035-e4f1-f011-8406-002248882207:adx_webrole
+  CheckSum: 2391138326fe1cf093cbe064ce0f60fe50935caf921db5bb4da673f67e766990
+  IsDeleted: false
 - RecordId: 0f461b15-3d92-4e58-958b-f87b7895508c
   DisplayName: $RELATIONSHIP$adx_entitypermission:b06b474b-3648-4156-928e-84fddca8feb5:adx_webrole
   CheckSum: 98fb54b540849a6de4f596058a13affad94b96f72dae740890db0db748541fbf
@@ -338,6 +350,10 @@ adx_sitesetting:
   DisplayName: ThemeFeature
   CheckSum: 6711c414ceec3a48a36a19920d537ec9b7d03141773e997418413de89ee5656e
   IsDeleted: false
+- RecordId: 1c5e3359-5ffb-f011-8406-002248882207
+  DisplayName: Webapi/error/innererror
+  CheckSum: 8aa5d854f142cf6d11f72148730dc6eae436da1a9f4b3fa037d5918e087277ae
+  IsDeleted: false
 - RecordId: 225a1ca2-a10c-48a8-905a-05c114a3ff32
   DisplayName: Search/IndexNotesAttachments
   CheckSum: 4e6ea3f9b08361d87a13b3b357ba4bce163bb7b13ce96566a5b3d96673a4ce82
@@ -470,6 +486,10 @@ adx_sitesetting:
   DisplayName: Authentication/Registration/LocalLoginDeprecated
   CheckSum: b2467934c6b554d52cfab84afd4163dd1adeee8b08a85189a92e535c6f2c0f72
   IsDeleted: false
+- RecordId: d4438552-5ffb-f011-8406-002248882207
+  DisplayName: Webapi/pg_event/fields
+  CheckSum: 790588b54f0e909c99b2aec25bf855b8495c0f0718b3a50748b8550cf239f0d0
+  IsDeleted: false
 - RecordId: d54e4d72-e920-43d7-a7b7-7579093b8130
   DisplayName: Search/Enabled
   CheckSum: ebb0320e091b5a986d0c89720f9f9ca00c3b0bc84563500618c7c77e5298c301
@@ -485,6 +505,10 @@ adx_sitesetting:
 - RecordId: dbcd50c4-6d54-48d8-a23e-88990750be97
   DisplayName: Header/OutputCache/Enabled
   CheckSum: 36dfd904312aa44c59fdaa8ed7d8f7a12a778fffec5de6a941c98557b678e26f
+  IsDeleted: false
+- RecordId: e071eb3e-5ffb-f011-8406-002248882207
+  DisplayName: Webapi/pg_event/enabled
+  CheckSum: b2398077fcf238b5447b5d3d0cb9fc8dc2a70fd978f1374a50bf1866fced97b0
   IsDeleted: false
 - RecordId: e3ef0c12-72e6-4182-b5db-decc6e7b3e61
   DisplayName: MultiLanguage/DisplayLanguageCodeInURL
@@ -644,6 +668,10 @@ adx_weblink:
   DisplayName: Contact us
   CheckSum: b3e477ed0f3843f1f97326ec072bd4ee658628fcd7dd72bf96a01cffb4510845
   IsDeleted: false
+- RecordId: d66fb469-239d-6223-254c-55b382c8158d
+  DisplayName: Event Form Registration
+  CheckSum: 1f7c7c71d9663b580d19a93f84c356b337e50f1ab635751b48317c98812296a8
+  IsDeleted: false
 adx_weblinkset:
 - RecordId: 199d1557-9a42-434e-9560-5b0d819cb12a
   DisplayName: Secondary Navigation
@@ -672,7 +700,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: 10ebe240-1303-928b-8ba7-aa8e00a594ed
   DisplayName: Event Details
-  CheckSum: 04f8324fd8785a1b33cfadba84d2ed70a170a8a970cac94072a5b4cde7c10cfe
+  CheckSum: 5c2dba3578e3e841205c53ef01aae72ef6307face7341e87f48eb47b2a0f689e
   IsDeleted: false
 - RecordId: 2ae695d4-0e17-479e-89e8-cc399a424040
   DisplayName: Home
@@ -682,9 +710,17 @@ adx_webpage:
   DisplayName: User Panel
   CheckSum: 81f73c02751d96ca65eed72413c3e71ebe7675456a9d5ea61d9bbfd1126b1ec6
   IsDeleted: false
+- RecordId: 33ee654a-f1fd-2b4f-3e1e-19e537669128
+  DisplayName: Event Form Registration
+  CheckSum: 7309159566c01169cb0cfb3973580261d6f5a8ccb74fd97c25152e9a7f461a8f
+  IsDeleted: false
 - RecordId: 36458231-d113-48d0-845f-716348e85a51
   DisplayName: Page Not Found
   CheckSum: e611353b27394e351f9165c2d75ccb5c85c99dc2a53ec93863dcded40a9a4cdb
+  IsDeleted: false
+- RecordId: 4326f56f-df9d-55b8-cdb1-5267e3f4465b
+  DisplayName: Event Form Registration
+  CheckSum: b7aefd5e0f2d13d66d31b4d055ea7872e6f58694b50ad8b6332af091bd0e0f22
   IsDeleted: false
 - RecordId: 4de8b326-dda0-4c2e-a72a-6c57a2b1f863
   DisplayName: Access Denied

@@ -29,6 +29,7 @@ namespace Pg.LetsMeet.Dataverse.Context
 			public const string skip = "skip";
 			public const string search = "search";
 			public const string orderby = "orderby";
+			public const string semanticquery = "semanticquery";
 		}
 		
 		public const string ActionLogicalName = "searchquery";
@@ -220,6 +221,25 @@ namespace Pg.LetsMeet.Dataverse.Context
 			set
 			{
 				this.Parameters["orderby"] = value;
+			}
+		}
+		
+		public string semanticquery
+		{
+			get
+			{
+				if (this.Parameters.Contains("semanticquery"))
+				{
+					return ((string)(this.Parameters["semanticquery"]));
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+			set
+			{
+				this.Parameters["semanticquery"] = value;
 			}
 		}
 		

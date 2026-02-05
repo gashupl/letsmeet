@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xrm.Sdk;
 using Moq;
 using Pg.LetsMeet.Dataverse.Context;
-using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Event;
+using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Events;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
 using Pg.LetsMeet.Dataverse.Tests.Shared;
 using System;

@@ -1,6 +1,6 @@
 ﻿using Pg.LetsMeet.Dataverse.Context;
 
-namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Event
+namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Events
 {
     public interface IEventService
     {

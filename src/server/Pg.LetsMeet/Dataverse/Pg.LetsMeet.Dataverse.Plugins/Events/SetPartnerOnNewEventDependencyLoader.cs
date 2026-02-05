@@ -1,4 +1,4 @@
-﻿using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Event;
+﻿using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Events;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
 using Pg.LetsMeet.Dataverse.Infrastructure;
 using Pg.LetsMeet.Dataverse.Shared.Injections;

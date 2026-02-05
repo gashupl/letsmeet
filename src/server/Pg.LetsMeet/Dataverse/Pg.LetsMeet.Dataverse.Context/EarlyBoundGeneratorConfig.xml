@@ -36,6 +36,7 @@ environmentvariabledefinition|
 environmentvariablevalue|
 pg_event|
 pg_eventparticipation|
+pg_eventregistrationform|
 settingdefinition</EntitiesWhitelist>
     <EntityAttributeSpecifiedNames />
     <EntityClassNameOverrides />
@@ -152,7 +153,7 @@ VoiceMail</TokenCapitalizationOverrides>
   <Namespace>Pg.LetsMeet.Dataverse.Context</Namespace>
   <ServiceContextName>DataverseContext</ServiceContextName>
   <SuppressGeneratedCodeAttribute>true</SuppressGeneratedCodeAttribute>
-  <SettingsVersion>2.2025.4.20</SettingsVersion>
+  <SettingsVersion>2.2025.8.26</SettingsVersion>
   <UpdateBuilderSettingsJson>true</UpdateBuilderSettingsJson>
   <Version>2.2025.8.26</Version>
 </Config>

@@ -76,9 +76,12 @@ namespace Pg.LetsMeet.Dataverse.Context
 			public const string pg_eventIdName = "pg_eventidname";
 			public const string pg_eventparticipation_contactId_Contact = "pg_eventparticipation_contactId_Contact";
 			public const string pg_eventparticipation_pg_eventId_pg_event = "pg_eventparticipation_pg_eventId_pg_event";
+			public const string pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform = "pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform";
 			public const string pg_eventparticipationId = "pg_eventparticipationid";
 			public const string Id = "pg_eventparticipationid";
 			public const string pg_Name = "pg_name";
+			public const string pg_sourceregistrationformId = "pg_sourceregistrationformid";
+			public const string pg_sourceregistrationformIdName = "pg_sourceregistrationformidname";
 			public const string StateCode = "statecode";
 			public const string statecodeName = "statecodename";
 			public const string StatusCode = "statuscode";
@@ -569,6 +572,38 @@ namespace Pg.LetsMeet.Dataverse.Context
 			}
 		}
 		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("pg_sourceregistrationformid")]
+		public Microsoft.Xrm.Sdk.EntityReference pg_sourceregistrationformId
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("pg_sourceregistrationformid");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetAttributeValue("pg_sourceregistrationformid", value);
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("pg_sourceregistrationformidname")]
+		public string pg_sourceregistrationformIdName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("pg_sourceregistrationformid"))
+				{
+					return this.FormattedValues["pg_sourceregistrationformid"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
 		/// <summary>
 		/// Status of the Event Participation
 		/// </summary>
@@ -723,6 +758,25 @@ namespace Pg.LetsMeet.Dataverse.Context
 			set
 			{
 				this.SetRelatedEntity<Pg.LetsMeet.Dataverse.Context.pg_event>("pg_eventparticipation_pg_eventId_pg_event", null, value);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("pg_sourceregistrationformid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform")]
+		public Pg.LetsMeet.Dataverse.Context.pg_eventregistrationform pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<Pg.LetsMeet.Dataverse.Context.pg_eventregistrationform>("pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetRelatedEntity<Pg.LetsMeet.Dataverse.Context.pg_eventregistrationform>("pg_eventparticipation_sourceregistrationformId_pg_eventregistrationform", null, value);
 			}
 		}
 		

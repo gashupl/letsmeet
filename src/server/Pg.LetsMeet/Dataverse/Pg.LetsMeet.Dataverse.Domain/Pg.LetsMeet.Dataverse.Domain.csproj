@@ -91,10 +91,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\Contacts\ContactExistsResponse.cs" />
+    <Compile Include="BusinessLogic\Contacts\ContactService.cs" />
+    <Compile Include="BusinessLogic\Contacts\IContactService.cs" />
     <Compile Include="BusinessLogic\Demo\DemoService.cs" />
     <Compile Include="BusinessLogic\Demo\IDemoService.cs" />
-    <Compile Include="BusinessLogic\Event\IEventService.cs" />
-    <Compile Include="BusinessLogic\Event\EventService.cs" />
+    <Compile Include="BusinessLogic\EventParticipations\CreateParticipationsFromRegistrationsResult.cs" />
+    <Compile Include="BusinessLogic\EventParticipations\IRegistrationToParticipationService.cs" />
+    <Compile Include="BusinessLogic\EventParticipations\RegistrationToParticipationService.cs" />
+    <Compile Include="BusinessLogic\Events\IEventService.cs" />
+    <Compile Include="BusinessLogic\Events\EventService.cs" />
     <Compile Include="BusinessLogic\ServicesFactory.cs" />
     <Compile Include="BusinessLogic\Environment\IVariablesService.cs" />
     <Compile Include="BusinessLogic\Environment\VariablesService.cs" />

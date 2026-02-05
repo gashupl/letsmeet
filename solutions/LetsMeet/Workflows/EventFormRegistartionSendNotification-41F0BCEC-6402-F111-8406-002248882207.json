@@ -1,0 +1,147 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_sendmail": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "pg_sharedsendmail_04fe2"
+        },
+        "api": {
+          "name": "shared_sendmail"
+        }
+      },
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "pg_sharedcommondataserviceforapps_8683e"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "502faa45-72eb-4aac-b1b3-0e8c97a286a3"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "pg_eventregistrationform",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filterexpression": "statecode eq 1"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "status_eq_accepted_condition": {
+          "actions": {
+            "Send_an_email_notification_(V3)": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "3c776658-f7b5-4315-8713-a09f95b83a22"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_sendmail",
+                  "operationId": "SendEmailV3",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sendmail"
+                },
+                "parameters": {
+                  "request/to": "@triggerOutputs()?['body/pg_email']",
+                  "request/subject": "[Let's Meet] Event Registration Status",
+                  "request/text": "<p>Your registration to the event @{outputs('get_event_details')?['body/pg_name']} has been accepted.<br>\nSee you soon!</p>"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "get_event_details": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Send_an_email_notification_(V3)_2": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "dfc7331a-5c5b-4a7a-8be6-99124ba2a327"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_sendmail",
+                    "operationId": "SendEmailV3",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_sendmail"
+                  },
+                  "parameters": {
+                    "request/to": "@triggerOutputs()?['body/pg_email']",
+                    "request/subject": "[Let's Meet] Event Registration Status",
+                    "request/text": "<p>We're sorry, bit your registration to the @{outputs('get_event_details')?['body/pg_name']} event has been rejected.<br>\nIn case of any questions - please contact us.&nbsp;</p>"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/statuscode']",
+              2
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "18067f72-09f2-47f8-ab6d-db4dcff8da8a"
+          },
+          "type": "If"
+        },
+        "get_event_details": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "aa36196d-1e8c-49bc-9ccc-66eb78c71cb7"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "pg_events",
+              "recordId": "@triggerOutputs()?['body/_pg_eventid_value']",
+              "$select": "pg_name"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

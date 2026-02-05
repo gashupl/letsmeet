@@ -117,6 +117,17 @@ namespace Pg.LetsMeet.Dataverse.Context
 		}
 		
 		/// <summary>
+		/// Gets a binding to the set of all <see cref="Pg.LetsMeet.Dataverse.Context.pg_eventregistrationform"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Pg.LetsMeet.Dataverse.Context.pg_eventregistrationform> pg_eventregistrationformSet
+		{
+			get
+			{
+				return this.CreateQuery<Pg.LetsMeet.Dataverse.Context.pg_eventregistrationform>();
+			}
+		}
+		
+		/// <summary>
 		/// Gets a binding to the set of all <see cref="Pg.LetsMeet.Dataverse.Context.SettingDefinition"/> entities.
 		/// </summary>
 		public System.Linq.IQueryable<Pg.LetsMeet.Dataverse.Context.SettingDefinition> SettingDefinitionSet
