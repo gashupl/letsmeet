@@ -4,6 +4,7 @@ using Pg.LetsMeet.Dataverse.Context;
 using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
 using System;
+using System.ServiceModel;
 
 namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
 {
@@ -41,9 +42,13 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
                 tracing.Trace("Event participation created successfully.");
                 return CreateParticipationsFromRegistrationsResult.Success;
             }
-            catch (InvalidPluginExecutionException ex)
+            catch (FaultException<OrganizationServiceFault> ex)
             {
-                tracing.Trace("[InvalidPluginExecutionException] Failed to create event participation: " + ex.Message);
+                tracing.Trace("[FaultExceptionException] Failed to create event participation: " + ex.Message);
+                if(ex.Detail != null)
+                {
+                    tracing.Trace("OrganizationServiceFault Detail: " + ex.Detail.Message);
+                }
                 return CreateParticipationsFromRegistrationsResult.Failure; 
             }
             catch(Exception ex)
