@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xrm.Sdk;
 using Pg.LetsMeet.Dataverse.Context;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
+using Pg.LetsMeet.Dataverse.Shared.Services;
 using System;
 
 namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
@@ -12,7 +13,7 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
         private readonly IEventParticipationRepository _eventParticipationsRepository;
         private readonly IRepository _entityRepository; 
 
-        public EventParticipationService(IRepositoriesFactory repositoryFactory, ITracingService tracing) : base(repositoryFactory, tracing)
+        public EventParticipationService(IRepositoriesFactory repositoryFactory, IPluginTracingService tracing) : base(repositoryFactory, tracing)
         {
             _eventParticipationsRepository = repositoryFactory.Get<IEventParticipationRepository>();
             _entityRepository = repositoryFactory.Get<IRepository>(); 

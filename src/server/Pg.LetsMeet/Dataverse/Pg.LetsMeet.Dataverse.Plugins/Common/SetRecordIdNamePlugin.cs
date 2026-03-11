@@ -3,6 +3,7 @@ using Pg.LetsMeet.Dataverse.Common.Values;
 using Pg.LetsMeet.Dataverse.Domain;
 using Pg.LetsMeet.Dataverse.Plugins.Core;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
+using Pg.LetsMeet.Dataverse.Shared.Services;
 using Pg.LetsMeet.Dataverse.Shared.Values;
 using System.Collections.Generic;
 
@@ -12,7 +13,7 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Common
     {
         public override IDependencyLoader DependencyLoader { get; set; } = new CommonDependencyLoader();
 
-        public override void Execute(IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, ITracingService tracingService)
+        public override void Execute(IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, IPluginTracingService tracingService)
         {
             if (pluginExecutionContext.InputParameters.ContainsKey(ParameterName.Target))
             {

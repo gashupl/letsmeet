@@ -1,10 +1,12 @@
 ﻿using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.PluginTelemetry;
 using Pg.LetsMeet.Dataverse.Common.Values;
 using Pg.LetsMeet.Dataverse.Context;
 using Pg.LetsMeet.Dataverse.Domain;
 using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Events;
 using Pg.LetsMeet.Dataverse.Plugins.Core;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
+using Pg.LetsMeet.Dataverse.Shared.Services;
 
 namespace Pg.LetsMeet.Dataverse.Plugins.Events
 {
@@ -27,7 +29,7 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Events
             }
         }
 
-        public override void Execute(IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, ITracingService tracingService)
+        public override void Execute(IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, IPluginTracingService tracingService)
         {
             if(pluginExecutionContext.InputParameters.Contains("Target") && pluginExecutionContext.InputParameters["Target"] is Entity)
             {
@@ -38,7 +40,7 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Events
             }
             else
             {
-                tracingService.Trace("Target entity not found in input parameters or is not of type Entity");
+                tracingService.Trace(LogLevel.Trace, "Target entity not found in input parameters or is not of type Entity");
             }
         }
     }

@@ -5,6 +5,7 @@ using Pg.LetsMeet.Dataverse.Domain;
 using Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations;
 using Pg.LetsMeet.Dataverse.Plugins.Core;
 using Pg.LetsMeet.Dataverse.Shared.Injections;
+using Pg.LetsMeet.Dataverse.Shared.Services;
 using Pg.LetsMeet.Dataverse.Shared.Values;
 
 namespace Pg.LetsMeet.Dataverse.Plugins.Events
@@ -26,7 +27,8 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Events
             }
         }
 
-        public override void Execute(IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, ITracingService tracingService)
+        public override void Execute(
+            IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, IPluginTracingService tracingService)
         {
             if (pluginExecutionContext.Stage == (int)ProcessingStage.PostOperation) //For Calculating during Participant creation and update
             {
@@ -39,7 +41,8 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Events
 
         }
 
-        private void HandlePreEvents(IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, ITracingService tracingService)
+        private void HandlePreEvents
+            (IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, IPluginTracingService tracingService)
         {
             var preImage = GetPreImageEntity<pg_eventparticipation>(pluginExecutionContext, ImageName.PreImage);
             if (preImage?.pg_eventId != null)
@@ -51,7 +54,8 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Events
             }
         }
 
-        private void HandlePostEvents(IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, ITracingService tracingService)
+        private void HandlePostEvents
+            (IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, IPluginTracingService tracingService)
         {
             var postImage = GetPostImageEntity<pg_eventparticipation>(pluginExecutionContext, ImageName.PostImage);
             if (postImage?.pg_eventId != null)

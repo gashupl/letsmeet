@@ -105,6 +105,8 @@
     <Compile Include="Injections\IDependencyLoader.cs" />
     <Compile Include="Injections\IExecutionScope.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IPluginTracingService.cs" />
+    <Compile Include="Services\PluginTracingService.cs" />
     <Compile Include="Values\CommonAttributesName.cs" />
     <Compile Include="Values\ImageName.cs" />
     <Compile Include="Values\IsolationMode.cs" />
