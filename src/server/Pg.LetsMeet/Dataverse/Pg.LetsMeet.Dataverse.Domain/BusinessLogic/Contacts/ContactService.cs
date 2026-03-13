@@ -1,5 +1,6 @@
-﻿using Microsoft.Xrm.Sdk;
+﻿using Microsoft.Xrm.Sdk.PluginTelemetry;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
+using Pg.LetsMeet.Dataverse.Shared.Services;
 using System;
 
 namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
@@ -7,7 +8,7 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
     public class ContactService : ServiceBase, IContactService
     {
         private readonly IContactRepository _contactRepository;
-        public ContactService(IRepositoriesFactory repositoryFactory, ITracingService tracing) : base(repositoryFactory, tracing)
+        public ContactService(IRepositoriesFactory repositoryFactory, IPluginTracingService tracing) : base(repositoryFactory, tracing)
         {
             _contactRepository = repositoryFactory.Get<IContactRepository>();
         }
@@ -48,11 +49,11 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
 
         public Guid UpsertContactWithEmail(string email, string firstName, string lastName)
         {
-            tracing.Trace($"UpsertContactWithEmail called with email: {email}, firstName: {firstName}, lastName: {lastName}");
+            tracing.Trace(LogLevel.Trace, "UpsertContactWithEmail called with email: {email}, firstName: {firstName}, lastName: {lastName}", email, firstName, lastName);
             var contactExistsResponse = ContactExists(email);
             if (contactExistsResponse.Exists)
             {
-                tracing.Trace($"Contact with email {email} already exists. Checking for updates.");
+                tracing.Trace(LogLevel.Trace, "Contact with email {email} already exists. Checking for updates.", email);
                 UpdateContactIfChanged(
                     contactExistsResponse.Contact,
                     firstName,
@@ -62,7 +63,7 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
             }
             else
             {
-                tracing.Trace($"Contact with email {email} does not exist. Creating new contact.");
+                tracing.Trace(LogLevel.Trace, "Contact with email {email} does not exist. Creating new contact.", email);
                 var newContact = new Context.Contact
                 {
                     FirstName = firstName,

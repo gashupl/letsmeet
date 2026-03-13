@@ -6,6 +6,8 @@ using Pg.LetsMeet.Dataverse.Shared.Injections;
 using Pg.LetsMeet.Dataverse.Shared.Extensions;
 using Pg.LetsMeet.Dataverse.Domain.DataAccess;
 using Pg.LetsMeet.Dataverse.Context;
+using Microsoft.Xrm.Sdk.PluginTelemetry;
+using Pg.LetsMeet.Dataverse.Shared.Services;
 
 namespace Pg.LetsMeet.Dataverse.Plugins.Core
 {
@@ -39,11 +41,13 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Core
             ITracingService tracingService = null;
             IPluginExecutionContext pluginExecutionContext = null;
             IExecutionScope scope = null;
+            ILogger logger = null;
 
             var container = new Container();
             try
             {
                 tracingService = serviceProvider.GetService(typeof(ITracingService)) as ITracingService;
+                logger = (ILogger)serviceProvider.GetService(typeof(ILogger));
 
                 tracingService.Trace("Resolving plugin execution context");
                 pluginExecutionContext = serviceProvider.GetService(typeof(IPluginExecutionContext)) as IPluginExecutionContext;
@@ -66,14 +70,16 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Core
                 }
 
                 container.Register<ITracingService>(() => { return tracingService; });
+                container.Register<ILogger>(() => logger);
                 container.RegisterSingleton<IOrganizationServiceFactory>(() => { return orgServiceFactory; }); 
                 container.Register<IServicesFactory>(() => new ServicesFactory(container));
                 container.Register<IRepositoriesFactory>(() => new RepositoriesFactory(container));
+                container.Register<IPluginTracingService>(() => new PluginTracingService(tracingService, logger));
                 DependencyLoader?.SetRegistrations(container);
 
                 scope = container.BeginExecutionScope();
 
-                Execute(pluginExecutionContext, container.GetInstance<IServicesFactory>(), tracingService);
+                Execute(pluginExecutionContext, container.GetInstance<IServicesFactory>(), container.GetInstance<IPluginTracingService>());
             }
             catch (InvalidPluginExecutionException) { throw; }
             catch (Exception e)
@@ -109,6 +115,11 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Core
                    context.InputParameters.Contains(ParameterName.Target)
                        ? context.InputParameters[ParameterName.Target] as EntityReference
                        : null;
+        }
+
+        protected void Trace(string message)
+        {
+            
         }
 
         protected static TEntity GetTargetEntity<TEntity>(IPluginExecutionContext context) where TEntity : Entity
@@ -156,7 +167,7 @@ namespace Pg.LetsMeet.Dataverse.Plugins.Core
 
         public abstract bool IsContextValid(IPluginExecutionContext pluginExecutionContext);
 
-        public abstract void Execute(IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, ITracingService tracingService);
+        public abstract void Execute(IPluginExecutionContext pluginExecutionContext, IServicesFactory servicesFactory, IPluginTracingService tracingService);
 
         #endregion
     }

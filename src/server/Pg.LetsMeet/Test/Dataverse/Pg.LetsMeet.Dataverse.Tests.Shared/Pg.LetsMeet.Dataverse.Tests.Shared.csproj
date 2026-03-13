@@ -103,5 +103,11 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Dataverse\Pg.LetsMeet.Dataverse.Shared\Pg.LetsMeet.Dataverse.Shared.csproj">
+      <Project>{df13e2f2-b3c9-47e0-8910-c6d55c2f55ce}</Project>
+      <Name>Pg.LetsMeet.Dataverse.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

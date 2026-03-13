@@ -127,6 +127,10 @@
       <Project>{3771FA1B-CD5F-4DB8-82C8-9D6BBBE0F906}</Project>
       <Name>Pg.LetsMeet.Dataverse.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Dataverse\Pg.LetsMeet.Dataverse.Shared\Pg.LetsMeet.Dataverse.Shared.csproj">
+      <Project>{DF13E2F2-B3C9-47E0-8910-C6D55C2F55CE}</Project>
+      <Name>Pg.LetsMeet.Dataverse.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pg.LetsMeet.Dataverse.Tests.Shared\Pg.LetsMeet.Dataverse.Tests.Shared.csproj">
       <Project>{dae56212-2e41-4e9c-b316-03b5480fe042}</Project>
       <Name>Pg.LetsMeet.Dataverse.Tests.Shared</Name>
