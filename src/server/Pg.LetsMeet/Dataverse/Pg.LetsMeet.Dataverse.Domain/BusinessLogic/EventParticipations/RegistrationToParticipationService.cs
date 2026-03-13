@@ -46,17 +46,17 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
             catch (FaultException<OrganizationServiceFault> ex)
             {
                 tracing.Trace(LogLevel.Trace, 
-                    "[FaultExceptionException] Failed to create event participation: {ExceptionMessage} ", ex.Message);
+                    "[FaultExceptionException] Failed to create event participation: {0} ", ex.Message);
 
                 if(ex.Detail != null)
                 {
-                    tracing.Trace(LogLevel.Trace, "OrganizationServiceFault Detail: {ExceptionMessage}", ex.Detail.Message);
+                    tracing.Trace(LogLevel.Trace, "OrganizationServiceFault Detail: {0}", ex.Detail.Message);
                 }
                 return CreateParticipationsFromRegistrationsResult.Failure; 
             }
             catch(Exception ex)
             {
-                tracing.Trace(LogLevel.Trace, "[Exception] Failed to create event participation: {ExceptionMessage}", ex.Message);
+                tracing.Trace(LogLevel.Trace, "[Exception] Failed to create event participation: {0}", ex.Message);
                 return CreateParticipationsFromRegistrationsResult.Failure;
             }
 
