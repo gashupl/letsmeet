@@ -25,6 +25,10 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
 
         public CreateParticipationsFromRegistrationsResult TryCreateParticipationsFromRegistrations(pg_eventregistrationform registrationForm)
         {
+            tracing.Trace(LogLevel.Information, 
+                "Starting participation creation for registration form: {registrationFormId}, Email: {email}", 
+                registrationForm.Id, registrationForm.pg_email);
+
             var contactId = _contactService.UpsertContactWithEmail(
                 registrationForm.pg_email,
                 registrationForm.pg_firstname,
@@ -40,23 +44,28 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
 
                 };
                 _eventParticipationRepository.Create(participation);
-                tracing.Trace(LogLevel.Trace, "Event participation created successfully.");
+                tracing.Trace(LogLevel.Information, 
+                    "Event participation created successfully. ContactId: {contactId}, EventId: {eventId}, RegistrationFormId: {registrationFormId}",
+                    contactId, registrationForm.pg_eventId?.Id, registrationForm.Id);
                 return CreateParticipationsFromRegistrationsResult.Success;
             }
             catch (FaultException<OrganizationServiceFault> ex)
             {
-                tracing.Trace(LogLevel.Trace, 
-                    "[FaultExceptionException] Failed to create event participation: {0} ", ex.Message);
+                tracing.Trace(LogLevel.Error, 
+                    "[FaultException] Failed to create event participation: {exceptionMessage}", ex.Message);
 
                 if(ex.Detail != null)
                 {
-                    tracing.Trace(LogLevel.Trace, "OrganizationServiceFault Detail: {0}", ex.Detail.Message);
+                    tracing.Trace(LogLevel.Error, 
+                        "OrganizationServiceFault Detail - ErrorCode: {errorCode}, Message: {faultMessage}", 
+                        ex.Detail.ErrorCode, ex.Detail.Message);
                 }
                 return CreateParticipationsFromRegistrationsResult.Failure; 
             }
             catch(Exception ex)
             {
-                tracing.Trace(LogLevel.Trace, "[Exception] Failed to create event participation: {0}", ex.Message);
+                tracing.Trace(LogLevel.Error, 
+                    "[Exception] Failed to create event participation: {exceptionMessage}", ex.Message);
                 return CreateParticipationsFromRegistrationsResult.Failure;
             }
 
@@ -70,7 +79,8 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
                     pg_eventregistrationform.EntityLogicalName,
                     (int)pg_eventregistrationform_statecode.Inactive, 
                     (int)pg_eventregistrationform_StatusCode.Accepted);
-                tracing.Trace(LogLevel.Trace, "Registration form accepted");
+                tracing.Trace(LogLevel.Information, 
+                    "Registration form accepted - RegistrationFormId: {registrationFormId}", registrationFormId);
             }
             else
             {       
@@ -78,7 +88,8 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
                     pg_eventregistrationform.EntityLogicalName,
                     (int)pg_eventregistrationform_statecode.Inactive, 
                     (int)pg_eventregistrationform_StatusCode.Rejected);
-                tracing.Trace(LogLevel.Trace, "Registration form rejected");
+                tracing.Trace(LogLevel.Warning, 
+                    "Registration form rejected - RegistrationFormId: {registrationFormId}", registrationFormId);
             }
         }
     }

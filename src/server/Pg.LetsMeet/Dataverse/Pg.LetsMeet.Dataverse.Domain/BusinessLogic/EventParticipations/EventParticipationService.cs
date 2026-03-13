@@ -34,14 +34,14 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
 
         public void TryUpdateParticipantsNumber(Guid eventId, int number)
         {
-            tracing.Trace(LogLevel.Trace,
-                "Trying to update participants number for event with id {0} to {1}", eventId, number);
+            tracing.Trace(LogLevel.Trace, 
+                "Trying to update participants number for event with id {eventId} to {number}", eventId, number);
             var @event = _entityRepository.GetEntityById<pg_event>(eventId); 
             if (@event?.pg_allowedparticipantsquantity != null 
                 && number > @event.pg_allowedparticipantsquantity)
             {
-                tracing.Trace(LogLevel.Warning,
-                    "Cannot update participants number for event with id {0} to {1}. Max participant count is {2}", 
+                tracing.Trace(LogLevel.Warning, 
+                    "Cannot update participants number for event with id {eventId} to {number}. Max participant count is {maxNumber}", 
                     eventId, number, @event.pg_allowedparticipantsquantity);
                 throw new InvalidPluginExecutionException(
                     String.Format(CannotAddMoreParticipants, @event?.pg_allowedparticipantsquantity.ToString())); 
@@ -52,7 +52,7 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.EventParticipations
                 pg_registeredparticipantsquantity = number
             }); 
             tracing.Trace(LogLevel.Trace,
-                "Participants number for event with id {0} updated to {1}", eventId, number);
+                "Participants number for event with id {eventId} updated to {number}", eventId, number);
         }
     }
 }

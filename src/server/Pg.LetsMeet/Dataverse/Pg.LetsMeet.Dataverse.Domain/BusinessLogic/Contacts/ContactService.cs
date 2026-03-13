@@ -49,11 +49,11 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
 
         public Guid UpsertContactWithEmail(string email, string firstName, string lastName)
         {
-            tracing.Trace(LogLevel.Trace, "UpsertContactWithEmail called with email: {0}, firstName: {1}, lastName: {2}", email, firstName, lastName);
+            tracing.Trace(LogLevel.Trace, "UpsertContactWithEmail called with email: {email}, firstName: {firstName}, lastName: {lastName}", email, firstName, lastName);
             var contactExistsResponse = ContactExists(email);
             if (contactExistsResponse.Exists)
             {
-                tracing.Trace(LogLevel.Trace, "Contact with email {0} already exists. Checking for updates.", email);
+                tracing.Trace(LogLevel.Trace, "Contact with email {email} already exists. Checking for updates.", email);
                 UpdateContactIfChanged(
                     contactExistsResponse.Contact,
                     firstName,
@@ -63,7 +63,7 @@ namespace Pg.LetsMeet.Dataverse.Domain.BusinessLogic.Contacts
             }
             else
             {
-                tracing.Trace(LogLevel.Trace, "Contact with email {0} does not exist. Creating new contact.", email);
+                tracing.Trace(LogLevel.Trace, "Contact with email {email} does not exist. Creating new contact.", email);
                 var newContact = new Context.Contact
                 {
                     FirstName = firstName,
