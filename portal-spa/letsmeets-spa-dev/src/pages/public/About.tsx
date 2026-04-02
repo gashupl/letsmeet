@@ -6,7 +6,7 @@ export default function About() {
     <div className="about-page">
       <div className="container">
         <div className="about-hero">
-          <h1>About LetsMeets</h1>
+          <h1>About Let's Meet!</h1>
           <p className="lead">Connecting event organizers with attendees worldwide</p>
         </div>
 
@@ -14,7 +14,7 @@ export default function About() {
           <section className="about-section">
             <h2>Our Mission</h2>
             <p>
-              LetsMeets is dedicated to making event management and registration simple, efficient, 
+              Let's Meet! is dedicated to making event management and registration simple, efficient, 
               and accessible for everyone. We believe that great events bring people together and 
               create meaningful connections that last beyond the event itself.
             </p>
@@ -50,7 +50,7 @@ export default function About() {
 
           <section className="about-section cta-section">
             <h2>Ready to Get Started?</h2>
-            <p>Join thousands of event organizers and attendees using LetsMeets.</p>
+            <p>Join thousands of event organizers and attendees using Let's Meet!</p>
             <div className="cta-buttons">
               <a href="/events"><Button size="large">Browse Events</Button></a>
               <a href="/login"><Button variant="outline" size="large">Become a Partner</Button></a>

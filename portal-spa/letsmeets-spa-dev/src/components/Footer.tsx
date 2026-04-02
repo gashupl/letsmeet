@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3 className="footer-title">LetsMeets</h3>
+            <h3 className="footer-title">Let's Meet!</h3>
             <p className="footer-text">Event management and registration platform</p>
           </div>
           
@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} LetsMeets. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Let's Meet! All rights reserved.</p>
         </div>
       </div>
     </footer>

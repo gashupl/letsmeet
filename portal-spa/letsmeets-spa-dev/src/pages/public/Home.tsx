@@ -48,7 +48,7 @@ export default function Home() {
               Discover & Manage Events with Ease
             </h1>
             <p className="hero-subtitle">
-              LetsMeets connects event organizers with attendees. Create, manage, and register for events all in one platform.
+              Let's Meet! connects event organizers with attendees. Create, manage, and register for events all in one platform.
             </p>
             <div className="hero-actions">
               <Link to="/events">
@@ -57,32 +57,6 @@ export default function Home() {
               <Link to="/login">
                 <Button variant="outline" size="large">Partner Login</Button>
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="features">
-        <div className="container">
-          <h2 className="section-title">Why Choose LetsMeets?</h2>
-          
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">🎯</div>
-              <h3>Easy Registration</h3>
-              <p>Simple, streamlined event registration for attendees with instant confirmation.</p>
-            </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon">📊</div>
-              <h3>Powerful Management</h3>
-              <p>Full-featured dashboard for partners to create and manage events effortlessly.</p>
-            </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon">🔍</div>
-              <h3>Smart Discovery</h3>
-              <p>Find the perfect events with advanced search and filtering options.</p>
             </div>
           </div>
         </div>
