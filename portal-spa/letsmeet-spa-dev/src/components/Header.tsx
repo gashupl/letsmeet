@@ -9,7 +9,7 @@ export default function Header() {
         <div className="header-content">
           <Link to="/" className="logo">
             <span className="logo-icon">📅</span>
-            <span className="logo-text">Let's Meet!</span>
+            <span className="logo-text">Let's Meet! (v.3)</span>
           </Link>
           
           <nav className="nav">
