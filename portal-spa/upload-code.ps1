@@ -1,0 +1,1 @@
+pac pages upload-code-site --rootPath ".\letsmeet-spa-dev-code\" --compiledPath ".\letsmeet-spa-dev-code\dist\" --siteName "Lets meet (SPA)"

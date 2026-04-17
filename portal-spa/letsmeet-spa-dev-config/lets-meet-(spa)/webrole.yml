@@ -1,7 +1,7 @@
 - adx_anonymoususersrole: false
   adx_authenticatedusersrole: false
-  adx_description: Test, test
-  adx_name: Test
+  adx_description: Test of test role...
+  adx_name: Testers
   adx_webroleid: 2fe196b9-9c39-f111-88b4-00224889f08a
 - adx_anonymoususersrole: false
   adx_authenticatedusersrole: false

@@ -1,0 +1,1 @@
+pac pages upload --path '.\letsmeet-spa-dev-config\lets-meet-(spa)\' --modelVersion "2"
