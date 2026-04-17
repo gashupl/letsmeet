@@ -1,0 +1,110 @@
+adx_webfile:
+- RecordId: 1308e8c5-ca77-4729-aec4-0e99b7d23fa7
+  DisplayName: 1308e8c5-ca77-4729-aec4-0e99b7d23fa7
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 3e29cc83-b0d2-4762-adb0-ce408452e448
+  DisplayName: 3e29cc83-b0d2-4762-adb0-ce408452e448
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 4fa6a23f-902b-491d-b583-ee499cb45cb4
+  DisplayName: 4fa6a23f-902b-491d-b583-ee499cb45cb4
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 4fd3f207-11e2-4562-994e-9d1642b7974b
+  DisplayName: index-CQNpsQj7.js
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 51d73b54-a7d8-4d23-8f22-36436553cca4
+  DisplayName: index-roC4GW0y.js
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 60caa4a6-adf6-43dc-a392-91e684ea0384
+  DisplayName: index-Bpgb52WC.js
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 619ef62a-c953-46ac-870c-b01f3526ba1b
+  DisplayName: 619ef62a-c953-46ac-870c-b01f3526ba1b
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 6f6eecf5-abaf-4811-afc6-5c4a65e81638
+  DisplayName: index-_vlftSdX.js
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 7da89f2b-c0b1-45d5-a265-6525c67786c1
+  DisplayName: 7da89f2b-c0b1-45d5-a265-6525c67786c1
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 820ad629-3f48-4311-b241-c6de65fa31f5
+  DisplayName: 820ad629-3f48-4311-b241-c6de65fa31f5
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 86ca237f-f0d8-4d92-8ad6-53e35451df81
+  DisplayName: 86ca237f-f0d8-4d92-8ad6-53e35451df81
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 8d810f23-dd61-47a0-8a29-600a34fbbe1a
+  DisplayName: 8d810f23-dd61-47a0-8a29-600a34fbbe1a
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 9aab2eb5-233d-44bd-b7b1-8b0a8e799608
+  DisplayName: index-CwYRe_O3.js
+  CheckSum: 
+  IsDeleted: true
+- RecordId: c8465859-5b98-4df4-875c-dc9636244073
+  DisplayName: c8465859-5b98-4df4-875c-dc9636244073
+  CheckSum: 
+  IsDeleted: true
+- RecordId: f0adedc9-3d66-464a-b356-6ee0b2096a4a
+  DisplayName: f0adedc9-3d66-464a-b356-6ee0b2096a4a
+  CheckSum: 
+  IsDeleted: true
+- RecordId: fdb38444-6157-4042-91cb-3b8843ecdbb2
+  DisplayName: fdb38444-6157-4042-91cb-3b8843ecdbb2
+  CheckSum: 
+  IsDeleted: true
+annotation:
+- RecordId: 1308e8c5-ca77-4729-aec4-0e99b7d23fa7
+  DisplayName: index.html
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 3e29cc83-b0d2-4762-adb0-ce408452e448
+  DisplayName: theme.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 4fa6a23f-902b-491d-b583-ee499cb45cb4
+  DisplayName: react-vendor-Ca01mDvO.js
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 619ef62a-c953-46ac-870c-b01f3526ba1b
+  DisplayName: favicon.svg
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 7da89f2b-c0b1-45d5-a265-6525c67786c1
+  DisplayName: Logo-sm-64.png
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 820ad629-3f48-4311-b241-c6de65fa31f5
+  DisplayName: Cat-PC.png
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 86ca237f-f0d8-4d92-8ad6-53e35451df81
+  DisplayName: rolldown-runtime-DF2fYuay.js
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 8d810f23-dd61-47a0-8a29-600a34fbbe1a
+  DisplayName: icons.svg
+  CheckSum: 
+  IsDeleted: true
+- RecordId: c8465859-5b98-4df4-875c-dc9636244073
+  DisplayName: portalbasictheme.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: f0adedc9-3d66-464a-b356-6ee0b2096a4a
+  DisplayName: index-CxFdOomu.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: fdb38444-6157-4042-91cb-3b8843ecdbb2
+  DisplayName: bootstrap.min.css
+  CheckSum: 
+  IsDeleted: true
