@@ -21,4 +21,4 @@
 /src/client/Pg.LetsMeet.EventsRegistry/build
 src/client/Pg.LetsMeet.EventsRegistry/src/config.json
 portal-spa/.github/skills/**
-portal-spa/letsmeet-spa-dev/.powerpages-site/web-files/**
+portal-spa/letsmeet-spa-dev-code/.powerpages-site/web-files/**
