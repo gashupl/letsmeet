@@ -1,1 +1,34 @@
-{}
+adx_webfile:
+- RecordId: 4fd3f207-11e2-4562-994e-9d1642b7974b
+  DisplayName: index-CQNpsQj7.js
+  CheckSum: 
+  IsDeleted: true
+annotation:
+- RecordId: 66a8adf9-9c39-f111-88b4-00224889f08a
+  DisplayName: index.html
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 67a8adf9-9c39-f111-88b4-00224889f08a
+  DisplayName: icons.svg
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 68a8adf9-9c39-f111-88b4-00224889f08a
+  DisplayName: favicon.svg
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 69a8adf9-9c39-f111-88b4-00224889f08a
+  DisplayName: rolldown-runtime-DF2fYuay.js
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 6aa8adf9-9c39-f111-88b4-00224889f08a
+  DisplayName: react-vendor-Ca01mDvO.js
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 6ba8adf9-9c39-f111-88b4-00224889f08a
+  DisplayName: index-CxFdOomu.css
+  CheckSum: 
+  IsDeleted: true
+- RecordId: 6ca8adf9-9c39-f111-88b4-00224889f08a
+  DisplayName: index-CQNpsQj7.js
+  CheckSum: 
+  IsDeleted: true

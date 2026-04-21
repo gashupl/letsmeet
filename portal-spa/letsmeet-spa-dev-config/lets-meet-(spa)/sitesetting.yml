@@ -97,7 +97,7 @@
 - adx_description: Enables or disables Azure AD as an external identity provider. By default, it is set to true.
   adx_name: Authentication/Registration/AzureADLoginEnabled
   adx_sitesettingid: a616a280-8b37-49ca-8b82-3eef9b6a69d5
-  adx_value: true
+  adx_value: false
 - adx_description: Denies use of the portal to minors without parental consent. By default, it is set to false.
   adx_name: Authentication/Registration/DenyMinorsWithoutParentalConsent
   adx_sitesettingid: a65adc17-6278-4986-8b64-5eae6f5768d4

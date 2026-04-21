@@ -227,7 +227,7 @@ adx_sitesetting:
   IsDeleted: false
 - RecordId: a616a280-8b37-49ca-8b82-3eef9b6a69d5
   DisplayName: Authentication/Registration/AzureADLoginEnabled
-  CheckSum: b099d68ad1cde5e330e3fc3b7ddc7b8ff3358e49c90c0e864989a88c9cec36d3
+  CheckSum: 0afd10f47544b2be61089c9bfb9dad59d4126f46ef184c971f44103fe125b1ee
   IsDeleted: false
 - RecordId: a65adc17-6278-4986-8b64-5eae6f5768d4
   DisplayName: Authentication/Registration/DenyMinorsWithoutParentalConsent
@@ -325,10 +325,14 @@ adx_webfile:
 - RecordId: 4fd3f207-11e2-4562-994e-9d1642b7974b
   DisplayName: index-CQNpsQj7.js
   CheckSum: 17b786b10ce3bb1c1ea77936ccf2f446c436dce77f67a99c5731939b94c9f16b
-  IsDeleted: false
+  IsDeleted: true
 - RecordId: 5d40ad6a-b4a6-4127-a2c8-282a72a66396
   DisplayName: index.html
-  CheckSum: 0bc975f779c1a4c391da0e75e1eec8255f4be2b8101a60edd15cb0896b8600e4
+  CheckSum: 6948c4c6a39d697c5cb9bff3bd4ad5d3200135f83d84c68e75ee3df518b0a84d
+  IsDeleted: false
+- RecordId: 786b16e9-ab70-42ec-9df9-6d430a74904e
+  DisplayName: index-DGklA6Py.js
+  CheckSum: f3b2c72e2c79188f128e576ebb375d7cacb5be508d273b8b63b38bbcebf3dba3
   IsDeleted: false
 - RecordId: 7d4256e4-7c4c-40e7-9d8d-bdc3c39d1510
   DisplayName: index-DHNqAwq0.js
@@ -387,7 +391,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: c0196bd2-f192-445d-b6a0-d63d48dd0a10
   DisplayName: Home
-  CheckSum: b88161edbaebe22892a4c0b7596b43b46e645e5bd0d7da1a1fca0ba637bb5236
+  CheckSum: 9b690a5417f30faa5ea73fd39de97d424e23e8991ac757cffeadcfc925e071ce
   IsDeleted: false
 - RecordId: cfb9ffc3-2b62-4e6e-86c0-4fc8d0e47d06
   DisplayName: assets
@@ -429,8 +433,8 @@ adx_webpageaccesscontrolrule_webrole:
   IsDeleted: false
 adx_webrole:
 - RecordId: 2fe196b9-9c39-f111-88b4-00224889f08a
-  DisplayName: Test
-  CheckSum: 6770088d6a9a5fe7cda070c9a86eccf57cad77dd74362518ad910aa89bc1a8bf
+  DisplayName: Testers
+  CheckSum: d70014c014f9b774486f22d718340c62524c3390413a5f2970bd041099432532
   IsDeleted: false
 - RecordId: 859a8437-4c9e-4953-a75c-0d813b2c8cfa
   DisplayName: Administrators
@@ -529,28 +533,56 @@ annotation:
 - RecordId: 66a8adf9-9c39-f111-88b4-00224889f08a
   DisplayName: index.html
   CheckSum: 2536ae8aa2164d7608a54ca1e0ed4d4dbc0432ec21be6fff64298b9a1e010a23
-  IsDeleted: false
+  IsDeleted: true
 - RecordId: 67a8adf9-9c39-f111-88b4-00224889f08a
   DisplayName: icons.svg
   CheckSum: 5d8aaa6a407e645178cac62e04edee13768ca6b121ff2bdde9debf61d186c8d9
-  IsDeleted: false
+  IsDeleted: true
 - RecordId: 68a8adf9-9c39-f111-88b4-00224889f08a
   DisplayName: favicon.svg
   CheckSum: 5f734020013541e98dc17860ba29fb88e3350fecb57eca8d1f0665fdb2f933a0
-  IsDeleted: false
+  IsDeleted: true
 - RecordId: 69a8adf9-9c39-f111-88b4-00224889f08a
   DisplayName: rolldown-runtime-DF2fYuay.js
   CheckSum: 1504121620d4919f47b937a65440f8dc3519edf0a6c84ff05d1fa7860697dfe4
-  IsDeleted: false
+  IsDeleted: true
 - RecordId: 6aa8adf9-9c39-f111-88b4-00224889f08a
   DisplayName: react-vendor-Ca01mDvO.js
   CheckSum: 513ecf6722d19db53b5c431c74c0ad5da927f82fa72c20bf6855ea335527f82e
-  IsDeleted: false
+  IsDeleted: true
 - RecordId: 6ba8adf9-9c39-f111-88b4-00224889f08a
   DisplayName: index-CxFdOomu.css
   CheckSum: 2ac1cb300a5c112ea201d8c605840a29e61955f67eae2b0dacf80be97e951b3d
-  IsDeleted: false
+  IsDeleted: true
 - RecordId: 6ca8adf9-9c39-f111-88b4-00224889f08a
   DisplayName: index-CQNpsQj7.js
   CheckSum: 117c1760ffb8971bb518ff8f20ec80cc271889b8a79f35f59797b612f55e0b34
+  IsDeleted: true
+- RecordId: b4b773c2-673a-f111-88b4-70a8a53c81d8
+  DisplayName: rolldown-runtime-DF2fYuay.js
+  CheckSum: fbd0d90c6e962ca5569e9b367ffc2c58ba9b65de91a902dd3e24b49285c864a9
+  IsDeleted: false
+- RecordId: b5b773c2-673a-f111-88b4-70a8a53c81d8
+  DisplayName: index.html
+  CheckSum: 878890fa26164d01879c16222164e36a3ab079a89f22aac65d9bde2a56683c60
+  IsDeleted: false
+- RecordId: b74b6ec8-673a-f111-88b4-70a8a53c81d8
+  DisplayName: icons.svg
+  CheckSum: 4d5218bd9d1663f3a813e14ea45b90e36f94628e2ae319ebca226fdaa1c1e4db
+  IsDeleted: false
+- RecordId: b84b6ec8-673a-f111-88b4-70a8a53c81d8
+  DisplayName: index-CxFdOomu.css
+  CheckSum: 6b7560b53aa2bbfd2563a9819127ed1daa371fe3cb5c57e5a010b6553cbdc18d
+  IsDeleted: false
+- RecordId: b94b6ec8-673a-f111-88b4-70a8a53c81d8
+  DisplayName: index-DGklA6Py.js
+  CheckSum: a818a1404511fda8c024a952a3ff491b922dba0d3c82b9f2506436cde33ec583
+  IsDeleted: false
+- RecordId: ba4b6ec8-673a-f111-88b4-70a8a53c81d8
+  DisplayName: react-vendor-Ca01mDvO.js
+  CheckSum: 3721dcd02c2444fd668f199b980ec8d180d67e7cb53de00b42a828531c5d22be
+  IsDeleted: false
+- RecordId: bb4b6ec8-673a-f111-88b4-70a8a53c81d8
+  DisplayName: favicon.svg
+  CheckSum: ced8d5a9b6db1e405d96b5369824ee28971c03991e47b4dfdf5ed0aefd78addb
   IsDeleted: false

@@ -1,1 +1,1 @@
- pac pages download --path '.\letsmeet-spa-dev-config\lets-meet-(spa)\' --webSiteId 1b34c4d4-a0aa-4c98-9a9b-87b61ed71f2b --modelVersion "2"
+ pac pages download --path '.\letsmeet-spa-dev-config\' --webSiteId 1b34c4d4-a0aa-4c98-9a9b-87b61ed71f2b --modelVersion "2" --overwrite
