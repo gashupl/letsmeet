@@ -33,6 +33,16 @@
   margin-bottom: var(--spacing-xl);
 }
 
+.login-error {
+  background-color: #fef2f2;
+  color: var(--color-error);
+  border: 1px solid #fecaca;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+}
+
 .form-options {
   display: flex;
   justify-content: space-between;

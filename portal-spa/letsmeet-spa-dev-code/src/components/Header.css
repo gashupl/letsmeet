@@ -57,3 +57,16 @@
     display: none;
   }
 }
+
+.auth-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.welcome-text {
+  color: var(--color-gray-700);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+}

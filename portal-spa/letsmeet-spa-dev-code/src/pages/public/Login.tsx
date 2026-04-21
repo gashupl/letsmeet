@@ -2,26 +2,43 @@ import { useState, FormEvent, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import { useAuth } from '../../context/AuthContext';
 import './Login.css';
 
 interface LoginFormData {
-  email: string;
+  username: string;
   password: string;
 }
 
 export default function Login() {
   const navigate = useNavigate();
+  const { login, isAuthenticated } = useAuth();
   const [formData, setFormData] = useState<LoginFormData>({
-    email: '',
+    username: '',
     password: ''
   });
+  const [error, setError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  // Redirect if already authenticated
+  if (isAuthenticated) {
+    navigate('/partner/dashboard', { replace: true });
+    return null;
+  }
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Mock login - in real app, this would call an API
-    console.log('Login attempt:', formData);
-    // Redirect to partner dashboard
-    navigate('/partner/dashboard');
+    setError(null);
+    setIsSubmitting(true);
+
+    try {
+      await login(formData.username, formData.password);
+      navigate('/partner/dashboard');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Login failed. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -41,14 +58,16 @@ export default function Login() {
           </div>
 
           <form onSubmit={handleSubmit} className="login-form">
+            {error && <div className="login-error">{error}</div>}
+
             <Input
-              label="Email"
-              type="email"
-              name="email"
-              value={formData.email}
+              label="Username"
+              type="text"
+              name="username"
+              value={formData.username}
               onChange={handleChange}
               required
-              placeholder="partner@example.com"
+              placeholder="Enter your username"
             />
 
             <Input
@@ -69,8 +88,8 @@ export default function Login() {
               <a href="#" className="forgot-link">Forgot password?</a>
             </div>
 
-            <Button type="submit" size="large" fullWidth>
-              Sign In
+            <Button type="submit" size="large" fullWidth disabled={isSubmitting}>
+              {isSubmitting ? 'Signing In...' : 'Sign In'}
             </Button>
           </form>
 
